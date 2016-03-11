@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Hand_in_Hand.jnlp">
+  <information>
+    <title>Hand_in_Hand</title>
+    <vendor>Andrej</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" java-vm-args="-Djava.library.path=.\rxtx-2.1-7-bins-r2\Windows\i368-mingw32;%PATH% "  href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Hand_in_Hand.jar" size="8830" download="eager" />
+    <jar href="lib\RXTXcomm.jar" size="60866" download="eager" />
+    <jar href="lib\RXTXcomm_32.jar" size="59464" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Hand_in_Hand" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="hand_in_hand.Hand_in_Hand"  name="Hand_in_Hand" />
+  <update check="always"/>
+</jnlp>

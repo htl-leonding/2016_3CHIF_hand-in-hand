@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="RXTXcomm24">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/run997009293/lib/RXTXcomm.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="RXTXcomm2" level="project" />
+    <orderEntry type="library" name="RXTXcomm7" level="project" />
+    <orderEntry type="library" name="RXTXcomm19" level="project" />
+    <orderEntry type="library" name="rxtx-2.1-7-bins-r2" level="project" />
+    <orderEntry type="library" name="RXTXcomm1" level="project" />
+    <orderEntry type="library" name="RXTXcomm3" level="project" />
+    <orderEntry type="library" name="RXTXcomm26" level="project" />
+    <orderEntry type="library" name="RXTXcomm20" level="project" />
+    <orderEntry type="library" name="RXTXcomm6" level="project" />
+    <orderEntry type="library" name="RXTXcomm13" level="project" />
+    <orderEntry type="library" name="RXTXcomm12" level="project" />
+    <orderEntry type="library" name="RXTXcomm23" level="project" />
+    <orderEntry type="library" name="RXTXcomm14" level="project" />
+    <orderEntry type="library" name="RXTXcomm8" level="project" />
+    <orderEntry type="library" name="RXTXcomm4" level="project" />
+    <orderEntry type="library" name="RXTXcomm16" level="project" />
+    <orderEntry type="library" name="RXTXcomm" level="project" />
+    <orderEntry type="library" name="RXTXcomm17" level="project" />
+    <orderEntry type="library" name="RXTXcomm10" level="project" />
+    <orderEntry type="library" name="RXTXcomm15" level="project" />
+    <orderEntry type="library" name="RXTXcomm9" level="project" />
+    <orderEntry type="library" name="RXTXcomm24" level="project" />
+    <orderEntry type="library" name="RXTXcomm25" level="project" />
+    <orderEntry type="library" name="RXTXcomm22" level="project" />
+    <orderEntry type="library" name="RXTXcomm18" level="project" />
+    <orderEntry type="library" name="RXTXcomm21" level="project" />
+    <orderEntry type="library" name="RXTXcomm11" level="project" />
+    <orderEntry type="library" name="RXTXcomm5" level="project" />
+  </component>
+</module>
