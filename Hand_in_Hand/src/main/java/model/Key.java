@@ -5,32 +5,35 @@
  */
 package model;
 
-import java.awt.event.KeyEvent;
-
 /**
  *
  * @author Andrej Sakal, Stefan Smiljkovic
  */
 public class Key {
    
-    String keyString = "";
-    int outputKey = -1;
+    private String keyString = null;
+    private int outputKey = 0;
     
-    
-    public String getKeyString() 
+    public Key(int key, String keyString) 
     {
+        this.keyString = keyString;
+        this.outputKey = key;
+    }
+
+    public String getInputString() {
         return keyString;
     }
 
-    public Integer getOutputKey() 
-    {
+    public void setInputKey(String keyString) {
+        this.keyString = keyString;
+    }
+
+    public int getOutputKey() {
         return outputKey;
     }
-    
-    public Key(String s, int k) 
-    {
-        this.keyString = s;
-        this.outputKey = k;
+
+    public void setOutputKey(int outputKey) {
+        this.outputKey = outputKey;
     }
     
     @Override

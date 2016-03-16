@@ -129,7 +129,8 @@ public class PortListener extends Observable implements SerialPortEventListener 
                 //Cheks the value of the input
                 if (input.ready()) {
                     inputString = input.readLine();
-
+                    System.out.println("Input: " + inputString);
+                    
                     //Notifying all Observers when something new is read from the Prot
                     setChanged();
                     notifyObservers();

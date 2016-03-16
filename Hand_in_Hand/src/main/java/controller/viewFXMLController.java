@@ -5,11 +5,12 @@
  */
 package controller;
 
-
 import java.awt.AWTException;
 import java.awt.Desktop;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -36,9 +37,8 @@ import model.PortListener;
  *
  * @author Andrej Sakal, Gabriel Ionescu
  */
-public class viewFXMLController implements Initializable, Observer 
-{
-    
+public class viewFXMLController implements Initializable, Observer {
+
     @FXML
     private Label label;
     @FXML
@@ -46,146 +46,55 @@ public class viewFXMLController implements Initializable, Observer
     @FXML
     private Button leftButton;
     @FXML
-    private Button rightButton;    
+    private Button rightButton;
     @FXML
     private Hyperlink helpHyper;
     @FXML
     private BorderPane bordPane;
     @FXML
     private ProgressIndicator progressbar;
-    
+
     //Eine Istanz des ProtListeners wird erstellt
     private PortListener model;
-    
+
     //Eine Liste der Keys
-    static List<Key> keyList;
-    public boolean ret;
-    public boolean waitingToAssign;
-    String input;
-    public int intRet;
-    String toAssign;
+    private static List<Key> keyList;
+    private int toAssignKey;
     Robot robot;
 
-    
     @Override
-    public void initialize(URL url, ResourceBundle rb) 
-    {
+    public void initialize(URL url, ResourceBundle rb) {
         model = new PortListener();
         keyList = new LinkedList<>();
-        toAssign = "";
-        
-        try 
-        {
+        toAssignKey = 0;
+
+        try {
             robot = new Robot();
-        } catch (AWTException ex) 
-        {
+        } catch (AWTException ex) {
             Logger.getLogger(viewFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
+
         model.addObserver(this);
         this.progressbar.setVisible(false);
-        
+
         //If there is no connection...
-        if (model.getSerialPort() == null) 
-        {
+        if (model.getSerialPort() == null) {
             printToLabel("The Device is not connected. "
                     + "Please check the connection!");
-        }
-        else if (model.getSerialPort() != null){
+        } else if (model.getSerialPort() != null) {
             printToLabel("The Device is successfuly connected!");
         }
-    }    
+    }
 
-    @Override
-    public void update(Observable o, Object o1) 
-    {
-        input = model.getInputString();
-        if(waitingToAssign == true)
-            toAssign = input;
-        else
-            pressKey(input);
-        
-        input = "";
-   }
+    private void printToLabel(final String text) {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                label.setText(text);
+            }
+        });
+    }
 
-    /**
-     * Falls einer der 3-Knöpfe gedrückt wird dann wird überprüft ob überhaupt
-     * eine Verbindung zum Microcontroller besteht falls ja wird auf ein
-     * Signal  vom MC gewartet.
-     * @param event 
-     */
-    @FXML
-    private void handleLeftButton(ActionEvent event)
-    {
-        if(checkIfKeyEventAssigned(KeyEvent.VK_LEFT) == true)
-        {
-            printToLabel(leftButton.getText() + " is already assigned");
-        }
-        else
-        {
-            waitingToAssign = true;
-            if (model.getSerialPort() == null)
-            {
-                printToLabel("Please check the connection!\nYou can't assign a "
-                        + "button!");
-            }   
-            else if (model.getSerialPort() != null) 
-            {
-                assignKey(KeyEvent.VK_LEFT);
-                
-            }
-        }
-    }
-    
-    @FXML
-    private void handleSpaceButton(ActionEvent event)
-    {
-        if(checkIfKeyEventAssigned(KeyEvent.VK_SPACE) == true)
-        {
-            printToLabel(spaceButton.getText() + " is already assigned");
-        }
-        else
-        {
-            waitingToAssign = true;
-            if (model.getSerialPort() == null)
-            {
-                printToLabel("Please check the connection!\nYou can't assign a "
-                        + "button!");
-            }   
-            else if (model.getSerialPort() != null) 
-            {
-                assignKey(KeyEvent.VK_SPACE);
-            }
-        }
-    }
-    
-    @FXML
-    private void handleRightButton(ActionEvent event)
-    {
-        if(checkIfKeyEventAssigned(KeyEvent.VK_RIGHT) == true)
-        {
-            printToLabel(rightButton.getText() + " is already assigned");
-        }
-        else
-        {
-            waitingToAssign = true;
-            if (model.getSerialPort() == null)
-            {
-                printToLabel("Please check the connection!\nYou can't assign a "
-                        + "button!");
-            }   
-            else if (model.getSerialPort() != null) 
-            {
-                assignKey(KeyEvent.VK_RIGHT);
-            }
-        }
-    }
-    
-    /**
-     * Falls der Help-Hyperlink aufgerufen wird, dann öffnet sich ein 
-     * Textdokument mit einer Hilfe.
-     * @param event
-     * @throws IOException 
-     */
     @FXML
     private void handleHyperLink(ActionEvent event) throws IOException 
     {
@@ -197,89 +106,72 @@ public class viewFXMLController implements Initializable, Observer
         Desktop.getDesktop().open(new File(filename));
     }
     
-    private boolean checkIfKeyEventAssigned(int key)
-    {
-        ret = false;
-        
-        for (Key p : keyList) {
-            if(p.getOutputKey() == key) 
-               ret = true;
-        }
-        
-        return ret;
-    }
-    
-    private void printToLabel(final String text)
-    {
-        Platform.runLater(new Runnable() {
+    @FXML
+    private void handleLeftButton(ActionEvent event) {
+        System.out.println("Left button pressed!");
+        toAssignKey = KeyEvent.VK_LEFT;
 
-            @Override
-            public void run() {
-                label.setText(text);
-            }
-        });
-    }
-    
-    private int getKeyEvent(String key)
-    {
-        intRet = -1;
-        for (Key p : keyList) {
-            if(p.getKeyString().matches(key) == true)
-                intRet = p.getOutputKey();
+        if (model.getSerialPort() == null) {
+            printToLabel("Please check the connection!\nYou can't assign a "
+                    + "button!");
         }
-        return intRet;
-    }
-    /**
-     * 
-     * @param key The input key from the aruduino
-     */
-    public void pressKey(String key)
-    {
-        int toPress = getKeyEvent(key);
-        if(toPress == -1)
-            printToLabel(key + " is not assigned");
-        else
-        {
-            if(toPress == KeyEvent.VK_SPACE)
-            {
-                robot.keyPress(toPress);
-                printToLabel("SPACE pressed");
-            }
-            else if(toPress == KeyEvent.VK_RIGHT)
-            {
-                robot.keyPress(toPress);
-                printToLabel("RIGHT pressed");
-            }
-            else if(toPress == KeyEvent.VK_LEFT)
-            {
-                robot.keyPress(toPress);
-                printToLabel("LEFT pressed");
-            }
-        }        
-    }
-    
-    public synchronized void assignKey(int keyToAssign)
-    {
-        progressbar.setVisible(true);
-        
-        printToLabel("Waiting for input from the device!");
-        progressbar.setVisible(true);
-        while("" .equals(toAssign)) { System.out.println("waiting"); }
-        progressbar.setVisible(false);
-        
-        
-        if (getKeyEvent(toAssign) == -1)
-        {
-            keyList.add(new Key(toAssign, keyToAssign));
-            printToLabel("Key successfuly assigned");
-            
+        else{
+            progressbar.setVisible(true);
         }
-        else
-        {
-            printToLabel(toAssign + " is already assigned \ntry again");
+    }
+
+    @FXML
+    private void handleSpaceButton(ActionEvent event) {
+        System.out.println("Space button pressed!");
+        toAssignKey = KeyEvent.VK_SPACE;
+
+        if (model.getSerialPort() == null) {
+            printToLabel("Please check the connection!\nYou can't assign a "
+                    + "button!");
         }
-        progressbar.setVisible(false);
-        waitingToAssign = false;
-        toAssign = "";
+        else{
+            progressbar.setVisible(true);
+        }
+    }
+
+    @FXML
+    private void handleRightButton(ActionEvent event) {
+        System.out.println("Right button pressed!");
+        toAssignKey = KeyEvent.VK_RIGHT;
+
+        if (model.getSerialPort() == null) {
+            printToLabel("Please check the connection!\nYou can't assign a "
+                    + "button!");
+        }
+        else{
+            progressbar.setVisible(true);
+        }
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        System.out.println("Update - method called!");
+        String input = model.getInputString();
+        
+        boolean isInList = false;
+        
+        for(int i = 0; i < keyList.size(); ++i)
+        {
+            if(keyList.get(i).getInputString().equals(input))
+            {
+                System.out.println("Key in list!");
+                isInList = true;
+                progressbar.setVisible(false);
+                robot.keyPress(keyList.get(i).getOutputKey());
+            }
+        }
+        
+        if(!isInList && toAssignKey != 0)
+        {
+            keyList.add(new Key(toAssignKey, input));
+            toAssignKey = 0;
+            progressbar.setVisible(false);
+            System.out.println("New key added! Size: "+ keyList.size());
+        }
     }
 }
