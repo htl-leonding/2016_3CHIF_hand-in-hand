@@ -30,6 +30,7 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.layout.BorderPane;
+import javax.swing.JOptionPane;
 import model.Key;
 import model.PortListener;
 
@@ -55,7 +56,7 @@ public class viewFXMLController implements Initializable, Observer {
     private ProgressIndicator progressbar;
 
     //Eine Istanz des ProtListeners wird erstellt
-    private PortListener model;
+    private static PortListener model;
 
     //Eine Liste der Keys
     private static List<Key> keyList;
@@ -74,14 +75,14 @@ public class viewFXMLController implements Initializable, Observer {
             Logger.getLogger(viewFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        model.addObserver(this);
+        getModel().addObserver(this);
         this.progressbar.setVisible(false);
 
         //If there is no connection...
-        if (model.getSerialPort() == null) {
+        if (getModel().getSerialPort() == null) {
             printToLabel("The Device is not connected. "
                     + "Please check the connection!");
-        } else if (model.getSerialPort() != null) {
+        } else if (getModel().getSerialPort() != null) {
             printToLabel("The Device is successfuly connected!");
         }
     }
@@ -112,7 +113,7 @@ public class viewFXMLController implements Initializable, Observer {
         System.out.println("Left button pressed!");
         toAssignKey = KeyEvent.VK_LEFT;
 
-        if (model.getSerialPort() == null) {
+        if (getModel().getSerialPort() == null) {
             printToLabel("Please check the connection!\nYou can't assign a "
                     + "button!");
         } else {
@@ -127,7 +128,7 @@ public class viewFXMLController implements Initializable, Observer {
         System.out.println("Space button pressed!");
         toAssignKey = KeyEvent.VK_SPACE;
 
-        if (model.getSerialPort() == null) {
+        if (getModel().getSerialPort() == null) {
             printToLabel("Please check the connection!\nYou can't assign a "
                     + "button!");
         } else {
@@ -142,7 +143,7 @@ public class viewFXMLController implements Initializable, Observer {
         System.out.println("Right button pressed!");
         toAssignKey = KeyEvent.VK_RIGHT;
 
-        if (model.getSerialPort() == null) {
+        if (getModel().getSerialPort() == null) {
             printToLabel("Please check the connection!\nYou can't assign a "
                     + "button!");
         } else {
@@ -153,7 +154,7 @@ public class viewFXMLController implements Initializable, Observer {
     @Override
     public void update(Observable o, Object arg) {
         System.out.println("Update - method called!");
-        String input = model.getInputString();
+        String input = getModel().getInputString();
 
         boolean isInList = false;
         for (int i = 0; i < keyList.size(); ++i) {
@@ -173,5 +174,12 @@ public class viewFXMLController implements Initializable, Observer {
             progressbar.setVisible(false);
             System.out.println("New key added! Size: " + keyList.size());
         }
+    }
+
+    /**
+     * @return the model
+     */
+    public static PortListener getModel() {
+        return model;
     }
 }
