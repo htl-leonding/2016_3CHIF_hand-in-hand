@@ -9,8 +9,6 @@ import java.awt.AWTException;
 import java.awt.Desktop;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -30,7 +28,6 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.layout.BorderPane;
-import javax.swing.JOptionPane;
 import model.Key;
 import model.PortListener;
 
@@ -75,7 +72,9 @@ public class viewFXMLController implements Initializable, Observer {
             Logger.getLogger(viewFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+        //Add as Observer
         getModel().addObserver(this);
+        //Set loadanimation to visible
         this.progressbar.setVisible(false);
 
         //If there is no connection...
@@ -87,6 +86,10 @@ public class viewFXMLController implements Initializable, Observer {
         }
     }
 
+    /**
+     * Writes given String on Label
+     * @param text 
+     */
     private void printToLabel(final String text) {
         Platform.runLater(new Runnable() {
             @Override
@@ -96,6 +99,11 @@ public class viewFXMLController implements Initializable, Observer {
         });
     }
 
+    /**
+     * HyperLink handler for Help
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void handleHyperLink(ActionEvent event) throws IOException {
         //Open Help-File with the use of System.getPropertys 
@@ -103,75 +111,99 @@ public class viewFXMLController implements Initializable, Observer {
                 + System.getProperty("file.separator") + "Ressources"
                 + System.getProperty("file.separator") + "Help_de_De.pdf";
 
-        Desktop.getDesktop().open(new File(filename));
+        Desktop.getDesktop().open(new File(filename));//Open file
     }
 
+    /**
+     * Handler for the very left button
+     * @param event 
+     */
     @FXML
     private void handleLeftButton(ActionEvent event) {
         printToLabel("Waiting for input from the microcontroller...");
-        
-        System.out.println("Left button pressed!");
-        toAssignKey = KeyEvent.VK_LEFT;
 
+        System.out.println("Left button pressed!");
+        toAssignKey = KeyEvent.VK_LEFT;//Save last pressed button
+
+        //Check if device is connected
         if (getModel().getSerialPort() == null) {
             printToLabel("Please check the connection!\nYou can't assign a "
                     + "button!");
         } else {
-            progressbar.setVisible(true);
+            progressbar.setVisible(true);//Show loadingbar
         }
     }
 
+    /**
+     * Handler for middle button
+     * @param event 
+     */
     @FXML
     private void handleSpaceButton(ActionEvent event) {
         printToLabel("Waiting for input from the microcontroller...");
-        
-        System.out.println("Space button pressed!");
-        toAssignKey = KeyEvent.VK_SPACE;
 
+        System.out.println("Space button pressed!");
+        toAssignKey = KeyEvent.VK_SPACE;//Save last pressed button
+
+        //Check if device is connected
         if (getModel().getSerialPort() == null) {
             printToLabel("Please check the connection!\nYou can't assign a "
                     + "button!");
         } else {
-            progressbar.setVisible(true);
+            progressbar.setVisible(true);//Show loadingbar
         }
     }
 
+    /**
+     * Handler for very right button
+     * @param event 
+     */
     @FXML
     private void handleRightButton(ActionEvent event) {
         printToLabel("Waiting for input from the microcontroller...");
 
         System.out.println("Right button pressed!");
-        toAssignKey = KeyEvent.VK_RIGHT;
+        toAssignKey = KeyEvent.VK_RIGHT;//Save last pressed button
 
+        //Check if device is connected
         if (getModel().getSerialPort() == null) {
             printToLabel("Please check the connection!\nYou can't assign a "
                     + "button!");
         } else {
-            progressbar.setVisible(true);    
+            progressbar.setVisible(true);//Show loadingbar
         }
     }
 
+    /**
+     * Handles incomming key-value
+     * @param o
+     * @param arg 
+     */
     @Override
     public void update(Observable o, Object arg) {
         System.out.println("Update - method called!");
         String input = getModel().getInputString();
 
         boolean isInList = false;
+        
+        //Looking if key is in List
         for (int i = 0; i < keyList.size(); ++i) {
+            //If inputvalue maches with key
             if (keyList.get(i).getInputString().equals(input)) {
                 System.out.println("Key in list!");
                 isInList = true;
-                progressbar.setVisible(false);
-                robot.keyPress(keyList.get(i).getOutputKey());
-               printToLabel("The button is already assigned!");
+                progressbar.setVisible(false);//Hide loadingbar
+                robot.keyPress(keyList.get(i).getOutputKey());//"PRESS" button
+                printToLabel("The button is already assigned!");
             }
         }
 
+        //When key is not in list
         if (!isInList && toAssignKey != 0) {
             printToLabel("Key successfully asigned!");
-            keyList.add(new Key(toAssignKey, input));
+            keyList.add(new Key(toAssignKey, input));//Adding new key to List
             toAssignKey = 0;
-            progressbar.setVisible(false);
+            progressbar.setVisible(false);//Hide loadingbar
             System.out.println("New key added! Size: " + keyList.size());
         }
     }
