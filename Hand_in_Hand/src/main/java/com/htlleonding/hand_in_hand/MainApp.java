@@ -6,6 +6,8 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -18,10 +20,11 @@ public class MainApp extends Application {
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
-        
-        stage.setTitle("JavaFX and Maven");
+        //stage.getIcons().add(new Image("C:\\Users\\Andrej\\Documents\\GitHub\\2016_3CHIF_hand-in-hand\\Hand_in_Hand\\ressources\\HighlLightIndustries_Logo.png"));
+        stage.setTitle("Hand in Hand");
         stage.setScene(scene);
         stage.show();
+        
            
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
