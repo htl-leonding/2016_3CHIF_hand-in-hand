@@ -15,4 +15,4 @@ Ziel ist es das reibungslos laufende Programm auf vielen Systemen verwenden zu k
 Der Benutzer soll mittels den Tasten auf dem Makey-Makey in einem Video-, Bild- oder Musikwiedergabeprogramm 
 verschiedene Funktionen ausführen können. Diese Funktionen kann der Benutzer selbständig einer Taste zuweisen.
 
-
+Hand in Hand Project by Sakal and Smilkovic http://sakalandrej.github.io/hand-in-hand/
