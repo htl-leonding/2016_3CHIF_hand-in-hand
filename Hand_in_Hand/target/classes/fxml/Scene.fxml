@@ -64,6 +64,13 @@
                      </BorderPane.margin>
                   </ProgressIndicator>
                </top>
+               <bottom>
+                  <Button fx:id="btReset" mnemonicParsing="false" onAction="#handleResetButton" text="RESET" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="5.0" top="-3.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </bottom>
             </BorderPane>
          </bottom>
       </BorderPane>

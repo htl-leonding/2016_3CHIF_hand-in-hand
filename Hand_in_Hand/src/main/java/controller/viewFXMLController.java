@@ -186,7 +186,7 @@ public class viewFXMLController implements Initializable, Observer {
 
         boolean isInList = false;
         
-        //Looking if key is in List
+                //Looking if key is in List
         for (int i = 0; i < keyList.size(); ++i) {
             //If inputvalue maches with key
             if (keyList.get(i).getInputString().equals(input)) {
@@ -194,6 +194,7 @@ public class viewFXMLController implements Initializable, Observer {
                 isInList = true;
                 progressbar.setVisible(false);//Hide loadingbar
                 robot.keyPress(keyList.get(i).getOutputKey());//"PRESS" button
+                if(toAssignKey != 0)
                 printToLabel("The button is already assigned!");
             }
         }
@@ -213,5 +214,10 @@ public class viewFXMLController implements Initializable, Observer {
      */
     public static PortListener getModel() {
         return model;
+    }
+
+    @FXML
+    private void handleResetButton(ActionEvent event) {
+        keyList.clear();
     }
 }
