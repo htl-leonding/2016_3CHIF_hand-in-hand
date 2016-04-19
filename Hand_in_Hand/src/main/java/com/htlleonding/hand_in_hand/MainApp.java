@@ -19,8 +19,8 @@ public class MainApp extends Application {
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
+        stage.getIcons().add(new Image(getClass().getResource("/ico.jpg").toExternalForm()));
         stage.setTitle("Hand in Hand");
-        stage.getIcons().add(new Image("/resources/HighlLightIndustries_Logo.png"));
         stage.setScene(scene);
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {

@@ -10,6 +10,7 @@ import java.awt.Desktop;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
+import javafx.scene.control.TabPane;
 import java.io.IOException;
 import java.net.URL;
 import java.util.LinkedList;
@@ -27,9 +28,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import model.Key;
 import model.PortListener;
+import javafx.scene.control.ListView;
+import javafx.scene.control.Tab;
+import javafx.scene.image.ImageView;
 
 /**
  *
@@ -38,19 +43,56 @@ import model.PortListener;
 public class viewFXMLController implements Initializable, Observer {
 
     @FXML
-    private Label label;
+    private Label lbInfoStefan;
     @FXML
-    private Button spaceButton;
+    private ImageView ivInfoPic;
+    @FXML
+    private BorderPane bpTwo;
+    @FXML
+    private Tab tInfo;
+    @FXML
+    private TabPane tbPane;
+    @FXML
+    private ImageView ivHomePic;
+    @FXML
+    private ListView<?> lvButtonsFunctionOverview;
+    @FXML
+    private Label lbInfoAndrej;
     @FXML
     private Button leftButton;
     @FXML
-    private Button rightButton;
+    private Button btReset;
     @FXML
-    private Hyperlink helpHyper;
+    private Label lbSupervised;
+    @FXML
+    private ImageView ivAndrejPic;
+    @FXML
+    private BorderPane bpOne;
+    @FXML
+    private ImageView ivStefanPic;
+    @FXML
+    private Button spaceButton;
+    @FXML
+    private Label lbPowered;
+    @FXML
+    private Tab tSettings;
+    @FXML
+    private ImageView ivGabrielPic;
+    @FXML
+    private Label label;
+    @FXML
+    private Label lbInfoGabriel;
     @FXML
     private BorderPane bordPane;
     @FXML
+    private Tab tHome;
+    @FXML
     private ProgressIndicator progressbar;
+    @FXML
+    private Hyperlink helpHyper;
+    @FXML
+    private Button rightButton;
+
 
     //Creating an new instance of the portlistener
     private static PortListener model;
@@ -65,6 +107,8 @@ public class viewFXMLController implements Initializable, Observer {
         model = new PortListener();
         keyList = new LinkedList<>();
         toAssignKey = 0;
+        ivInfoPic.setImage(new Image(getClass().getResource("/htl_logo.png").toExternalForm()));
+        ivHomePic.setImage(new Image(getClass().getResource("/HandinHand.PNG").toExternalForm()));
 
         try {
             robot = new Robot();
