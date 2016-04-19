@@ -33,7 +33,7 @@ import model.PortListener;
 
 /**
  *
- * @author Andrej Sakal, Gabriel Ionescu
+ * @author Andrej Sakal, Stefan Smiljkovic, Gabriel Ionescu
  */
 public class viewFXMLController implements Initializable, Observer {
 
@@ -52,10 +52,10 @@ public class viewFXMLController implements Initializable, Observer {
     @FXML
     private ProgressIndicator progressbar;
 
-    //Eine Istanz des ProtListeners wird erstellt
+    //Creating an new instance of the portlistener
     private static PortListener model;
 
-    //Eine Liste der Keys
+    //A new List where the Assigned function for the buttons is managed
     private static List<Key> keyList;
     private int toAssignKey;
     Robot robot;
@@ -74,7 +74,7 @@ public class viewFXMLController implements Initializable, Observer {
 
         //Add as Observer
         getModel().addObserver(this);
-        //Set loadanimation to visible
+        //Set load animation to visible
         this.progressbar.setVisible(false);
 
         //If there is no connection...
@@ -87,7 +87,7 @@ public class viewFXMLController implements Initializable, Observer {
     }
 
     /**
-     * Writes given String on Label
+     * Sets Label.Text to the given String
      * @param text 
      */
     private void printToLabel(final String text) {
@@ -155,7 +155,7 @@ public class viewFXMLController implements Initializable, Observer {
     }
 
     /**
-     * Handler for very right button
+     * Handler for the right button
      * @param event 
      */
     @FXML
@@ -175,7 +175,7 @@ public class viewFXMLController implements Initializable, Observer {
     }
 
     /**
-     * Handles incomming key-value
+     * Handles incoming key-value
      * @param o
      * @param arg 
      */
@@ -216,6 +216,10 @@ public class viewFXMLController implements Initializable, Observer {
         return model;
     }
 
+    /**
+     * Resets all assigned Keys
+     * @param event
+     */
     @FXML
     private void handleResetButton(ActionEvent event) {
         keyList.clear();

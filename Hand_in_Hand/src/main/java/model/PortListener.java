@@ -16,7 +16,7 @@ import java.util.Observable;
 
 /**
  *
- * @author Andrej Sakal
+ * @author Andrej Sakal, Stefan Smiljkovic, Gabriel Ionescu
  */
 public class PortListener extends Observable implements SerialPortEventListener {
 
@@ -25,13 +25,15 @@ public class PortListener extends Observable implements SerialPortEventListener 
     public SerialPort getSerialPort() {
         return serialPort;
     }
+
     /**
      * The port we're normally going to use.
      */
     private static final String PORT_NAMES[] = {
-        "/dev/ttyUSB0", // Linux
-        "COM3", "COM6", "COM7", "COM8", "COM9", "COM5" // Windows
+        "/dev/ttyUSB0", // Linux based port names
+        "COM3", "COM6", "COM7", "COM8", "COM9", "COM5" // Windows based port names
     };
+
     /**
      * A BufferedReader which will be fed by a InputStreamReader converting the
      * bytes into characters making the displayed results codepage independent
@@ -42,6 +44,7 @@ public class PortListener extends Observable implements SerialPortEventListener 
      * Saves the inputString
      */
     private String inputString;
+
     /**
      * Milliseconds to block while waiting for port open
      */
@@ -51,8 +54,13 @@ public class PortListener extends Observable implements SerialPortEventListener 
      */
     private static final int DATA_RATE = 9600;
 
+    /**
+     * Default constructor of the PortListener Class, searches the MC on the possible Ports
+     */
     public PortListener() {
-        System.out.println("CONSTR");//---------------------------
+
+        //Testing
+        //System.out.println("CONSTR");
         CommPortIdentifier portId = null;
         Enumeration portEnum = CommPortIdentifier.getPortIdentifiers();
         
@@ -62,13 +70,15 @@ public class PortListener extends Observable implements SerialPortEventListener 
             for (String portName : PORT_NAMES) {
                 if (currPortId.getName().equals(portName)) {
                     portId = currPortId;
-                    System.out.println("CONSTR FOUND PORT: " + portId.getName());
+                    //Testing
+                    //System.out.println("CONSTR FOUND PORT: " + portId.getName());
                     break;
                 }
             }
         }
         if (portId == null) {
-            System.out.println("Could not find COM port.");
+            //Testing
+            //System.out.println("Could not find COM port.");
             return;
         }
         try {
@@ -97,7 +107,7 @@ public class PortListener extends Observable implements SerialPortEventListener 
     /**
      * Returns the last read Input from the Port
      *
-     * @return
+     * @return Last Input
      */
     public String getInputString() {
         return inputString;
@@ -122,7 +132,7 @@ public class PortListener extends Observable implements SerialPortEventListener 
     @Override
     public void serialEvent(SerialPortEvent oEvent) {
 
-        //Cheks if the event is our needed event
+        //Proves if the event is our needed event
         if (oEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
             try {
 
@@ -131,7 +141,7 @@ public class PortListener extends Observable implements SerialPortEventListener 
                     inputString = input.readLine();
                     System.out.println("Input: " + inputString);
                     
-                    //Notifying all Observers when something new is read from the Prot
+                    //Notifying all Observers when something new is read from the mc
                     setChanged();
                     notifyObservers();
                 }

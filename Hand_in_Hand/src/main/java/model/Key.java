@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author Andrej Sakal, Stefan Smiljkovic
+ * @author Andrej Sakal, Stefan Smiljkovic, Gabriel Ionescu
  */
 public class Key {
    

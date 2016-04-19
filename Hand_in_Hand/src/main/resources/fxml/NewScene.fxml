@@ -21,32 +21,33 @@
          <center>
             <TabPane nodeOrientation="LEFT_TO_RIGHT" tabClosingPolicy="UNAVAILABLE" tabMinWidth="178.0" BorderPane.alignment="CENTER">
               <tabs>
-                <Tab text="Home">
+                <Tab fx:id="tHome" text="Home">
                      <content>
                         <BorderPane prefHeight="200.0" prefWidth="200.0">
                            <bottom>
                               <VBox prefHeight="171.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <Label text="Button-Funktionen:">
-                                       <padding>
-                                          <Insets bottom="5.0" left="7.0" />
-                                       </padding>
-                                    </Label>
-                                    <ListView prefHeight="145.0" prefWidth="595.0" />
+                                    <ListView fx:id="lvButtonsFunctionOverview" prefHeight="159.0" prefWidth="590.0">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin></ListView>
                                  </children>
                               </VBox>
                            </bottom>
-                           <top>
-                              <ImageView fitHeight="169.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <center>
+                              <ImageView fx:id="ivHomePic" fitHeight="170.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <BorderPane.margin>
-                                    <Insets top="15.0" />
+                                    <Insets top="5.0" />
                                  </BorderPane.margin>
+                                 <image>
+                                    <Image url="@../../../../../../../../Dropbox/Andrej/3CHIF/SYP/Projekt/Hand%20in%20Hand%20copy.JPG" />
+                                 </image>
                               </ImageView>
-                           </top>
+                           </center>
                         </BorderPane>
                      </content>
                 </Tab>
-                <Tab text="Settings">
+                <Tab fx:id="tSettings" text="Settings">
                   <content>
                       <AnchorPane id="AnchorPane" prefHeight="354.0" prefWidth="500.0">
                           <children>
@@ -85,7 +86,7 @@
                                   <bottom>
                                       <BorderPane prefHeight="195.0" prefWidth="500.0" BorderPane.alignment="CENTER">
                                           <center>
-                                              <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="468.0" style="-fx-background-color: #d3d3d3;" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                                              <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" prefHeight="94.0" prefWidth="541.0" style="-fx-background-color: #d3d3d3;" textAlignment="CENTER" BorderPane.alignment="CENTER">
                                                   <BorderPane.margin>
                                                       <Insets bottom="10.0" top="5.0" />
                                                   </BorderPane.margin>
@@ -112,9 +113,82 @@
                       </AnchorPane>
                   </content>
                   </Tab>
-                  <Tab text="Info">
+                  <Tab fx:id="tInfo" text="Info">
                      <content>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" />
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <top>
+                              <ImageView fx:id="ivInfoPic" fitHeight="60.0" fitWidth="440.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@../../../../../../../../Dropbox/Andrej/3CHIF/SYP/Projekt/htl_logo.png" />
+                                 </image>
+                                 <BorderPane.margin>
+                                    <Insets top="10.0" />
+                                 </BorderPane.margin>
+                              </ImageView>
+                           </top>
+                           <center>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <GridPane prefHeight="290.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="160.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label fx:id="lbInfoStefan" prefHeight="64.0" prefWidth="200.0" text="Stefan Smilkovic" textAlignment="JUSTIFY">
+                                             <font>
+                                                <Font size="27.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbInfoAndrej" alignment="CENTER" prefHeight="64.0" prefWidth="200.0" text="Andrej Sakal" textAlignment="JUSTIFY" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font size="27.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbInfoGabriel" alignment="CENTER" prefHeight="64.0" prefWidth="200.0" text="Gabriel Ionescu" textAlignment="JUSTIFY" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font size="27.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fx:id="ivStefanPic" fitHeight="169.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+                                          <ImageView fx:id="ivAndrejPic" fitHeight="170.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <ImageView fx:id="ivGabrielPic" fitHeight="168.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                 </center>
+                              </BorderPane>
+                           </center>
+                           <bottom>
+                              <GridPane prefHeight="21.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label fx:id="lbPowered" alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="298.0" text=" © 2016  - Powered by Hand in Hand " GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbSupervised" prefHeight="23.0" prefWidth="292.0" text="Supervised by Mag. Dr. Prof. Thomas Stütz">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </bottom></BorderPane>
                      </content>
                   </Tab>
               </tabs>
