@@ -10,7 +10,6 @@
         #7f8c8d,
         #bdc3c7;
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
-    //-fx-font-weight: bold;
     -fx-font-size: 1.1em;
 }
 .button:hover {
@@ -20,7 +19,6 @@
         #7f8c8d,
         #bdc3c7;
     -fx-font-weight: bold;
-    //-fx-font-size: 20px;
 }
 .button:pressed {
     -fx-padding: 10 15 13 15;

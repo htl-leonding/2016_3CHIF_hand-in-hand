@@ -20,12 +20,10 @@ public class MainApp extends Application {
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
-        //stage.getIcons().add(new Image("C:\\Users\\Andrej\\Documents\\GitHub\\2016_3CHIF_hand-in-hand\\Hand_in_Hand\\ressources\\HighlLightIndustries_Logo.png"));
         stage.setTitle("Hand in Hand");
+        stage.getIcons().add(new Image("/resources/HighlLightIndustries_Logo.png"));
         stage.setScene(scene);
         stage.show();
-        
-           
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {

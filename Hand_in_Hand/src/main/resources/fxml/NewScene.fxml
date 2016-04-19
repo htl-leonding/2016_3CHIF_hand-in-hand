@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <BorderPane prefHeight="401.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <center>
+            <TabPane nodeOrientation="LEFT_TO_RIGHT" tabClosingPolicy="UNAVAILABLE" tabMinWidth="178.0" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Home">
+                     <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <bottom>
+                              <VBox prefHeight="171.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label text="Button-Funktionen:">
+                                       <padding>
+                                          <Insets bottom="5.0" left="7.0" />
+                                       </padding>
+                                    </Label>
+                                    <ListView prefHeight="145.0" prefWidth="595.0" />
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <top>
+                              <ImageView fitHeight="169.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="15.0" />
+                                 </BorderPane.margin>
+                              </ImageView>
+                           </top>
+                        </BorderPane>
+                     </content>
+                </Tab>
+                <Tab text="Settings">
+                  <content>
+                      <AnchorPane id="AnchorPane" prefHeight="354.0" prefWidth="500.0">
+                          <children>
+                              <BorderPane fx:id="bordPane" prefHeight="354.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                  <center>
+                                      <Button fx:id="spaceButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="SPACE" BorderPane.alignment="CENTER">
+                                          <BorderPane.margin>
+                                              <Insets bottom="12.0" />
+                                          </BorderPane.margin>
+                                      </Button>
+                                  </center>
+                                  <left>
+                                      <Button fx:id="leftButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="LEFT" BorderPane.alignment="CENTER">
+                                          <BorderPane.margin>
+                                              <Insets bottom="12.0" left="10.0" />
+                                          </BorderPane.margin>
+                                      </Button>
+                                  </left>
+                                  <right>
+                                      <Button fx:id="rightButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="RIGHT" BorderPane.alignment="CENTER">
+                                          <BorderPane.margin>
+                                              <Insets bottom="12.0" right="10.0" />
+                                          </BorderPane.margin>
+                                      </Button>
+                                  </right>
+                                  <top>
+                                      <Hyperlink fx:id="helpHyper" alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="58.0" text="Help" textAlignment="CENTER" BorderPane.alignment="TOP_LEFT">
+                                          <font>
+                                              <Font size="16.0" />
+                                          </font>
+                                          <BorderPane.margin>
+                                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                          </BorderPane.margin>
+                                      </Hyperlink>
+                                  </top>
+                                  <bottom>
+                                      <BorderPane prefHeight="195.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+                                          <center>
+                                              <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="468.0" style="-fx-background-color: #d3d3d3;" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                                                  <BorderPane.margin>
+                                                      <Insets bottom="10.0" top="5.0" />
+                                                  </BorderPane.margin>
+                                              </Label>
+                                          </center>
+                                          <top>
+                                              <ProgressIndicator fx:id="progressbar" blendMode="DIFFERENCE" BorderPane.alignment="CENTER">
+                                                  <BorderPane.margin>
+                                                      <Insets />
+                                                  </BorderPane.margin>
+                                              </ProgressIndicator>
+                                          </top>
+                                          <bottom>
+                                              <Button fx:id="btReset" mnemonicParsing="false" text="RESET" BorderPane.alignment="CENTER">
+                                                  <BorderPane.margin>
+                                                      <Insets bottom="5.0" top="-3.0" />
+                                                  </BorderPane.margin>
+                                              </Button>
+                                          </bottom>
+                                      </BorderPane>
+                                  </bottom>
+                              </BorderPane>
+                          </children>
+                      </AnchorPane>
+                  </content>
+                  </Tab>
+                  <Tab text="Info">
+                     <content>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+              </tabs>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </top>
+</BorderPane>

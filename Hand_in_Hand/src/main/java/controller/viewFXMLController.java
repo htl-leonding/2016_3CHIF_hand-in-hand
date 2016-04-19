@@ -107,7 +107,7 @@ public class viewFXMLController implements Initializable, Observer {
     @FXML
     private void handleHyperLink(ActionEvent event) throws IOException {
         //Open Help-File with the use of System.getPropertys 
-        String filename = System.getProperty("user.dir")
+        String filename = System.getProperty("user.dir") + System.getProperty("file.separator") + "Hand_in_Hand"
                 + System.getProperty("file.separator") + "Ressources"
                 + System.getProperty("file.separator") + "Help_de_De.pdf";
 
