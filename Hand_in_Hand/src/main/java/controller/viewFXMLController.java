@@ -10,7 +10,13 @@ import java.awt.Desktop;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
-import javafx.scene.control.TabPane;
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.*;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.LinkedList;
@@ -24,16 +30,10 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.Label;
-import javafx.scene.control.ProgressIndicator;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import model.Key;
 import model.PortListener;
-import javafx.scene.control.ListView;
-import javafx.scene.control.Tab;
 import javafx.scene.image.ImageView;
 
 /**
@@ -55,7 +55,7 @@ public class viewFXMLController implements Initializable, Observer {
     @FXML
     private ImageView ivHomePic;
     @FXML
-    private ListView<?> lvButtonsFunctionOverview;
+    private ListView<Key> lvButtonsFunctionOverview;
     @FXML
     private Label lbInfoAndrej;
     @FXML
@@ -92,6 +92,8 @@ public class viewFXMLController implements Initializable, Observer {
     private Hyperlink helpHyper;
     @FXML
     private Button rightButton;
+    ObservableList<Key> keys;
+
 
 
     //Creating an new instance of the portlistener
@@ -106,6 +108,14 @@ public class viewFXMLController implements Initializable, Observer {
     public void initialize(URL url, ResourceBundle rb) {
         model = new PortListener();
         keyList = new LinkedList<>();
+
+        //For testing
+        for (int i = 0; i < 3; i++) {
+            keyList.add(new Key(i, "", "not assigned"));
+        }
+        //Refresh the ListView
+        RefreshListView();
+
         toAssignKey = 0;
         ivInfoPic.setImage(new Image(getClass().getResource("/htl_logo.png").toExternalForm()));
         ivHomePic.setImage(new Image(getClass().getResource("/HandinHand.PNG").toExternalForm()));
@@ -128,6 +138,15 @@ public class viewFXMLController implements Initializable, Observer {
         } else if (getModel().getSerialPort() != null) {
             printToLabel("The Device is successfuly connected!");
         }
+
+        /*
+        lvButtonsFunctionOverview.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Key>() {
+            @Override
+            public void changed(ObservableValue<? extends Key> observable, Key oldValue, Key newValue) {
+
+            }
+        });
+        */
     }
 
     /**
@@ -150,12 +169,7 @@ public class viewFXMLController implements Initializable, Observer {
      */
     @FXML
     private void handleHyperLink(ActionEvent event) throws IOException {
-        //Open Help-File with the use of System.getPropertys 
-        String filename = System.getProperty("user.dir") + System.getProperty("file.separator") + "Hand_in_Hand"
-                + System.getProperty("file.separator") + "Ressources"
-                + System.getProperty("file.separator") + "Help_de_De.pdf";
-
-        Desktop.getDesktop().open(new File(filename));//Open file
+        Desktop.getDesktop().open(new File(getClass().getResource("/Help_de_De.pdf").getFile()));//Open file
     }
 
     /**
@@ -246,7 +260,8 @@ public class viewFXMLController implements Initializable, Observer {
         //When key is not in list
         if (!isInList && toAssignKey != 0) {
             printToLabel("Key successfully asigned!");
-            keyList.add(new Key(toAssignKey, input));//Adding new key to List
+            keyList.add(new Key(toAssignKey, input, ""));//Adding new key to List
+            RefreshListView();
             toAssignKey = 0;
             progressbar.setVisible(false);//Hide loadingbar
             System.out.println("New key added! Size: " + keyList.size());
@@ -267,5 +282,11 @@ public class viewFXMLController implements Initializable, Observer {
     @FXML
     private void handleResetButton(ActionEvent event) {
         keyList.clear();
+    }
+
+    private void RefreshListView() {
+        keys = FXCollections.observableList(keyList);
+        lvButtonsFunctionOverview.setItems(keys);
+        lvButtonsFunctionOverview.refresh();
     }
 }

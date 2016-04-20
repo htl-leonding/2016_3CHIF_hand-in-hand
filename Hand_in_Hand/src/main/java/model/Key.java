@@ -12,12 +12,18 @@ package model;
 public class Key {
    
     private String keyString = null;
+    private String actionOfButton = null;
     private int outputKey = 0;
-    
-    public Key(int key, String keyString) 
+    private static int nuOfObj = 0;
+    private int id = 0;
+
+    public Key(int key, String keyString, String actionOfButton)
     {
         this.keyString = keyString;
         this.outputKey = key;
+        this.actionOfButton = actionOfButton;
+        nuOfObj++;
+        id = nuOfObj;
     }
 
     public String getInputString() {
@@ -39,7 +45,7 @@ public class Key {
     @Override
     public String toString()
     {
-        return keyString + " " + outputKey;
+        return String.format("%d                                                            %s", id, actionOfButton);
     }
     
 }
