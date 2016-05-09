@@ -109,10 +109,11 @@ public class viewFXMLController implements Initializable, Observer {
         model = new PortListener();
         keyList = new LinkedList<>();
 
-        //For testing
+        //For testing of the listView
         for (int i = 0; i < 3; i++) {
             keyList.add(new Key(i, "", "not assigned"));
         }
+
         //Refresh the ListView
         RefreshListView();
 
@@ -139,15 +140,6 @@ public class viewFXMLController implements Initializable, Observer {
         } else if (getModel().getSerialPort() != null) {
             printToLabel("The Device is successfuly connected!");
         }
-
-        /*
-        lvButtonsFunctionOverview.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Key>() {
-            @Override
-            public void changed(ObservableValue<? extends Key> observable, Key oldValue, Key newValue) {
-
-            }
-        });
-        */
     }
 
     /**
@@ -282,7 +274,12 @@ public class viewFXMLController implements Initializable, Observer {
      */
     @FXML
     private void handleResetButton(ActionEvent event) {
-        keyList.clear();
+        //keyList.clear();
+        for (int i = 0; i < keyList.size(); i++){
+            keyList.get(i).setActionOfButton("not assigned");
+            keyList.get(i).setInputKey("");
+            keyList.get(i).setOutputKey(0);
+        }
         lvButtonsFunctionOverview.refresh();
     }
 

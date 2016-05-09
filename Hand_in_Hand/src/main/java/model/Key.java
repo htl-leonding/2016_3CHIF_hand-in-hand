@@ -18,6 +18,15 @@ public class Key {
     private static int nuOfObj = 0;
     private int id = 0;
 
+
+    public String getActionOfButton() {
+        return actionOfButton;
+    }
+
+    public void setActionOfButton(String actionOfButton) {
+        this.actionOfButton = actionOfButton;
+    }
+
     public Key(int key, String keyString, String actionOfButton)
     {
         this.keyString = keyString;
