@@ -14,6 +14,7 @@ public class Key {
     private String keyString = null;
     private String actionOfButton = null;
     private int outputKey = 0;
+    //ID
     private static int nuOfObj = 0;
     private int id = 0;
 

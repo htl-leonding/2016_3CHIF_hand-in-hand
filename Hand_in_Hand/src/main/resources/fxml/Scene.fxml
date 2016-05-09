@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
@@ -122,15 +123,15 @@
                            <center>
                               <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                  <center>
-                                    <GridPane prefHeight="290.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                                    <GridPane prefHeight="302.0" prefWidth="599.0" BorderPane.alignment="CENTER">
                                       <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                       </columnConstraints>
                                       <rowConstraints>
-                                          <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
-                                        <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="160.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="236.0" minHeight="10.0" prefHeight="236.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
                                           <Label fx:id="lbInfoStefan" prefHeight="64.0" prefWidth="200.0" text="Stefan Smilkovic" textAlignment="JUSTIFY">
@@ -149,7 +150,7 @@
                                              </font>
                                           </Label>
                                           <ImageView fx:id="ivStefanPic" fitHeight="169.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
-                                          <ImageView fx:id="ivAndrejPic" fitHeight="170.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <ImageView fx:id="ivAndrejPic" fitHeight="221.0" fitWidth="173.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                           <ImageView fx:id="ivGabrielPic" fitHeight="168.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                                        </children>
                                     </GridPane>

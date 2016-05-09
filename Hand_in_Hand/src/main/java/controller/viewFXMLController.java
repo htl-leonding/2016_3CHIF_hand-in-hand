@@ -119,6 +119,7 @@ public class viewFXMLController implements Initializable, Observer {
         toAssignKey = 0;
         ivInfoPic.setImage(new Image(getClass().getResource("/htl_logo.png").toExternalForm()));
         ivHomePic.setImage(new Image(getClass().getResource("/HandinHand.PNG").toExternalForm()));
+        ivAndrejPic.setImage(new Image(getClass().getResource("/Sakal.jpg").toExternalForm()));
 
         try {
             robot = new Robot();
@@ -282,6 +283,7 @@ public class viewFXMLController implements Initializable, Observer {
     @FXML
     private void handleResetButton(ActionEvent event) {
         keyList.clear();
+        lvButtonsFunctionOverview.refresh();
     }
 
     private void RefreshListView() {
