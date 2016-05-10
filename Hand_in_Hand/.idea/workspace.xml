@@ -159,11 +159,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="languageProperty_de_DE.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="languageProperty_de_DE.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/languageProperty_de_DE.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -207,10 +207,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewFXMLController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="viewFXMLController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/viewFXMLController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60597014">
+            <state vertical-scroll-proportion="0.0">
               <caret line="298" column="44" selection-start-line="298" selection-start-column="44" selection-end-line="298" selection-end-column="44" />
               <folding>
                 <element signature="method#initialize#0;class#viewFXMLController#0" expanded="false" />
@@ -244,8 +244,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/htlleonding/hand_in_hand/MainApp.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/Scene.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/model/Key.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/languageProperty_de_DE.properties" />
         <option value="$PROJECT_DIR$/src/main/java/controller/viewFXMLController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/languageProperty_de_DE.properties" />
       </list>
     </option>
   </component>
@@ -1023,12 +1023,12 @@
       <workItem from="1462280241581" duration="1500000" />
       <workItem from="1462825091128" duration="2720000" />
       <workItem from="1462881321428" duration="326000" />
-      <workItem from="1462884439010" duration="5626000" />
+      <workItem from="1462884439010" duration="5735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20294000" />
+    <option name="totallyTimeSpent" value="20403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1932" height="1048" extended-state="0" />
@@ -2246,14 +2246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/languageProperty_de_DE.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2275,7 +2267,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/viewFXMLController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60597014">
+        <state vertical-scroll-proportion="0.0">
           <caret line="298" column="44" selection-start-line="298" selection-start-column="44" selection-end-line="298" selection-end-column="44" />
           <folding>
             <element signature="method#initialize#0;class#viewFXMLController#0" expanded="false" />
@@ -2292,6 +2284,14 @@
             <element signature="docComment;method#handleResetButton#0;class#viewFXMLController#0" expanded="false" />
             <element signature="method#handleResetButton#0;class#viewFXMLController#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/languageProperty_de_DE.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
