@@ -105,7 +105,7 @@
                                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                   </rowConstraints>
                                                    <children>
-                                                      <Button fx:id="btDeutsch" minHeight="35.0" mnemonicParsing="false" onAction="#handleGermanButton" prefWidth="150.0" text="Deutsch" />
+                                                      <Button fx:id="btDeutsch" minHeight="35.0" mnemonicParsing="false" onAction="#handleGermanButton" prefWidth="150.0" text="Englisch" />
                                                           <Button fx:id="btReset" alignment="CENTER" contentDisplay="CENTER" minHeight="35.0" mnemonicParsing="false" onAction="#handleResetButton" prefWidth="150.0" text="RESET" textAlignment="CENTER" GridPane.columnIndex="1" />
                                                    </children>
                                                 </GridPane>

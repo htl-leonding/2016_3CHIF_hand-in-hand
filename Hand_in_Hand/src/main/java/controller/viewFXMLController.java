@@ -38,7 +38,6 @@ import javafx.scene.image.ImageView;
  */
 public class viewFXMLController implements Initializable, Observer {
 
-    private String languagePropertyFile = "languageProperty";
     @FXML
     private Label lbInfoStefan;
     @FXML
@@ -91,11 +90,15 @@ public class viewFXMLController implements Initializable, Observer {
     private Button rightButton;
     @FXML
     private Button btDeutsch;
+
+    //For the ListView on the Home Tab
     ObservableList<Key> keys;
-    private boolean isGerman = false;
+    //For the Language if the act Lang is german
+    private boolean isGerman = true;
+    //For I18n
     ResourceBundle rs = null;
-
-
+    //LanguagePropertyFile
+    private String languagePropertyFile = "languageProperty";
 
     //Creating an new instance of the portlistener
     private static PortListener model;
@@ -122,7 +125,7 @@ public class viewFXMLController implements Initializable, Observer {
         toAssignKey = 0;
         ivInfoPic.setImage(new Image(getClass().getResource("/htl_logo.png").toExternalForm()));
         ivHomePic.setImage(new Image(getClass().getResource("/HandinHand.PNG").toExternalForm()));
-        ivAndrejPic.setImage(new Image(getClass().getResource("/Sakal.jpg").toExternalForm()));
+        ivAndrejPic.setImage(new Image(getClass().getResource("/Sakal.JPG").toExternalForm()));
 
         try {
             robot = new Robot();
@@ -297,15 +300,19 @@ public class viewFXMLController implements Initializable, Observer {
         tHome.setText(rs.getString("Home"));
         tSettings.setText(rs.getString("Settings"));
         helpHyper.setText(rs.getString("Help"));
+        btDeutsch.setText(rs.getString("Language"));
+        label.setText("");
     }
     @FXML
     public void handleGermanButton() {
         if (isGerman)
         {
             changeLang("en","US");
+            isGerman = false;
         }
         else {
             changeLang("de", "DE");
+            isGerman = true;
         }
     }
 }
