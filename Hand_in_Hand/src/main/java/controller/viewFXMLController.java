@@ -19,11 +19,7 @@ import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Observable;
-import java.util.Observer;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Platform;
@@ -42,6 +38,7 @@ import javafx.scene.image.ImageView;
  */
 public class viewFXMLController implements Initializable, Observer {
 
+    private String languagePropertyFile = "languageProperty";
     @FXML
     private Label lbInfoStefan;
     @FXML
@@ -92,7 +89,11 @@ public class viewFXMLController implements Initializable, Observer {
     private Hyperlink helpHyper;
     @FXML
     private Button rightButton;
+    @FXML
+    private Button btDeutsch;
     ObservableList<Key> keys;
+    private boolean isGerman = false;
+    ResourceBundle rs = null;
 
 
 
@@ -108,10 +109,11 @@ public class viewFXMLController implements Initializable, Observer {
     public void initialize(URL url, ResourceBundle rb) {
         model = new PortListener();
         keyList = new LinkedList<>();
+        changeLang("de","DE");
 
         //For testing of the listView
         for (int i = 0; i < 3; i++) {
-            keyList.add(new Key(i, "", "not assigned"));
+            keyList.add(new Key(i, "", "-"));
         }
 
         //Refresh the ListView
@@ -135,24 +137,10 @@ public class viewFXMLController implements Initializable, Observer {
 
         //If there is no connection...
         if (getModel().getSerialPort() == null) {
-            printToLabel("The Device is not connected. "
-                    + "Please check the connection!");
+            label.setText(rs.getString("NotConnected"));
         } else if (getModel().getSerialPort() != null) {
-            printToLabel("The Device is successfuly connected!");
+            label.setText(rs.getString("ConnectedSuc"));
         }
-    }
-
-    /**
-     * Sets Label.Text to the given String
-     * @param text 
-     */
-    private void printToLabel(final String text) {
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                label.setText(text);
-            }
-        });
     }
 
     /**
@@ -171,15 +159,16 @@ public class viewFXMLController implements Initializable, Observer {
      */
     @FXML
     private void handleLeftButton(ActionEvent event) {
-        printToLabel("Waiting for input from the microcontroller...");
+        label.setText(rs.getString("WaitingForInput"));
 
-        System.out.println("Left button pressed!");
+        //ForTesting
+        //System.out.println("Left button pressed!");
+
         toAssignKey = KeyEvent.VK_LEFT;//Save last pressed button
 
         //Check if device is connected
         if (getModel().getSerialPort() == null) {
-            printToLabel("Please check the connection!\nYou can't assign a "
-                    + "button!");
+            label.setText(rs.getString("NotConnectedError"));
         } else {
             progressbar.setVisible(true);//Show loadingbar
         }
@@ -191,16 +180,16 @@ public class viewFXMLController implements Initializable, Observer {
      */
     @FXML
     private void handleSpaceButton(ActionEvent event) {
-        printToLabel("Waiting for input from the microcontroller...");
+        label.setText(rs.getString("WaitingForInput"));
 
-        System.out.println("Space button pressed!");
+        //For Testing
+        //System.out.println("Space button pressed!");
         toAssignKey = KeyEvent.VK_SPACE;//Save last pressed button
 
         //Check if device is connected
         if (getModel().getSerialPort() == null) {
-            printToLabel("Please check the connection!\nYou can't assign a "
-                    + "button!");
-        } else {
+            label.setText(rs.getString("NotConnectedError"));
+            } else {
             progressbar.setVisible(true);//Show loadingbar
         }
     }
@@ -211,16 +200,16 @@ public class viewFXMLController implements Initializable, Observer {
      */
     @FXML
     private void handleRightButton(ActionEvent event) {
-        printToLabel("Waiting for input from the microcontroller...");
+        label.setText(rs.getString("WaitingForInput"));
 
-        System.out.println("Right button pressed!");
+        //For Testing
+        //System.out.println("Right button pressed!");
         toAssignKey = KeyEvent.VK_RIGHT;//Save last pressed button
 
         //Check if device is connected
         if (getModel().getSerialPort() == null) {
-            printToLabel("Please check the connection!\nYou can't assign a "
-                    + "button!");
-        } else {
+            label.setText(rs.getString("NotConnectedError"));
+            } else {
             progressbar.setVisible(true);//Show loadingbar
         }
     }
@@ -232,32 +221,40 @@ public class viewFXMLController implements Initializable, Observer {
      */
     @Override
     public void update(Observable o, Object arg) {
-        System.out.println("Update - method called!");
+
+        //For Testing
+        //System.out.println("Update - method called!");
         String input = getModel().getInputString();
 
         boolean isInList = false;
         
                 //Looking if key is in List
         for (int i = 0; i < keyList.size(); ++i) {
+
             //If inputvalue maches with key
             if (keyList.get(i).getInputString().equals(input)) {
-                System.out.println("Key in list!");
+
+                //For Testing
+                //System.out.println("Key in list!");
+
                 isInList = true;
                 progressbar.setVisible(false);//Hide loadingbar
                 robot.keyPress(keyList.get(i).getOutputKey());//"PRESS" button
                 if(toAssignKey != 0)
-                printToLabel("The button is already assigned!");
+                label.setText(rs.getString("AlreadyAssinged"));
             }
         }
 
         //When key is not in list
         if (!isInList && toAssignKey != 0) {
-            printToLabel("Key successfully asigned!");
+            label.setText(rs.getString("KeyAssignedSuc"));
             keyList.add(new Key(toAssignKey, input, ""));//Adding new key to List
             RefreshListView();
             toAssignKey = 0;
             progressbar.setVisible(false);//Hide loadingbar
-            System.out.println("New key added! Size: " + keyList.size());
+
+            //For Testing
+            //System.out.println("New key added! Size: " + keyList.size());
         }
     }
 
@@ -287,5 +284,28 @@ public class viewFXMLController implements Initializable, Observer {
         keys = FXCollections.observableList(keyList);
         lvButtonsFunctionOverview.setItems(keys);
         lvButtonsFunctionOverview.refresh();
+    }
+    public void changeLang(String language, String country) {
+        Locale l = new Locale(language, country);
+        rs = ResourceBundle.getBundle(languagePropertyFile, l);
+
+        lbSupervised.setText(rs.getString("SuperBy"));
+        leftButton.setText(rs.getString("Left"));
+        rightButton.setText(rs.getString("Right"));
+        spaceButton.setText(rs.getString("Space"));
+        btReset.setText(rs.getString("Reset"));
+        tHome.setText(rs.getString("Home"));
+        tSettings.setText(rs.getString("Settings"));
+        helpHyper.setText(rs.getString("Help"));
+    }
+    @FXML
+    public void handleGermanButton() {
+        if (isGerman)
+        {
+            changeLang("en","US");
+        }
+        else {
+            changeLang("de", "DE");
+        }
     }
 }

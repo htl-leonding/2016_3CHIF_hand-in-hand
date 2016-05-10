@@ -17,10 +17,10 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="bpOne" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.viewFXMLController">
-   <top>
-      <BorderPane fx:id="bpTwo" prefHeight="401.0" prefWidth="600.0" BorderPane.alignment="TOP_LEFT">
+   <center>
+      <BorderPane fx:id="bpTwo" prefHeight="401.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <center>
-            <TabPane fx:id="tbPane" nodeOrientation="LEFT_TO_RIGHT" tabClosingPolicy="UNAVAILABLE" tabMinWidth="178.0" BorderPane.alignment="CENTER">
+            <TabPane fx:id="tbPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="414.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="178.0" BorderPane.alignment="CENTER">
               <tabs>
                 <Tab fx:id="tHome" text="Home">
                      <content>
@@ -80,7 +80,7 @@
                                   <bottom>
                                       <BorderPane prefHeight="195.0" prefWidth="500.0" BorderPane.alignment="CENTER">
                                           <center>
-                                              <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" prefHeight="94.0" prefWidth="541.0" style="-fx-background-color: #d3d3d3;" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                                              <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" prefHeight="78.0" prefWidth="541.0" style="-fx-background-color: #d3d3d3;" textAlignment="CENTER" BorderPane.alignment="CENTER">
                                                   <BorderPane.margin>
                                                       <Insets bottom="10.0" top="5.0" />
                                                   </BorderPane.margin>
@@ -93,13 +93,25 @@
                                                   </BorderPane.margin>
                                               </ProgressIndicator>
                                           </top>
-                                          <bottom>
-                                              <Button fx:id="btReset" mnemonicParsing="false" onAction="#handleResetButton" text="RESET" BorderPane.alignment="CENTER">
-                                                  <BorderPane.margin>
-                                                      <Insets bottom="5.0" top="-3.0" />
-                                                  </BorderPane.margin>
-                                              </Button>
-                                          </bottom>
+                                       <bottom>
+                                          <VBox alignment="CENTER" prefHeight="55.0" prefWidth="598.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <GridPane alignment="CENTER" prefHeight="59.0" prefWidth="598.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Button fx:id="btDeutsch" minHeight="35.0" mnemonicParsing="false" onAction="#handleGermanButton" prefWidth="150.0" text="Deutsch" />
+                                                          <Button fx:id="btReset" alignment="CENTER" contentDisplay="CENTER" minHeight="35.0" mnemonicParsing="false" onAction="#handleResetButton" prefWidth="150.0" text="RESET" textAlignment="CENTER" GridPane.columnIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </VBox>
+                                       </bottom>
                                       </BorderPane>
                                   </bottom>
                               </BorderPane>
@@ -198,5 +210,5 @@
             <Insets top="1.0" />
          </padding>
       </BorderPane>
-   </top>
+   </center>
 </BorderPane>
