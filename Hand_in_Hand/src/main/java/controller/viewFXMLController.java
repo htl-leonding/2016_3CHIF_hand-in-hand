@@ -245,13 +245,23 @@ public class viewFXMLController implements Initializable, Observer {
                 progressbar.setVisible(false);//Hide loadingbar
                 robot.keyPress(keyList.get(i).getOutputKey());//"PRESS" button
                 if(toAssignKey != 0)
-                label.setText(rs.getString("AlreadyAssinged"));
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            label.setText(rs.getString("AlreadyAssinged"));
+                        }
+                    });
             }
         }
 
         //When key is not in list
         if (!isInList && toAssignKey != 0) {
-            label.setText(rs.getString("KeyAssignedSuc"));
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    label.setText(rs.getString("AssignedKeySuc"));
+                }
+            });
             keyList.add(new Key(toAssignKey, input, ""));//Adding new key to List
             RefreshListView();
             toAssignKey = 0;
@@ -277,7 +287,7 @@ public class viewFXMLController implements Initializable, Observer {
     private void handleResetButton(ActionEvent event) {
         //keyList.clear();
         for (int i = 0; i < keyList.size(); i++){
-            keyList.get(i).setActionOfButton("not assigned");
+            keyList.get(i).setActionOfButton("-");
             keyList.get(i).setInputKey("");
             keyList.get(i).setOutputKey(0);
         }
