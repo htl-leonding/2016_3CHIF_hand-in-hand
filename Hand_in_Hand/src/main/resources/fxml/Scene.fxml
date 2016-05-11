@@ -47,21 +47,21 @@
                           <children>
                               <BorderPane fx:id="bordPane" prefHeight="354.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                   <center>
-                                      <Button fx:id="spaceButton" mnemonicParsing="false" onAction="#handleSpaceButton" prefHeight="50.0" prefWidth="100.0" text="SPACE" BorderPane.alignment="CENTER">
+                                      <Button fx:id="spaceButton" mnemonicParsing="false" onAction="#handleSpaceButton" prefHeight="50.0" prefWidth="120.0" text="SPACE" BorderPane.alignment="CENTER">
                                           <BorderPane.margin>
                                               <Insets bottom="12.0" />
                                           </BorderPane.margin>
                                       </Button>
                                   </center>
                                   <left>
-                                      <Button fx:id="leftButton" mnemonicParsing="false" onAction="#handleLeftButton" prefHeight="50.0" prefWidth="100.0" text="LEFT" BorderPane.alignment="CENTER">
+                                      <Button fx:id="leftButton" mnemonicParsing="false" onAction="#handleLeftButton" prefHeight="50.0" prefWidth="120.0" text="LEFT" BorderPane.alignment="CENTER">
                                           <BorderPane.margin>
                                               <Insets bottom="12.0" left="10.0" />
                                           </BorderPane.margin>
                                       </Button>
                                   </left>
                                   <right>
-                                      <Button fx:id="rightButton" mnemonicParsing="false" onAction="#handleRightButton" prefHeight="50.0" prefWidth="100.0" text="RIGHT" BorderPane.alignment="CENTER">
+                                      <Button fx:id="rightButton" mnemonicParsing="false" onAction="#handleRightButton" prefHeight="50.0" prefWidth="120.0" text="RIGHT" BorderPane.alignment="CENTER">
                                           <BorderPane.margin>
                                               <Insets bottom="12.0" right="10.0" />
                                           </BorderPane.margin>
@@ -137,9 +137,9 @@
                                  <center>
                                     <GridPane prefHeight="302.0" prefWidth="599.0" BorderPane.alignment="CENTER">
                                       <columnConstraints>
-                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                       </columnConstraints>
                                       <rowConstraints>
                                           <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
@@ -161,9 +161,9 @@
                                                 <Font size="27.0" />
                                              </font>
                                           </Label>
-                                          <ImageView fx:id="ivStefanPic" fitHeight="169.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+                                          <ImageView fx:id="ivStefanPic" fitHeight="221.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
                                           <ImageView fx:id="ivAndrejPic" fitHeight="221.0" fitWidth="173.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                          <ImageView fx:id="ivGabrielPic" fitHeight="168.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <ImageView fx:id="ivGabrielPic" fitHeight="221.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                                        </children>
                                     </GridPane>
                                  </center>

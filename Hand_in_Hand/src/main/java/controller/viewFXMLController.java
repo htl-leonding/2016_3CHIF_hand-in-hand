@@ -126,6 +126,7 @@ public class viewFXMLController implements Initializable, Observer {
         ivInfoPic.setImage(new Image(getClass().getResource("/htl_logo.png").toExternalForm()));
         ivHomePic.setImage(new Image(getClass().getResource("/HandinHand.PNG").toExternalForm()));
         ivAndrejPic.setImage(new Image(getClass().getResource("/Sakal.JPG").toExternalForm()));
+        ivStefanPic.setImage(new Image(getClass().getResource("/Smiljkovic.jpg").toExternalForm()));
 
         try {
             robot = new Robot();
