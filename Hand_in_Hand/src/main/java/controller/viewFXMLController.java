@@ -115,9 +115,9 @@ public class viewFXMLController implements Initializable, Observer {
         changeLang("de","DE");
 
         //For testing of the listView
-        for (int i = 0; i < 3; i++) {
+        /*for (int i = 0; i < 3; i++) {
             keyList.add(new Key(i, "", "-"));
-        }
+        }*/
 
         //Refresh the ListView
         RefreshListView();
@@ -285,12 +285,7 @@ public class viewFXMLController implements Initializable, Observer {
      */
     @FXML
     private void handleResetButton(ActionEvent event) {
-        //keyList.clear();
-        for (int i = 0; i < keyList.size(); i++){
-            keyList.get(i).setActionOfButton("-");
-            keyList.get(i).setInputKey("");
-            keyList.get(i).setOutputKey(0);
-        }
+        keyList.clear();
         lvButtonsFunctionOverview.refresh();
     }
 
