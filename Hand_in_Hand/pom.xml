@@ -11,7 +11,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mainClass>com.htlleonding.hand_in_hand.MainApp</mainClass>
+        <mainClass>htl.leonding.hand_in_hand.HandInHand</mainClass>
     </properties>
 
     <organization>
