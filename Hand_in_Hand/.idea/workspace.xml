@@ -90,13 +90,15 @@
       <file leaf-file-name="viewFXMLController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/viewFXMLController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67824495">
-              <caret line="311" column="28" selection-start-line="311" selection-start-column="28" selection-end-line="311" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.738574">
+              <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7965#7966#0" expanded="true" />
-                <element signature="e#7996#7997#0" expanded="true" />
+                <element signature="docComment;method#getModel#0;class#viewFXMLController#0" expanded="false" />
+                <element signature="docComment;method#handleResetButton#0;class#viewFXMLController#0" expanded="false" />
+                <element signature="docComment;method#changeLang#0;class#viewFXMLController#0" expanded="false" />
                 <element signature="method#changeLang#0;class#viewFXMLController#0" expanded="false" />
+                <element signature="method#handleGermanButton#0;class#viewFXMLController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -921,12 +923,12 @@
       <workItem from="1462991956918" duration="1433000" />
       <workItem from="1463037773097" duration="378000" />
       <workItem from="1463426866706" duration="388000" />
-      <workItem from="1463644319479" duration="1784000" />
+      <workItem from="1463644319479" duration="2590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26957000" />
+    <option name="totallyTimeSpent" value="27763000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1057,9 +1059,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7965#7966#0" expanded="true" />
-            <element signature="e#7996#7997#0" expanded="true" />
+            <element signature="docComment;method#getModel#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#handleResetButton#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#changeLang#0;class#viewFXMLController#0" expanded="false" />
             <element signature="method#changeLang#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="method#handleGermanButton#0;class#viewFXMLController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1119,9 +1123,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7965#7966#0" expanded="true" />
-            <element signature="e#7996#7997#0" expanded="true" />
+            <element signature="docComment;method#getModel#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#handleResetButton#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#changeLang#0;class#viewFXMLController#0" expanded="false" />
             <element signature="method#changeLang#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="method#handleGermanButton#0;class#viewFXMLController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1159,9 +1165,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7965#7966#0" expanded="true" />
-            <element signature="e#7996#7997#0" expanded="true" />
+            <element signature="docComment;method#getModel#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#handleResetButton#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#changeLang#0;class#viewFXMLController#0" expanded="false" />
             <element signature="method#changeLang#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="method#handleGermanButton#0;class#viewFXMLController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1199,9 +1207,11 @@
           <caret line="262" column="69" selection-start-line="262" selection-start-column="69" selection-end-line="262" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7965#7966#0" expanded="true" />
-            <element signature="e#7996#7997#0" expanded="true" />
+            <element signature="docComment;method#getModel#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#handleResetButton#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#changeLang#0;class#viewFXMLController#0" expanded="false" />
             <element signature="method#changeLang#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="method#handleGermanButton#0;class#viewFXMLController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1239,9 +1249,11 @@
           <caret line="262" column="69" selection-start-line="262" selection-start-column="69" selection-end-line="262" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7965#7966#0" expanded="true" />
-            <element signature="e#7996#7997#0" expanded="true" />
+            <element signature="docComment;method#getModel#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#handleResetButton#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#changeLang#0;class#viewFXMLController#0" expanded="false" />
             <element signature="method#changeLang#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="method#handleGermanButton#0;class#viewFXMLController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1279,9 +1291,11 @@
           <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7965#7966#0" expanded="true" />
-            <element signature="e#7996#7997#0" expanded="true" />
+            <element signature="docComment;method#getModel#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#handleResetButton#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#changeLang#0;class#viewFXMLController#0" expanded="false" />
             <element signature="method#changeLang#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="method#handleGermanButton#0;class#viewFXMLController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1319,9 +1333,11 @@
           <caret line="110" column="76" selection-start-line="110" selection-start-column="76" selection-end-line="110" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7965#7966#0" expanded="true" />
-            <element signature="e#7996#7997#0" expanded="true" />
+            <element signature="docComment;method#getModel#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#handleResetButton#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#changeLang#0;class#viewFXMLController#0" expanded="false" />
             <element signature="method#changeLang#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="method#handleGermanButton#0;class#viewFXMLController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1397,13 +1413,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/viewFXMLController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67824495">
-          <caret line="311" column="28" selection-start-line="311" selection-start-column="28" selection-end-line="311" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.738574">
+          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7965#7966#0" expanded="true" />
-            <element signature="e#7996#7997#0" expanded="true" />
+            <element signature="docComment;method#getModel#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#handleResetButton#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="docComment;method#changeLang#0;class#viewFXMLController#0" expanded="false" />
             <element signature="method#changeLang#0;class#viewFXMLController#0" expanded="false" />
+            <element signature="method#handleGermanButton#0;class#viewFXMLController#0" expanded="false" />
           </folding>
         </state>
       </provider>

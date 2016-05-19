@@ -161,9 +161,6 @@ public class viewFXMLController implements Initializable, Observer {
     private void handleLeftButton(ActionEvent event) {
         label.setText(rs.getString("WaitingForInput"));
 
-        //ForTesting
-        //System.out.println("Left button pressed!");
-
         toAssignKey = KeyEvent.VK_LEFT;//Save last pressed button
 
         //Check if device is connected
@@ -182,8 +179,6 @@ public class viewFXMLController implements Initializable, Observer {
     private void handleSpaceButton(ActionEvent event) {
         label.setText(rs.getString("WaitingForInput"));
 
-        //For Testing
-        //System.out.println("Space button pressed!");
         toAssignKey = KeyEvent.VK_SPACE;//Save last pressed button
 
         //Check if device is connected
@@ -202,8 +197,6 @@ public class viewFXMLController implements Initializable, Observer {
     private void handleRightButton(ActionEvent event) {
         label.setText(rs.getString("WaitingForInput"));
 
-        //For Testing
-        //System.out.println("Right button pressed!");
         toAssignKey = KeyEvent.VK_RIGHT;//Save last pressed button
 
         //Check if device is connected
@@ -222,8 +215,6 @@ public class viewFXMLController implements Initializable, Observer {
     @Override
     public void update(Observable o, Object arg) {
 
-        //For Testing
-        //System.out.println("Update - method called!");
         String input = getModel().getInputString();
 
         boolean isInList = false;
@@ -233,9 +224,6 @@ public class viewFXMLController implements Initializable, Observer {
 
             //If inputvalue maches with key
             if (keyList.get(i).getInputString().equals(input)) {
-
-                //For Testing
-                //System.out.println("Key in list!");
 
                 isInList = true;
                 progressbar.setVisible(false);//Hide loadingbar
@@ -261,9 +249,6 @@ public class viewFXMLController implements Initializable, Observer {
             keyList.add(new Key(toAssignKey, input, ""));//Adding new key to List
             toAssignKey = 0;
             progressbar.setVisible(false);//Hide loadingbar
-
-            //For Testing
-            //System.out.println("New key added! Size: " + keyList.size());
         }
     }
 
@@ -283,6 +268,11 @@ public class viewFXMLController implements Initializable, Observer {
         keyList.clear();
     }
 
+    /**
+     * When the Language changes then this method refreshes the button names and labels
+     * @param language
+     * @param country
+     */
     public void changeLang(String language, String country) {
         Locale l = new Locale(language, country);
         rs = ResourceBundle.getBundle(languagePropertyFile, l);
@@ -298,6 +288,10 @@ public class viewFXMLController implements Initializable, Observer {
         btDeutsch.setText(rs.getString("Language"));
         label.setText("");
     }
+
+    /**
+     * Change the Language
+     */
     @FXML
     public void handleGermanButton() {
         if (isGerman)
