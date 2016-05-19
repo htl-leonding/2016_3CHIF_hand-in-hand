@@ -18,7 +18,7 @@ public class HandInHand extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
         
         Scene scene = new Scene(root);
-        scene.getStylesheets().add("/styles/ButonAnimation.css");
+        scene.getStylesheets().add("/styles/ButtonAnimation.css");
         stage.getIcons().add(new Image(getClass().getResource("/ico.jpg").toExternalForm()));
         stage.setTitle("Hand in Hand");
         stage.setScene(scene);

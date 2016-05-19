@@ -51,9 +51,9 @@ public class viewFXMLController implements Initializable, Observer {
     @FXML
     private ImageView ivHomePic;
     @FXML
-    private ListView<Key> lvButtonsFunctionOverview;
-    @FXML
     private Label lbInfoAndrej;
+    @FXML
+    private Label lbHome;
     @FXML
     private Button leftButton;
     @FXML
@@ -91,8 +91,7 @@ public class viewFXMLController implements Initializable, Observer {
     @FXML
     private Button btDeutsch;
 
-    //For the ListView on the Home Tab
-    ObservableList<Key> keys;
+
     //For the Language if the act Lang is german
     private boolean isGerman = true;
     //For I18n
@@ -108,26 +107,22 @@ public class viewFXMLController implements Initializable, Observer {
     private int toAssignKey;
     Robot robot;
 
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         model = new PortListener();
         keyList = new LinkedList<>();
         changeLang("de","DE");
 
-        //For testing of the listView
-        /*for (int i = 0; i < 3; i++) {
-            keyList.add(new Key(i, "", "-"));
-        }*/
-
-        //Refresh the ListView
-        RefreshListView();
-
         toAssignKey = 0;
+
+        //Setting images
         ivInfoPic.setImage(new Image(getClass().getResource("/htl_logo.png").toExternalForm()));
         ivHomePic.setImage(new Image(getClass().getResource("/HandinHand.PNG").toExternalForm()));
         ivAndrejPic.setImage(new Image(getClass().getResource("/Sakal.JPG").toExternalForm()));
         ivStefanPic.setImage(new Image(getClass().getResource("/Smiljkovic.jpg").toExternalForm()));
-        ivGabrielPic.setImage(new Image(getClass().getResource("/Ionescu.JPG").toExternalForm()));
+        ivGabrielPic.setImage(new Image(getClass().getResource("/test.jpg").toExternalForm()));
 
         try {
             robot = new Robot();
@@ -142,9 +137,9 @@ public class viewFXMLController implements Initializable, Observer {
 
         //If there is no connection...
         if (getModel().getSerialPort() == null) {
-            label.setText(rs.getString("NotConnected"));
+            lbHome.setText(rs.getString("NotConnected"));
         } else if (getModel().getSerialPort() != null) {
-            label.setText(rs.getString("ConnectedSuc"));
+            lbHome.setText(rs.getString("ConnectedSuc"));
         }
     }
 
@@ -264,7 +259,6 @@ public class viewFXMLController implements Initializable, Observer {
                 }
             });
             keyList.add(new Key(toAssignKey, input, ""));//Adding new key to List
-            RefreshListView();
             toAssignKey = 0;
             progressbar.setVisible(false);//Hide loadingbar
 
@@ -287,14 +281,8 @@ public class viewFXMLController implements Initializable, Observer {
     @FXML
     private void handleResetButton(ActionEvent event) {
         keyList.clear();
-        lvButtonsFunctionOverview.refresh();
     }
 
-    private void RefreshListView() {
-        keys = FXCollections.observableList(keyList);
-        lvButtonsFunctionOverview.setItems(keys);
-        lvButtonsFunctionOverview.refresh();
-    }
     public void changeLang(String language, String country) {
         Locale l = new Locale(language, country);
         rs = ResourceBundle.getBundle(languagePropertyFile, l);
@@ -316,10 +304,12 @@ public class viewFXMLController implements Initializable, Observer {
         {
             changeLang("en","US");
             isGerman = false;
+            lbHome.setText("");
         }
         else {
             changeLang("de", "DE");
             isGerman = true;
+            lbHome.setText("");
         }
     }
 }

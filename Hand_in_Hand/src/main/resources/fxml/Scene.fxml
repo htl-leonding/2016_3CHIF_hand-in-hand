@@ -24,20 +24,21 @@
               <tabs>
                 <Tab fx:id="tHome" text="Home">
                      <content>
-                        <BorderPane prefHeight="348.0" prefWidth="600.0">
-                           <bottom>
-                              <ListView fx:id="lvButtonsFunctionOverview" prefHeight="97.0" prefWidth="500.0" BorderPane.alignment="CENTER">
-                                 <BorderPane.margin>
-                                    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
-                                 </BorderPane.margin></ListView>
-                           </bottom>
+                        <BorderPane prefHeight="593.0" prefWidth="607.0">
                            <center>
-                              <ImageView fx:id="ivHomePic" fitHeight="170.0" fitWidth="600.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                              <ImageView fx:id="ivHomePic" fitHeight="222.0" fitWidth="607.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <BorderPane.margin>
-                                    <Insets top="5.0" />
+                                    <Insets />
                                  </BorderPane.margin>
                               </ImageView>
                            </center>
+                           <bottom>
+                              <Label fx:id="lbHome" alignment="CENTER" prefHeight="109.0" prefWidth="460.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets bottom="20.0" />
+                                 </BorderPane.margin>
+                              </Label>
+                           </bottom>
                         </BorderPane>
                      </content>
                 </Tab>
