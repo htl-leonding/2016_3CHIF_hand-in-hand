@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Hand_in_Hand:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/Hand_in_Hand_jar</output-path>
+    <root id="archive" name="Hand_in_Hand.jar">
+      <element id="module-output" name="Hand_in_Hand" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/rxtx/rxtx/2.1.7/rxtx-2.1.7.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
