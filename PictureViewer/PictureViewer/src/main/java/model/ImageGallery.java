@@ -31,6 +31,9 @@ public class ImageGallery {
         return filesList;
     }
 
+    /*
+        Searches all Pictures in a folder
+     */
     public void searchPicturesInDirectory() {
         File[] filesArray = folder.listFiles();
         List<File> temp = new LinkedList<File>();
@@ -44,7 +47,6 @@ public class ImageGallery {
                     continue;
                 }
             }
-
         }
         filesList = temp;
     }
