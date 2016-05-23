@@ -67,9 +67,13 @@
       <file leaf-file-name="ImageGallery.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/ImageGallery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18942189">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.5682657">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <folding>
+                <element signature="e#266#272#0" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+                <element signature="e#733#734#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -523,12 +527,12 @@
       <workItem from="1463783538213" duration="87000" />
       <workItem from="1463838612518" duration="634000" />
       <workItem from="1464036468242" duration="2760000" />
-      <workItem from="1464039315077" duration="91000" />
+      <workItem from="1464039315077" duration="246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17199000" />
+    <option name="totallyTimeSpent" value="17354000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -620,7 +624,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#266#272#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -951,9 +959,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/ImageGallery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18942189">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.5682657">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#266#272#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
