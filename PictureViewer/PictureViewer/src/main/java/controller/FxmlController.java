@@ -14,11 +14,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 public class FxmlController implements Initializable {
-
-    @FXML
-    private Label lbTest;
 
     @FXML
     private Button btRightSwitch;
@@ -30,22 +28,38 @@ public class FxmlController implements Initializable {
     private ImageView ivMainView;
 
     private ImageGallery img = model.ImageGallery.getInstance();
+    private int actPos = 0;
 
 
     @FXML
     void RightSwitch(ActionEvent event) {
-
+        if (actPos+1 >= img.getFilesList().size())
+            actPos = 0;
+        else
+            actPos++;
+        SetImage(actPos);
     }
 
     @FXML
     void LeftSwitch(ActionEvent event) {
-
+        if (actPos - 1 < 0)
+            actPos = img.getFilesList().size()-1;
+        else
+            actPos--;
+        SetImage(actPos);
     }
 
 
 
     public void initialize(URL location, ResourceBundle resources) {
 
+        img.searchPicturesInDirectory();
+        try {
+            if (img.getFilesList().size() > 0)
+                ivMainView.setImage(new Image(new FileInputStream(img.getFilesList().get(actPos)), 1024, 0, true, true));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
         //ivLeftButton.setImage(new Image(getClass().getResource("/LeftButton.png").toExternalForm()));
         //ivRightButton.setImage(new Image(getClass().getResource("/RightButton.png").toExternalForm()));
 
@@ -71,5 +85,11 @@ public class FxmlController implements Initializable {
         f.setVisible(true);
         */
     }
-
+    void SetImage(int act) {
+        try {
+            ivMainView.setImage(new Image(new FileInputStream(img.getFilesList().get(act)), 1024, 0, true, true));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }
