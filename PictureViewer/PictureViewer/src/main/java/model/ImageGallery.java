@@ -31,4 +31,21 @@ public class ImageGallery {
         return filesList;
     }
 
+    public void searchPicturesInDirectory() {
+        File[] filesArray = folder.listFiles();
+        List<File> temp = new LinkedList<File>();
+        for (File file : filesArray) {
+            if (!file.isDirectory()) {
+                String path = String.valueOf(file.getPath());
+
+                if (((path.toUpperCase().contains(".JPG")) || (path.toUpperCase().contains(".PNG")) || (path.toUpperCase().contains(".JPEG")) && !temp.contains(new File(path)))) {
+                    temp.add(file);
+                } else {
+                    continue;
+                }
+            }
+
+        }
+        filesList = temp;
+    }
 }
