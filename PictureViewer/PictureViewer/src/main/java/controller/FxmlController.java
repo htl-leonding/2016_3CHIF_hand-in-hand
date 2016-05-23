@@ -6,8 +6,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import model.ImageGallery;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -25,6 +29,8 @@ public class FxmlController implements Initializable {
     @FXML
     private ImageView ivMainView;
 
+    private ImageGallery img = model.ImageGallery.getInstance();
+
 
     @FXML
     void RightSwitch(ActionEvent event) {
@@ -39,6 +45,7 @@ public class FxmlController implements Initializable {
 
 
     public void initialize(URL location, ResourceBundle resources) {
+
         //ivLeftButton.setImage(new Image(getClass().getResource("/LeftButton.png").toExternalForm()));
         //ivRightButton.setImage(new Image(getClass().getResource("/RightButton.png").toExternalForm()));
 
