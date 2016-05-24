@@ -8,7 +8,10 @@
 
 <BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FxmlController">
    <center>
-      <ImageView fx:id="ivMainView" fitHeight="672.0" fitWidth="863.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+      <ImageView fx:id="ivMainView" fitHeight="516.0" fitWidth="863.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="150.0" top="150.0" />
+         </BorderPane.margin></ImageView>
    </center>
    <left>
       <Button fx:id="btLeftSwitch" mnemonicParsing="false" onAction="#LeftSwitch" rotate="180.0" stylesheets="@Buttons.css" text="➡" textAlignment="CENTER" BorderPane.alignment="CENTER">

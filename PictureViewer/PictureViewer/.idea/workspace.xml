@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="094c262b-944d-4936-a50c-acba57c027c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/Direction.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/FxmlController$3$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controller/FxmlController$3.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/FxmlController$1$1.class" afterPath="$PROJECT_DIR$/target/classes/controller/FxmlController$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/FxmlController$1.class" afterPath="$PROJECT_DIR$/target/classes/controller/FxmlController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/FxmlController$2.class" afterPath="$PROJECT_DIR$/target/classes/controller/FxmlController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/FxmlController.class" afterPath="$PROJECT_DIR$/target/classes/controller/FxmlController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pictureViewer/PictureViewer.class" afterPath="$PROJECT_DIR$/target/classes/pictureViewer/PictureViewer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/FxmlController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/FxmlController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/ImageGallery.java" afterPath="$PROJECT_DIR$/src/main/java/model/ImageGallery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java" afterPath="$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/Buttons.css" afterPath="$PROJECT_DIR$/src/main/resources/Buttons.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/FxmlView.fxml" afterPath="$PROJECT_DIR$/src/main/resources/FxmlView.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Buttons.css" afterPath="$PROJECT_DIR$/target/classes/Buttons.css" />
     </list>
     <ignored path="PictureViewer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,36 +37,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FxmlController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FxmlController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/FxmlController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.55520993">
+              <caret line="99" column="9" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
                 <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
                 <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-                <element signature="e#1600#1916#0" expanded="true" />
-                <element signature="e#1915#1916#0" expanded="true" />
-                <element signature="e#2707#2953#0" expanded="true" />
-                <element signature="e#2952#2953#0" expanded="true" />
-                <element signature="e#3066#3769#0" expanded="true" />
-                <element signature="e#3258#3648#0" expanded="true" />
-                <element signature="e#3647#3648#0" expanded="true" />
-                <element signature="e#3768#3769#0" expanded="true" />
-                <element signature="e#3852#4273#0" expanded="true" />
-                <element signature="e#3982#4231#0" expanded="true" />
-                <element signature="e#4230#4231#0" expanded="true" />
-                <element signature="e#4272#4273#0" expanded="true" />
-                <element signature="e#4355#4978#0" expanded="true" />
-                <element signature="e#4531#4873#0" expanded="true" />
-                <element signature="e#4872#4873#0" expanded="true" />
-                <element signature="e#4977#4978#0" expanded="true" />
-                <element signature="e#5062#5483#0" expanded="true" />
-                <element signature="e#5192#5441#0" expanded="true" />
-                <element signature="e#5440#5441#0" expanded="true" />
-                <element signature="e#5482#5483#0" expanded="true" />
+                <element signature="e#1671#1987#0" expanded="true" />
+                <element signature="e#1986#1987#0" expanded="true" />
+                <element signature="method#ShowButtons#0;class#FxmlController#0" expanded="false" />
+                <element signature="e#2775#3021#0" expanded="true" />
+                <element signature="e#3020#3021#0" expanded="true" />
+                <element signature="e#3134#3837#0" expanded="true" />
+                <element signature="e#3326#3716#0" expanded="true" />
+                <element signature="e#3715#3716#0" expanded="true" />
+                <element signature="e#3836#3837#0" expanded="true" />
+                <element signature="e#3920#4341#0" expanded="true" />
+                <element signature="e#4050#4299#0" expanded="true" />
+                <element signature="e#4298#4299#0" expanded="true" />
+                <element signature="e#4340#4341#0" expanded="true" />
+                <element signature="e#4423#5046#0" expanded="true" />
+                <element signature="e#4599#4941#0" expanded="true" />
+                <element signature="e#4940#4941#0" expanded="true" />
+                <element signature="e#5045#5046#0" expanded="true" />
+                <element signature="e#5130#5551#0" expanded="true" />
+                <element signature="e#5260#5509#0" expanded="true" />
+                <element signature="e#5508#5509#0" expanded="true" />
+                <element signature="e#5550#5551#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,10 +103,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageGallery.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImageGallery.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/ImageGallery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.03421462">
+            <state vertical-scroll-proportion="0.0">
               <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
               <folding>
                 <element signature="e#1056#1062#0" expanded="true" />
@@ -131,8 +118,8 @@
       <file leaf-file-name="Buttons.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/Buttons.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.354839">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state vertical-scroll-proportion="-4.967742">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -152,12 +139,12 @@
       </file>
       <file leaf-file-name="FxmlView.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.258064">
+              <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -185,12 +172,12 @@
         <option value="$PROJECT_DIR$/src/main/java/PictureViewer/pictureViewer.java" />
         <option value="$PROJECT_DIR$/src/main/java/pictureViewer/FxmlView.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/view/FxmlView.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/FxmlView.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/Buttons.css" />
         <option value="$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Direction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/FxmlController.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/ImageGallery.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/FxmlView.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/FxmlController.java" />
       </list>
     </option>
   </component>
@@ -591,12 +578,12 @@
       <workItem from="1464036468242" duration="2760000" />
       <workItem from="1464039315077" duration="415000" />
       <workItem from="1464039836666" duration="1457000" />
-      <workItem from="1464073217087" duration="16997000" />
+      <workItem from="1464073217087" duration="19758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35977000" />
+    <option name="totallyTimeSpent" value="38738000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -647,7 +634,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -708,26 +695,27 @@
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#1600#1916#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-            <element signature="e#2707#2953#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-            <element signature="e#3066#3769#0" expanded="true" />
-            <element signature="e#3258#3648#0" expanded="true" />
-            <element signature="e#3647#3648#0" expanded="true" />
-            <element signature="e#3768#3769#0" expanded="true" />
-            <element signature="e#3852#4273#0" expanded="true" />
-            <element signature="e#3982#4231#0" expanded="true" />
-            <element signature="e#4230#4231#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4355#4978#0" expanded="true" />
-            <element signature="e#4531#4873#0" expanded="true" />
-            <element signature="e#4872#4873#0" expanded="true" />
-            <element signature="e#4977#4978#0" expanded="true" />
-            <element signature="e#5062#5483#0" expanded="true" />
-            <element signature="e#5192#5441#0" expanded="true" />
-            <element signature="e#5440#5441#0" expanded="true" />
-            <element signature="e#5482#5483#0" expanded="true" />
+            <element signature="e#1671#1987#0" expanded="true" />
+            <element signature="e#1986#1987#0" expanded="true" />
+            <element signature="method#ShowButtons#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2775#3021#0" expanded="true" />
+            <element signature="e#3020#3021#0" expanded="true" />
+            <element signature="e#3134#3837#0" expanded="true" />
+            <element signature="e#3326#3716#0" expanded="true" />
+            <element signature="e#3715#3716#0" expanded="true" />
+            <element signature="e#3836#3837#0" expanded="true" />
+            <element signature="e#3920#4341#0" expanded="true" />
+            <element signature="e#4050#4299#0" expanded="true" />
+            <element signature="e#4298#4299#0" expanded="true" />
+            <element signature="e#4340#4341#0" expanded="true" />
+            <element signature="e#4423#5046#0" expanded="true" />
+            <element signature="e#4599#4941#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="e#5045#5046#0" expanded="true" />
+            <element signature="e#5130#5551#0" expanded="true" />
+            <element signature="e#5260#5509#0" expanded="true" />
+            <element signature="e#5508#5509#0" expanded="true" />
+            <element signature="e#5550#5551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -804,26 +792,27 @@
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#1600#1916#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-            <element signature="e#2707#2953#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-            <element signature="e#3066#3769#0" expanded="true" />
-            <element signature="e#3258#3648#0" expanded="true" />
-            <element signature="e#3647#3648#0" expanded="true" />
-            <element signature="e#3768#3769#0" expanded="true" />
-            <element signature="e#3852#4273#0" expanded="true" />
-            <element signature="e#3982#4231#0" expanded="true" />
-            <element signature="e#4230#4231#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4355#4978#0" expanded="true" />
-            <element signature="e#4531#4873#0" expanded="true" />
-            <element signature="e#4872#4873#0" expanded="true" />
-            <element signature="e#4977#4978#0" expanded="true" />
-            <element signature="e#5062#5483#0" expanded="true" />
-            <element signature="e#5192#5441#0" expanded="true" />
-            <element signature="e#5440#5441#0" expanded="true" />
-            <element signature="e#5482#5483#0" expanded="true" />
+            <element signature="e#1671#1987#0" expanded="true" />
+            <element signature="e#1986#1987#0" expanded="true" />
+            <element signature="method#ShowButtons#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2775#3021#0" expanded="true" />
+            <element signature="e#3020#3021#0" expanded="true" />
+            <element signature="e#3134#3837#0" expanded="true" />
+            <element signature="e#3326#3716#0" expanded="true" />
+            <element signature="e#3715#3716#0" expanded="true" />
+            <element signature="e#3836#3837#0" expanded="true" />
+            <element signature="e#3920#4341#0" expanded="true" />
+            <element signature="e#4050#4299#0" expanded="true" />
+            <element signature="e#4298#4299#0" expanded="true" />
+            <element signature="e#4340#4341#0" expanded="true" />
+            <element signature="e#4423#5046#0" expanded="true" />
+            <element signature="e#4599#4941#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="e#5045#5046#0" expanded="true" />
+            <element signature="e#5130#5551#0" expanded="true" />
+            <element signature="e#5260#5509#0" expanded="true" />
+            <element signature="e#5508#5509#0" expanded="true" />
+            <element signature="e#5550#5551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -874,26 +863,27 @@
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#1600#1916#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-            <element signature="e#2707#2953#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-            <element signature="e#3066#3769#0" expanded="true" />
-            <element signature="e#3258#3648#0" expanded="true" />
-            <element signature="e#3647#3648#0" expanded="true" />
-            <element signature="e#3768#3769#0" expanded="true" />
-            <element signature="e#3852#4273#0" expanded="true" />
-            <element signature="e#3982#4231#0" expanded="true" />
-            <element signature="e#4230#4231#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4355#4978#0" expanded="true" />
-            <element signature="e#4531#4873#0" expanded="true" />
-            <element signature="e#4872#4873#0" expanded="true" />
-            <element signature="e#4977#4978#0" expanded="true" />
-            <element signature="e#5062#5483#0" expanded="true" />
-            <element signature="e#5192#5441#0" expanded="true" />
-            <element signature="e#5440#5441#0" expanded="true" />
-            <element signature="e#5482#5483#0" expanded="true" />
+            <element signature="e#1671#1987#0" expanded="true" />
+            <element signature="e#1986#1987#0" expanded="true" />
+            <element signature="method#ShowButtons#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2775#3021#0" expanded="true" />
+            <element signature="e#3020#3021#0" expanded="true" />
+            <element signature="e#3134#3837#0" expanded="true" />
+            <element signature="e#3326#3716#0" expanded="true" />
+            <element signature="e#3715#3716#0" expanded="true" />
+            <element signature="e#3836#3837#0" expanded="true" />
+            <element signature="e#3920#4341#0" expanded="true" />
+            <element signature="e#4050#4299#0" expanded="true" />
+            <element signature="e#4298#4299#0" expanded="true" />
+            <element signature="e#4340#4341#0" expanded="true" />
+            <element signature="e#4423#5046#0" expanded="true" />
+            <element signature="e#4599#4941#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="e#5045#5046#0" expanded="true" />
+            <element signature="e#5130#5551#0" expanded="true" />
+            <element signature="e#5260#5509#0" expanded="true" />
+            <element signature="e#5508#5509#0" expanded="true" />
+            <element signature="e#5550#5551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -933,26 +923,27 @@
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#1600#1916#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-            <element signature="e#2707#2953#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-            <element signature="e#3066#3769#0" expanded="true" />
-            <element signature="e#3258#3648#0" expanded="true" />
-            <element signature="e#3647#3648#0" expanded="true" />
-            <element signature="e#3768#3769#0" expanded="true" />
-            <element signature="e#3852#4273#0" expanded="true" />
-            <element signature="e#3982#4231#0" expanded="true" />
-            <element signature="e#4230#4231#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4355#4978#0" expanded="true" />
-            <element signature="e#4531#4873#0" expanded="true" />
-            <element signature="e#4872#4873#0" expanded="true" />
-            <element signature="e#4977#4978#0" expanded="true" />
-            <element signature="e#5062#5483#0" expanded="true" />
-            <element signature="e#5192#5441#0" expanded="true" />
-            <element signature="e#5440#5441#0" expanded="true" />
-            <element signature="e#5482#5483#0" expanded="true" />
+            <element signature="e#1671#1987#0" expanded="true" />
+            <element signature="e#1986#1987#0" expanded="true" />
+            <element signature="method#ShowButtons#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2775#3021#0" expanded="true" />
+            <element signature="e#3020#3021#0" expanded="true" />
+            <element signature="e#3134#3837#0" expanded="true" />
+            <element signature="e#3326#3716#0" expanded="true" />
+            <element signature="e#3715#3716#0" expanded="true" />
+            <element signature="e#3836#3837#0" expanded="true" />
+            <element signature="e#3920#4341#0" expanded="true" />
+            <element signature="e#4050#4299#0" expanded="true" />
+            <element signature="e#4298#4299#0" expanded="true" />
+            <element signature="e#4340#4341#0" expanded="true" />
+            <element signature="e#4423#5046#0" expanded="true" />
+            <element signature="e#4599#4941#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="e#5045#5046#0" expanded="true" />
+            <element signature="e#5130#5551#0" expanded="true" />
+            <element signature="e#5260#5509#0" expanded="true" />
+            <element signature="e#5508#5509#0" expanded="true" />
+            <element signature="e#5550#5551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1003,26 +994,27 @@
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#1600#1916#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-            <element signature="e#2707#2953#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-            <element signature="e#3066#3769#0" expanded="true" />
-            <element signature="e#3258#3648#0" expanded="true" />
-            <element signature="e#3647#3648#0" expanded="true" />
-            <element signature="e#3768#3769#0" expanded="true" />
-            <element signature="e#3852#4273#0" expanded="true" />
-            <element signature="e#3982#4231#0" expanded="true" />
-            <element signature="e#4230#4231#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4355#4978#0" expanded="true" />
-            <element signature="e#4531#4873#0" expanded="true" />
-            <element signature="e#4872#4873#0" expanded="true" />
-            <element signature="e#4977#4978#0" expanded="true" />
-            <element signature="e#5062#5483#0" expanded="true" />
-            <element signature="e#5192#5441#0" expanded="true" />
-            <element signature="e#5440#5441#0" expanded="true" />
-            <element signature="e#5482#5483#0" expanded="true" />
+            <element signature="e#1671#1987#0" expanded="true" />
+            <element signature="e#1986#1987#0" expanded="true" />
+            <element signature="method#ShowButtons#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2775#3021#0" expanded="true" />
+            <element signature="e#3020#3021#0" expanded="true" />
+            <element signature="e#3134#3837#0" expanded="true" />
+            <element signature="e#3326#3716#0" expanded="true" />
+            <element signature="e#3715#3716#0" expanded="true" />
+            <element signature="e#3836#3837#0" expanded="true" />
+            <element signature="e#3920#4341#0" expanded="true" />
+            <element signature="e#4050#4299#0" expanded="true" />
+            <element signature="e#4298#4299#0" expanded="true" />
+            <element signature="e#4340#4341#0" expanded="true" />
+            <element signature="e#4423#5046#0" expanded="true" />
+            <element signature="e#4599#4941#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="e#5045#5046#0" expanded="true" />
+            <element signature="e#5130#5551#0" expanded="true" />
+            <element signature="e#5260#5509#0" expanded="true" />
+            <element signature="e#5508#5509#0" expanded="true" />
+            <element signature="e#5550#5551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1065,26 +1057,27 @@
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#1600#1916#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-            <element signature="e#2707#2953#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-            <element signature="e#3066#3769#0" expanded="true" />
-            <element signature="e#3258#3648#0" expanded="true" />
-            <element signature="e#3647#3648#0" expanded="true" />
-            <element signature="e#3768#3769#0" expanded="true" />
-            <element signature="e#3852#4273#0" expanded="true" />
-            <element signature="e#3982#4231#0" expanded="true" />
-            <element signature="e#4230#4231#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4355#4978#0" expanded="true" />
-            <element signature="e#4531#4873#0" expanded="true" />
-            <element signature="e#4872#4873#0" expanded="true" />
-            <element signature="e#4977#4978#0" expanded="true" />
-            <element signature="e#5062#5483#0" expanded="true" />
-            <element signature="e#5192#5441#0" expanded="true" />
-            <element signature="e#5440#5441#0" expanded="true" />
-            <element signature="e#5482#5483#0" expanded="true" />
+            <element signature="e#1671#1987#0" expanded="true" />
+            <element signature="e#1986#1987#0" expanded="true" />
+            <element signature="method#ShowButtons#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2775#3021#0" expanded="true" />
+            <element signature="e#3020#3021#0" expanded="true" />
+            <element signature="e#3134#3837#0" expanded="true" />
+            <element signature="e#3326#3716#0" expanded="true" />
+            <element signature="e#3715#3716#0" expanded="true" />
+            <element signature="e#3836#3837#0" expanded="true" />
+            <element signature="e#3920#4341#0" expanded="true" />
+            <element signature="e#4050#4299#0" expanded="true" />
+            <element signature="e#4298#4299#0" expanded="true" />
+            <element signature="e#4340#4341#0" expanded="true" />
+            <element signature="e#4423#5046#0" expanded="true" />
+            <element signature="e#4599#4941#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="e#5045#5046#0" expanded="true" />
+            <element signature="e#5130#5551#0" expanded="true" />
+            <element signature="e#5260#5509#0" expanded="true" />
+            <element signature="e#5508#5509#0" expanded="true" />
+            <element signature="e#5550#5551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1127,26 +1120,27 @@
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#1600#1916#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-            <element signature="e#2707#2953#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-            <element signature="e#3066#3769#0" expanded="true" />
-            <element signature="e#3258#3648#0" expanded="true" />
-            <element signature="e#3647#3648#0" expanded="true" />
-            <element signature="e#3768#3769#0" expanded="true" />
-            <element signature="e#3852#4273#0" expanded="true" />
-            <element signature="e#3982#4231#0" expanded="true" />
-            <element signature="e#4230#4231#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4355#4978#0" expanded="true" />
-            <element signature="e#4531#4873#0" expanded="true" />
-            <element signature="e#4872#4873#0" expanded="true" />
-            <element signature="e#4977#4978#0" expanded="true" />
-            <element signature="e#5062#5483#0" expanded="true" />
-            <element signature="e#5192#5441#0" expanded="true" />
-            <element signature="e#5440#5441#0" expanded="true" />
-            <element signature="e#5482#5483#0" expanded="true" />
+            <element signature="e#1671#1987#0" expanded="true" />
+            <element signature="e#1986#1987#0" expanded="true" />
+            <element signature="method#ShowButtons#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2775#3021#0" expanded="true" />
+            <element signature="e#3020#3021#0" expanded="true" />
+            <element signature="e#3134#3837#0" expanded="true" />
+            <element signature="e#3326#3716#0" expanded="true" />
+            <element signature="e#3715#3716#0" expanded="true" />
+            <element signature="e#3836#3837#0" expanded="true" />
+            <element signature="e#3920#4341#0" expanded="true" />
+            <element signature="e#4050#4299#0" expanded="true" />
+            <element signature="e#4298#4299#0" expanded="true" />
+            <element signature="e#4340#4341#0" expanded="true" />
+            <element signature="e#4423#5046#0" expanded="true" />
+            <element signature="e#4599#4941#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="e#5045#5046#0" expanded="true" />
+            <element signature="e#5130#5551#0" expanded="true" />
+            <element signature="e#5260#5509#0" expanded="true" />
+            <element signature="e#5508#5509#0" expanded="true" />
+            <element signature="e#5550#5551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1212,25 +1206,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Buttons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.354839">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/javafx-src.zip!/com/sun/glass/ui/View.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1255,39 +1230,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/FxmlController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#1600#1916#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-            <element signature="e#2707#2953#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-            <element signature="e#3066#3769#0" expanded="true" />
-            <element signature="e#3258#3648#0" expanded="true" />
-            <element signature="e#3647#3648#0" expanded="true" />
-            <element signature="e#3768#3769#0" expanded="true" />
-            <element signature="e#3852#4273#0" expanded="true" />
-            <element signature="e#3982#4231#0" expanded="true" />
-            <element signature="e#4230#4231#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4355#4978#0" expanded="true" />
-            <element signature="e#4531#4873#0" expanded="true" />
-            <element signature="e#4872#4873#0" expanded="true" />
-            <element signature="e#4977#4978#0" expanded="true" />
-            <element signature="e#5062#5483#0" expanded="true" />
-            <element signature="e#5192#5441#0" expanded="true" />
-            <element signature="e#5440#5441#0" expanded="true" />
-            <element signature="e#5482#5483#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1300,10 +1242,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/ImageGallery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.03421462">
+        <state vertical-scroll-proportion="0.0">
           <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
             <element signature="e#1056#1062#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Buttons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.967742">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.258064">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/FxmlController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55520993">
+          <caret line="99" column="9" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
+            <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
+            <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#1671#1987#0" expanded="true" />
+            <element signature="e#1986#1987#0" expanded="true" />
+            <element signature="method#ShowButtons#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2775#3021#0" expanded="true" />
+            <element signature="e#3020#3021#0" expanded="true" />
+            <element signature="e#3134#3837#0" expanded="true" />
+            <element signature="e#3326#3716#0" expanded="true" />
+            <element signature="e#3715#3716#0" expanded="true" />
+            <element signature="e#3836#3837#0" expanded="true" />
+            <element signature="e#3920#4341#0" expanded="true" />
+            <element signature="e#4050#4299#0" expanded="true" />
+            <element signature="e#4298#4299#0" expanded="true" />
+            <element signature="e#4340#4341#0" expanded="true" />
+            <element signature="e#4423#5046#0" expanded="true" />
+            <element signature="e#4599#4941#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="e#5045#5046#0" expanded="true" />
+            <element signature="e#5130#5551#0" expanded="true" />
+            <element signature="e#5260#5509#0" expanded="true" />
+            <element signature="e#5508#5509#0" expanded="true" />
+            <element signature="e#5550#5551#0" expanded="true" />
           </folding>
         </state>
       </provider>
