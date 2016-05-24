@@ -18,11 +18,10 @@ public class PictureViewer extends Application{
         Parent root = FXMLLoader.load(getClass().getResource("/FxmlView.fxml"));
 
         Scene scene = new Scene(root);
-
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
         stage.setFullScreen(true);
-
 
     }
 

@@ -4,6 +4,7 @@ import java.io.File;
 import java.nio.file.Files;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Observable;
 
 
 public class ImageGallery {
