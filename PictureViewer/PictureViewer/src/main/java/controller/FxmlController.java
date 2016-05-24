@@ -1,13 +1,16 @@
 package controller;
 
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
@@ -68,10 +71,11 @@ public class FxmlController implements Initializable {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         double width = screenSize.getWidth();
         double height = screenSize.getHeight();
-        bp.setPrefWidth(width-10);
-        bp.setPrefHeight(height-10);
-        ivMainView.setFitHeight(height - 20);
-        ivMainView.setFitWidth(width);
+        bp.setPrefWidth(width-150);
+        bp.setPrefHeight(height-150);
+        ivMainView.setFitHeight(height - 165);
+        ivMainView.setFitWidth(width - 165);
+
 
         img.searchPicturesInDirectory();
         try {
@@ -82,6 +86,39 @@ public class FxmlController implements Initializable {
         }
 
 
+
+    }
+
+    private void ShowButtons() {
+        btLeftSwitch.addEventHandler(MouseEvent.MOUSE_EXITED,
+                new EventHandler<MouseEvent>() {
+                    public void handle(MouseEvent e) {
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                btLeftSwitch.setOpacity(0.0);
+                                                btRightSwitch.setOpacity(0.0);
+                                            }
+                                        },
+                                        5000
+                                );
+                    }
+                });
+
+        ShowButtons();
+        new Thread() {}.start();
+        btLeftSwitch.addEventHandler(MouseEvent.MOUSE_ENTERED,
+                new EventHandler<MouseEvent>() {
+                    public void handle(MouseEvent e) {
+                        Platform.runLater(new Runnable() {
+                            public void run() {
+                                btLeftSwitch.setOpacity(100.0);
+                                btRightSwitch.setOpacity(100.0);
+                            }
+                        });
+                    }
+                });
     }
 
     /**
@@ -94,5 +131,13 @@ public class FxmlController implements Initializable {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    public void CursorOnButtons(ActionEvent event) {
+
+        System.out.println("Drag detected");
+
+        actPos++;
     }
 }
