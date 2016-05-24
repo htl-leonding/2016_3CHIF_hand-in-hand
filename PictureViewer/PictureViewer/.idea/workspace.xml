@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="094c262b-944d-4936-a50c-acba57c027c9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/FxmlController.class" afterPath="$PROJECT_DIR$/target/classes/controller/FxmlController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/ImageGallery.class" afterPath="$PROJECT_DIR$/target/classes/model/ImageGallery.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/FxmlController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/FxmlController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java" afterPath="$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/FxmlView.fxml" afterPath="$PROJECT_DIR$/src/main/resources/FxmlView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/Buttons.css" afterPath="$PROJECT_DIR$/src/main/resources/Buttons.css" />
     </list>
     <ignored path="PictureViewer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,20 +37,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FxmlController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FxmlController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/FxmlController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52758133">
-              <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="98" column="63" selection-start-line="98" selection-start-column="63" selection-end-line="98" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="docComment;method#RightSwitch#0;class#FxmlController#0" expanded="false" />
                 <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
                 <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
                 <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-                <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
-                <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
+                <element signature="e#2374#3077#0" expanded="true" />
+                <element signature="e#2566#2956#0" expanded="true" />
+                <element signature="e#2955#2956#0" expanded="true" />
+                <element signature="e#3076#3077#0" expanded="true" />
+                <element signature="e#3216#3637#0" expanded="true" />
+                <element signature="e#3346#3595#0" expanded="true" />
+                <element signature="e#3594#3595#0" expanded="true" />
+                <element signature="e#3636#3637#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/javafx-src.zip!/com/sun/glass/ui/View.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="936" column="0" selection-start-line="936" selection-start-column="0" selection-end-line="936" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,17 +76,21 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
               <folding>
-                <element signature="e#1027#1033#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#266#272#0" expanded="false" />
+                <element signature="e#801#802#0" expanded="false" />
+                <element signature="e#833#834#0" expanded="false" />
+                <marker date="1464089548193" expanded="true" signature="685:763" placeholder="/**...*/" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Buttons.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Buttons.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/Buttons.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.193548">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5708583">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -87,7 +102,8 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#716#717#0" expanded="false" />
+                <element signature="e#744#745#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -128,10 +144,10 @@
         <option value="$PROJECT_DIR$/src/main/java/pictureViewer/FxmlView.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/view/FxmlView.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/FxmlView.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/Buttons.css" />
         <option value="$PROJECT_DIR$/src/main/java/model/ImageGallery.java" />
         <option value="$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/FxmlController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/Buttons.css" />
       </list>
     </option>
   </component>
@@ -529,12 +545,12 @@
       <workItem from="1464036468242" duration="2760000" />
       <workItem from="1464039315077" duration="415000" />
       <workItem from="1464039836666" duration="1457000" />
-      <workItem from="1464073217087" duration="5415000" />
+      <workItem from="1464073217087" duration="9690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24395000" />
+    <option name="totallyTimeSpent" value="28670000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -555,7 +571,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1252955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3321513" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -585,22 +601,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -615,12 +620,17 @@
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2374#3077#0" expanded="true" />
+            <element signature="e#2566#2956#0" expanded="true" />
+            <element signature="e#2955#2956#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="e#3216#3637#0" expanded="true" />
+            <element signature="e#3346#3595#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -630,7 +640,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1027#1033#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#266#272#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+            <element signature="e#833#834#0" expanded="false" />
+            <marker date="1464089548193" expanded="true" signature="685:763" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -648,7 +662,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="false" />
+            <element signature="e#744#745#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -678,12 +693,17 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2374#3077#0" expanded="true" />
+            <element signature="e#2566#2956#0" expanded="true" />
+            <element signature="e#2955#2956#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="e#3216#3637#0" expanded="true" />
+            <element signature="e#3346#3595#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -709,7 +729,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
-            <element signature="e#1027#1033#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#266#272#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+            <element signature="e#833#834#0" expanded="false" />
+            <marker date="1464089548193" expanded="true" signature="685:763" placeholder="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -727,7 +751,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="false" />
+            <element signature="e#744#745#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -757,12 +782,17 @@
           <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2374#3077#0" expanded="true" />
+            <element signature="e#2566#2956#0" expanded="true" />
+            <element signature="e#2955#2956#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="e#3216#3637#0" expanded="true" />
+            <element signature="e#3346#3595#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -780,7 +810,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="false" />
+            <element signature="e#744#745#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -810,12 +841,17 @@
           <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2374#3077#0" expanded="true" />
+            <element signature="e#2566#2956#0" expanded="true" />
+            <element signature="e#2955#2956#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="e#3216#3637#0" expanded="true" />
+            <element signature="e#3346#3595#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -833,7 +869,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="false" />
+            <element signature="e#744#745#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -852,12 +889,17 @@
           <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2374#3077#0" expanded="true" />
+            <element signature="e#2566#2956#0" expanded="true" />
+            <element signature="e#2955#2956#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="e#3216#3637#0" expanded="true" />
+            <element signature="e#3346#3595#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -875,7 +917,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="false" />
+            <element signature="e#744#745#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -905,12 +948,17 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2374#3077#0" expanded="true" />
+            <element signature="e#2566#2956#0" expanded="true" />
+            <element signature="e#2955#2956#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="e#3216#3637#0" expanded="true" />
+            <element signature="e#3346#3595#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -920,7 +968,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="false" />
+            <element signature="e#744#745#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -950,12 +999,17 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2374#3077#0" expanded="true" />
+            <element signature="e#2566#2956#0" expanded="true" />
+            <element signature="e#2955#2956#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="e#3216#3637#0" expanded="true" />
+            <element signature="e#3346#3595#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -965,7 +1019,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="false" />
+            <element signature="e#744#745#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -995,12 +1050,17 @@
           <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2374#3077#0" expanded="true" />
+            <element signature="e#2566#2956#0" expanded="true" />
+            <element signature="e#2955#2956#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="e#3216#3637#0" expanded="true" />
+            <element signature="e#3346#3595#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1010,7 +1070,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="false" />
+            <element signature="e#744#745#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1077,20 +1138,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Buttons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.193548">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="false" />
+            <element signature="e#744#745#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1100,24 +1154,49 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding>
-            <element signature="e#1027#1033#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#266#272#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+            <element signature="e#833#834#0" expanded="false" />
+            <marker date="1464089548193" expanded="true" signature="685:763" placeholder="/**...*/" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/javafx-src.zip!/com/sun/glass/ui/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="936" column="0" selection-start-line="936" selection-start-column="0" selection-end-line="936" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/FxmlController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52758133">
-          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="63" selection-start-line="98" selection-start-column="63" selection-end-line="98" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#RightSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="docComment;method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
             <element signature="method#LeftSwitch#0;class#FxmlController#0" expanded="false" />
-            <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#2374#3077#0" expanded="true" />
+            <element signature="e#2566#2956#0" expanded="true" />
+            <element signature="e#2955#2956#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="e#3216#3637#0" expanded="true" />
+            <element signature="e#3346#3595#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Buttons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5708583">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
