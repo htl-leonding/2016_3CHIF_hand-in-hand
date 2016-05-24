@@ -10,7 +10,9 @@ public class ImageGallery {
 
     //The FilesList contains the pictures from a specified directory
     private List<File> filesList = new LinkedList<File>();
+    //Instance of model
     private static ImageGallery model = null;
+    //The Folder which has to be scanned for Images
     final File folder = new File("C:\\Users\\Andrej\\Desktop");
 
     //Singleton Pattern
@@ -24,15 +26,16 @@ public class ImageGallery {
         return model;
     }
 
-    /*
-        Gets the fileList with the Pictures
+    /**
+     * Returns FileList with the contained pictures
+     * @return
      */
     public List<File> getFilesList() {
         return filesList;
     }
 
-    /*
-        Searches all Pictures in a folder
+    /**
+     * Searches all Pictures in a folder
      */
     public void searchPicturesInDirectory() {
         File[] filesArray = folder.listFiles();

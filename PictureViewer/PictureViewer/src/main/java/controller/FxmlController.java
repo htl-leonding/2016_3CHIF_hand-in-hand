@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Screen;
 import model.ImageGallery;
 
 import java.io.FileInputStream;
@@ -31,6 +32,10 @@ public class FxmlController implements Initializable {
     private int actPos = 0;
 
 
+    /**
+     * Switch to the next picture (right)
+     * @param event
+     */
     @FXML
     void RightSwitch(ActionEvent event) {
         if (actPos+1 >= img.getFilesList().size())
@@ -40,6 +45,10 @@ public class FxmlController implements Initializable {
         SetImage(actPos);
     }
 
+    /**
+     * Switch to the next picture (left)
+     * @param event
+     */
     @FXML
     void LeftSwitch(ActionEvent event) {
         if (actPos - 1 < 0)
@@ -50,7 +59,6 @@ public class FxmlController implements Initializable {
     }
 
     public void initialize(URL location, ResourceBundle resources) {
-
         img.searchPicturesInDirectory();
         try {
             if (img.getFilesList().size() > 0)
@@ -59,6 +67,11 @@ public class FxmlController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Set the Image which has to be showed in the MainView
+     * @param act
+     */
     void SetImage(int act) {
         try {
             ivMainView.setImage(new Image(new FileInputStream(img.getFilesList().get(act)), 1024, 0, true, true));
