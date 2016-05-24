@@ -21,6 +21,9 @@ public class PictureViewer extends Application{
 
         stage.setScene(scene);
         stage.show();
+        stage.setFullScreen(true);
+
+
     }
 
     /**

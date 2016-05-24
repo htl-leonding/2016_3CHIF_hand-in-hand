@@ -8,9 +8,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import model.ImageGallery;
 
+import java.awt.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
@@ -27,6 +30,9 @@ public class FxmlController implements Initializable {
 
     @FXML
     private ImageView ivMainView;
+
+    @FXML
+    private BorderPane bp;
 
     private ImageGallery img = model.ImageGallery.getInstance();
     private int actPos = 0;
@@ -59,13 +65,23 @@ public class FxmlController implements Initializable {
     }
 
     public void initialize(URL location, ResourceBundle resources) {
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        double width = screenSize.getWidth();
+        double height = screenSize.getHeight();
+        bp.setPrefWidth(width-10);
+        bp.setPrefHeight(height-10);
+        ivMainView.setFitHeight(height - 20);
+        ivMainView.setFitWidth(width);
+
         img.searchPicturesInDirectory();
         try {
             if (img.getFilesList().size() > 0)
-                ivMainView.setImage(new Image(new FileInputStream(img.getFilesList().get(actPos)), 1024, 0, true, true));
+                ivMainView.setImage(new Image(new FileInputStream(img.getFilesList().get(actPos)), width, height, true, true));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
+
     }
 
     /**
