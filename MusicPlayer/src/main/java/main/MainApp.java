@@ -22,8 +22,8 @@ public class MainApp extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
 
         Scene scene = new Scene(root);
-        scene.getStylesheets().add("/styles/Styles.css");
-//        stage.getIcons().add(new Image(getClass().getResource("/ico.jpg").toExternalForm()));
+        //scene.getStylesheets().add("/styles/Styles.css");
+        stage.getIcons().add(new Image(getClass().getResource("/music-icon.png").toExternalForm()));
         stage.setTitle("Hand in Hand");
         stage.setScene(scene);
         stage.show();
