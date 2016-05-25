@@ -36,6 +36,16 @@ public class MusicFinder implements Enumeration<File> {
         return fileList;
     }
 
+    public int getPosition()
+    {
+        return cnt;
+    }
+
+    public void setPosition(int i)
+    {
+        cnt = i;
+    }
+
     public boolean searchForMusic()
     {
         fileList = searchMusic();
@@ -53,6 +63,8 @@ public class MusicFinder implements Enumeration<File> {
             }
         });
 
+
+
         for (File f:files)
         {
             newListFiles.add(f);
@@ -67,10 +79,12 @@ public class MusicFinder implements Enumeration<File> {
     public File nextElement() {
         if(hasMoreElements()) {
             ++cnt;
+            System.out.println(cnt - 1);
             return fileList.get(cnt - 1);
         }
 
         cnt = 0;
+        System.out.println(cnt);
         return null;
     }
 
@@ -79,10 +93,12 @@ public class MusicFinder implements Enumeration<File> {
         if (cnt >= 0)
         {
             --cnt;
+            System.out.println(cnt);
             return fileList.get(cnt);
         }
 
         cnt = fileList.size() - 1;
+        System.out.println(cnt);
         return null;
     }
 }

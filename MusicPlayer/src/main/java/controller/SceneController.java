@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 import model.MusicFinder;
 import model.Player;
 
+import javax.sound.midi.Soundbank;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -59,19 +60,29 @@ public class SceneController implements Initializable{
 
     @FXML
     void progressClickHandler(MouseEvent event) {
-
+        if(player == null)
+            return;
     }
 
     @FXML
     void btPreviousHandler(ActionEvent event) {
+        if(player == null)
+            return;
 
+        if(musicFinder.getPosition() >= 0)
+        {
+            player.pause();
+            musicFinder.prevElement();
+            player.start(musicFinder.prevElement());
+            player.play();
+        }
     }
 
     @FXML
     void btPlayHandler(ActionEvent event) {
         if(player.isPlaying())
         {
-            player.stop();
+            player.pause();
             btPlay.setGraphic(new ImageView(getClass().getResource("/play.png").toExternalForm()));
         }
         else
@@ -83,7 +94,15 @@ public class SceneController implements Initializable{
 
     @FXML
     void btNextHandler(ActionEvent event) {
+        if(player == null)
+            return;
 
+        if(musicFinder.hasMoreElements())
+        {
+            player.pause();
+            player.start(musicFinder.nextElement());
+            player.play();
+        }
     }
 
     @FXML
@@ -107,7 +126,7 @@ public class SceneController implements Initializable{
             if(player == null)
                 player = new Player();
             else
-                player.stop();
+                player.pause();
             player.start(musicFinder.nextElement());
             player.play();
             btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));

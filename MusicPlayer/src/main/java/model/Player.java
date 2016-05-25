@@ -1,5 +1,6 @@
 package model;
 
+import com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
@@ -14,7 +15,9 @@ import java.io.File;
  */
 public class Player {
     private File currentFile;
-    MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer;
+    private Duration duration;
+    private SongInfo songInfo;
 
     public Player() {
 
@@ -26,6 +29,8 @@ public class Player {
         try{
             Media hit = new Media(currentFile.toURI().toASCIIString());
             mediaPlayer = new MediaPlayer(hit);
+
+            songInfo = new SongInfo(hit.getMetadata());
             return true;
         }
         catch(Exception ex)
@@ -39,15 +44,15 @@ public class Player {
         mediaPlayer.seek(new Duration(mediaPlayer.getTotalDuration().toMillis() * p));
     }
 
-    public void stop()
-    {
-        mediaPlayer.stop();
+    public void pause() {
+        mediaPlayer.pause();
     }
 
     public void play()
     {
-        if(mediaPlayer != null)
-        mediaPlayer.play();
+        if(mediaPlayer != null) {
+            mediaPlayer.play();
+        }
         else
             System.out.println("MediaPlayer is null");
     }
@@ -55,5 +60,11 @@ public class Player {
     public boolean isPlaying()
     {
         return mediaPlayer.getStatus().equals(MediaPlayer.Status.PLAYING);
+    }
+
+    public Duration getElapsedTime()
+    {
+        duration = mediaPlayer.getTotalDuration();
+        return duration;
     }
 }
