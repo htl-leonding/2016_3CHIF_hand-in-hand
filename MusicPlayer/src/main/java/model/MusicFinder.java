@@ -14,20 +14,35 @@ import java.util.List;
  */
 public class MusicFinder implements Enumeration<File> {
 
-    public static String directoryName = ".\\";
+    public String directoryName = "";
     private List<File> fileList;
     private int cnt;
 
     public MusicFinder(){
         cnt = 0;
-        fileList = searchForMusic();
+    }
+
+    public String getDirectoryName()
+    {
+        return directoryName;
+    }
+
+    public void setDirectoryName(String name)
+    {
+        directoryName = name;
     }
 
     public List<File> getFileList() {
         return fileList;
     }
 
-    private List<File> searchForMusic()
+    public boolean searchForMusic()
+    {
+        fileList = searchMusic();
+        return  fileList != null;
+    }
+
+    private List<File> searchMusic()
     {
         List<File> newListFiles = new LinkedList<File>();
         File dir = new File(directoryName);
@@ -57,6 +72,18 @@ public class MusicFinder implements Enumeration<File> {
         }
 
         cnt = 0;
+        return null;
+    }
+
+    public File prevElement()
+    {
+        if (cnt >= 0)
+        {
+            --cnt;
+            return fileList.get(cnt);
+        }
+
+        cnt = fileList.size() - 1;
         return null;
     }
 }
