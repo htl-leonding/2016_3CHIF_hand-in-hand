@@ -39,7 +39,7 @@ public class MusicFinder implements Enumeration<File> {
     public boolean searchForMusic()
     {
         fileList = searchMusic();
-        return  fileList != null;
+        return (fileList.size() != 0);
     }
 
     private List<File> searchMusic()
@@ -59,7 +59,6 @@ public class MusicFinder implements Enumeration<File> {
         }
         return newListFiles;
     }
-
 
     public boolean hasMoreElements() {
         return cnt < fileList.size();

@@ -16,6 +16,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import model.MusicFinder;
+import model.Player;
 
 import java.io.File;
 import java.net.URL;
@@ -52,8 +53,8 @@ public class SceneController implements Initializable{
 
 
     private Stage stage;
-    private boolean isStopped = true;
     private MusicFinder musicFinder;
+    private Player player;
 
 
     @FXML
@@ -68,7 +69,16 @@ public class SceneController implements Initializable{
 
     @FXML
     void btPlayHandler(ActionEvent event) {
-
+        if(player.isPlaying())
+        {
+            player.stop();
+            btPlay.setGraphic(new ImageView(getClass().getResource("/play.png").toExternalForm()));
+        }
+        else
+        {
+            player.play();
+            btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));
+        }
     }
 
     @FXML
@@ -84,14 +94,25 @@ public class SceneController implements Initializable{
             return;
 
         musicFinder.setDirectoryName(f.getAbsolutePath());
-        if(musicFinder.searchForMusic())
+        if(!musicFinder.searchForMusic())
         {
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setTitle("No music found!");
             a.setContentText("No music found at path: " + f.getAbsolutePath());
             a.setHeaderText("Error");
+            a.show();
         }
-        System.out.println(musicFinder.getFileList().size() + " Datein gefunden!");
+        else
+        {
+            if(player == null)
+                player = new Player();
+            else
+                player.stop();
+            player.start(musicFinder.nextElement());
+            player.play();
+            btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));
+        }
+        System.out.println(musicFinder.getFileList().size() + " file(s) found!");
     }
 
     public void initialize(URL location, ResourceBundle resources) {

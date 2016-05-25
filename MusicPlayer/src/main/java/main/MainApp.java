@@ -25,7 +25,6 @@ public class MainApp extends Application {
         Parent root = FXLoader.load();
         Scene scene = new Scene(root);
 
-        //scene.getStylesheets().add("/styles/Styles.css");
         stage.getIcons().add(new Image(getClass().getResource("/music-icon.png").toExternalForm()));
         stage.setTitle("MusicPlayer");
         stage.setScene(scene);
