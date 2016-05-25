@@ -69,6 +69,7 @@ public class MusicFinder implements Enumeration<File> {
         {
             newListFiles.add(f);
         }
+        cnt = 0;
         return newListFiles;
     }
 
@@ -90,11 +91,11 @@ public class MusicFinder implements Enumeration<File> {
 
     public File prevElement()
     {
-        if (cnt >= 0)
+        if (cnt > 1)
         {
             --cnt;
-            System.out.println(cnt);
-            return fileList.get(cnt);
+            System.out.println(cnt - 1);
+            return fileList.get(cnt - 1);
         }
 
         cnt = fileList.size() - 1;

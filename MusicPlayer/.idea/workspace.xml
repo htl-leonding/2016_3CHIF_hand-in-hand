@@ -39,8 +39,8 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+            <state relative-caret-position="369">
+              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1019#1020#0" expanded="true" />
@@ -49,38 +49,8 @@
                 <element signature="e#1174#1175#0" expanded="true" />
                 <element signature="e#1392#1393#0" expanded="true" />
                 <element signature="e#1473#1474#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SongInfo.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/SongInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#489#490#0" expanded="true" />
-                <element signature="e#529#530#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MusicFinder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/MusicFinder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#742#743#0" expanded="true" />
-                <element signature="e#768#769#0" expanded="true" />
-                <element signature="e#810#811#0" expanded="true" />
-                <element signature="e#833#834#0" expanded="true" />
-                <element signature="e#1049#1055#0" expanded="true" />
-                <element signature="e#1141#1292#0" expanded="true" />
+                <element signature="e#1640#1641#0" expanded="true" />
+                <element signature="e#1671#1672#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,12 +59,41 @@
       <file leaf-file-name="SceneController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/SceneController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="76" column="26" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
+            <state relative-caret-position="369">
+              <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3945#3946#0" expanded="true" />
-                <element signature="e#3975#3976#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SongInfo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/SongInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MusicFinder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/MusicFinder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="716">
+              <caret line="93" column="19" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
+                <element signature="e#810#811#0" expanded="true" />
+                <element signature="e#833#834#0" expanded="true" />
+                <element signature="e#1049#1055#0" expanded="true" />
+                <element signature="e#1141#1292#0" expanded="true" />
+                <element signature="e#1291#1292#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,10 +120,10 @@
         <option value="$PROJECT_DIR$/src/main/java/MainApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/MainApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Metadata.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/SceneController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/MusicFinder.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/MusicFinder.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/SongInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/SceneController.java" />
       </list>
     </option>
   </component>
@@ -736,12 +735,12 @@
       <workItem from="1464155397280" duration="327000" />
       <workItem from="1464176702030" duration="354000" />
       <workItem from="1464178728041" duration="964000" />
-      <workItem from="1464199261259" duration="9553000" />
+      <workItem from="1464199261259" duration="12404000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19380000" />
+    <option name="totallyTimeSpent" value="22231000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -825,6 +824,8 @@
             <element signature="e#1174#1175#0" expanded="true" />
             <element signature="e#1392#1393#0" expanded="true" />
             <element signature="e#1473#1474#0" expanded="true" />
+            <element signature="e#1640#1641#0" expanded="true" />
+            <element signature="e#1671#1672#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -835,8 +836,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3945#3946#0" expanded="true" />
-            <element signature="e#3975#3976#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -876,6 +875,8 @@
             <element signature="e#1174#1175#0" expanded="true" />
             <element signature="e#1392#1393#0" expanded="true" />
             <element signature="e#1473#1474#0" expanded="true" />
+            <element signature="e#1640#1641#0" expanded="true" />
+            <element signature="e#1671#1672#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -886,8 +887,6 @@
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3945#3946#0" expanded="true" />
-            <element signature="e#3975#3976#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -927,6 +926,8 @@
             <element signature="e#1174#1175#0" expanded="true" />
             <element signature="e#1392#1393#0" expanded="true" />
             <element signature="e#1473#1474#0" expanded="true" />
+            <element signature="e#1640#1641#0" expanded="true" />
+            <element signature="e#1671#1672#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -937,8 +938,6 @@
           <caret line="38" column="95" selection-start-line="38" selection-start-column="95" selection-end-line="38" selection-end-column="95" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3945#3946#0" expanded="true" />
-            <element signature="e#3975#3976#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -978,6 +977,8 @@
             <element signature="e#1174#1175#0" expanded="true" />
             <element signature="e#1392#1393#0" expanded="true" />
             <element signature="e#1473#1474#0" expanded="true" />
+            <element signature="e#1640#1641#0" expanded="true" />
+            <element signature="e#1671#1672#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -988,8 +989,6 @@
           <caret line="38" column="95" selection-start-line="38" selection-start-column="95" selection-end-line="38" selection-end-column="95" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3945#3946#0" expanded="true" />
-            <element signature="e#3975#3976#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1032,14 +1031,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1125,18 +1116,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/SceneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="76" column="26" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3945#3946#0" expanded="true" />
-            <element signature="e#3975#3976#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/io/FilenameFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1147,26 +1126,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/MusicFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#1049#1055#0" expanded="true" />
-            <element signature="e#1141#1292#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+        <state relative-caret-position="369">
+          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1019#1020#0" expanded="true" />
@@ -1175,18 +1138,53 @@
             <element signature="e#1174#1175#0" expanded="true" />
             <element signature="e#1392#1393#0" expanded="true" />
             <element signature="e#1473#1474#0" expanded="true" />
+            <element signature="e#1640#1641#0" expanded="true" />
+            <element signature="e#1671#1672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/MusicFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="716">
+          <caret line="93" column="19" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#1049#1055#0" expanded="true" />
+            <element signature="e#1141#1292#0" expanded="true" />
+            <element signature="e#1291#1292#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/SceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/SongInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state relative-caret-position="187">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
           </folding>
         </state>
       </provider>

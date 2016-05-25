@@ -67,4 +67,9 @@ public class Player {
         duration = mediaPlayer.getTotalDuration();
         return duration;
     }
+
+    public SongInfo getSongInfo()
+    {
+        return songInfo;
+    }
 }

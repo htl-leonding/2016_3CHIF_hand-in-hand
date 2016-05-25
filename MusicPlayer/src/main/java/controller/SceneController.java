@@ -22,6 +22,7 @@ import javax.sound.midi.Soundbank;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.TimerTask;
 
 public class SceneController implements Initializable{
 
@@ -69,10 +70,9 @@ public class SceneController implements Initializable{
         if(player == null)
             return;
 
-        if(musicFinder.getPosition() >= 0)
+        if(musicFinder.getPosition() > 1)
         {
             player.pause();
-            musicFinder.prevElement();
             player.start(musicFinder.prevElement());
             player.play();
         }
@@ -130,6 +130,8 @@ public class SceneController implements Initializable{
             player.start(musicFinder.nextElement());
             player.play();
             btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));
+
+            setMetadata();
         }
         System.out.println(musicFinder.getFileList().size() + " file(s) found!");
     }
@@ -143,6 +145,16 @@ public class SceneController implements Initializable{
         btDirectory.setGraphic(new ImageView((getClass().getResource("/file-directory.png").toExternalForm())));
         imageView.setImage(new Image(getClass().getResource("/album.png").toExternalForm()));
         imageView.setFitWidth(500);
+    }
+
+    private void setMetadata()
+    {
+        labelAlbum.setText(player.getSongInfo().getAlbum());
+        labelArtist.setText(player.getSongInfo().getArtist());
+        labelTitle.setText(player.getSongInfo().getTitle());
+        labelYear.setText(player.getSongInfo().getDate());
+
+        imageView.setImage(player.getSongInfo().getImage());
     }
 
     public void setStage(Stage s)
