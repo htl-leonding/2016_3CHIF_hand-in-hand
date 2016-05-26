@@ -16,6 +16,8 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import model.MusicFinder;
@@ -26,6 +28,12 @@ import java.net.URL;
 import java.util.*;
 
 public class SceneController implements Initializable{
+
+    @FXML
+    private Label progressTimeString;
+
+    @FXML
+    private BorderPane borderPaneMain;
 
     @FXML
     private Button btPlay;
@@ -69,7 +77,6 @@ public class SceneController implements Initializable{
     @FXML
     void progressClickHandler(MouseEvent event) {
         if(player != null) {
-            System.out.println(event.getX()/progressBarSong.getWidth());
             player.jump(event.getX()/progressBarSong.getWidth());
         }
     }
@@ -147,6 +154,15 @@ public class SceneController implements Initializable{
                 @Override
                 public void run() {
                     progressBarSong.setProgress(player.getElapsedTime().toMillis() / player.getDuration().toMillis());
+
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            progressTimeString.setText(convertIntSecToTimeSrting((int)player.getElapsedTime().toSeconds())
+                                    + " / " + convertIntSecToTimeSrting((int)player.getDuration().toSeconds()));
+                        }
+                    });
+
                     if(player.getElapsedTime().toMillis() / player.getDuration().toMillis() >= 1)
                     {
                         Platform.runLater(new Runnable() {
@@ -175,6 +191,8 @@ public class SceneController implements Initializable{
         imageView.setFitWidth(500);
 
         timer = new Timer(true);
+        progressTimeString.setDisable(true);
+        progressTimeString.setOpacity(1);
     }
 
     public void startResizableProperty()
@@ -240,6 +258,28 @@ public class SceneController implements Initializable{
     public void setStage(Stage s)
     {
         this.stage = s;
+    }
+
+    private String convertIntSecToTimeSrting(int sec)
+    {
+        String newString = "";
+        int temp = 0;
+
+        if(sec >= 60)//Minutes
+        {
+            if(sec >= 60*60)//Hours
+            {
+                temp = sec /(60*60);
+                newString = Integer.toString(temp) + "h";
+                sec -= temp*60*60;
+            }
+            temp = sec/60;
+            newString += " " + Integer.toString(temp) + "min";
+            sec -= temp*60;
+        }
+        newString += " " + Integer.toString(sec) + "sec";
+
+        return newString;
     }
 
     public void close()

@@ -71,14 +71,7 @@
       </BorderPane>
    </left>
    <bottom>
-      <BorderPane prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <center>
-            <VBox>
-               <children>
-                  <ProgressBar fx:id="progressBarSong" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#progressClickHandler" progress="0.0" BorderPane.alignment="CENTER" VBox.vgrow="ALWAYS" />
-               </children>
-            </VBox>
-         </center>
+      <BorderPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <left>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="157.0" BorderPane.alignment="CENTER">
                <children>
@@ -88,6 +81,21 @@
                </children>
             </HBox>
          </left>
+         <center>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="444.0" BorderPane.alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ProgressBar fx:id="progressBarSong" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#progressClickHandler" progress="0.0" />
+                        <Label fx:id="progressTimeString" text="0/0">
+                           <font>
+                              <Font size="19.0" />
+                           </font></Label>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </center>
       </BorderPane>
    </bottom>
    <top>
