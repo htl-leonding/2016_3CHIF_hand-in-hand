@@ -6,7 +6,6 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -18,11 +17,9 @@ import javafx.stage.Stage;
 import model.MusicFinder;
 import model.Player;
 
-import javax.sound.midi.Soundbank;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.TimerTask;
 
 public class SceneController implements Initializable{
 
@@ -75,6 +72,9 @@ public class SceneController implements Initializable{
             player.pause();
             player.start(musicFinder.prevElement());
             player.play();
+            btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));
+
+            setMetadata();
         }
     }
 
@@ -102,6 +102,9 @@ public class SceneController implements Initializable{
             player.pause();
             player.start(musicFinder.nextElement());
             player.play();
+            btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));
+
+            setMetadata();
         }
     }
 
@@ -149,12 +152,30 @@ public class SceneController implements Initializable{
 
     private void setMetadata()
     {
-        labelAlbum.setText(player.getSongInfo().getAlbum());
-        labelArtist.setText(player.getSongInfo().getArtist());
-        labelTitle.setText(player.getSongInfo().getTitle());
-        labelYear.setText(player.getSongInfo().getDate());
+        if(player.getSongInfo().getAlbum() == null)
+            labelAlbum.setText("<Empty>");
+        else
+            labelAlbum.setText(player.getSongInfo().getAlbum());
 
-        imageView.setImage(player.getSongInfo().getImage());
+        if(player.getSongInfo().getArtist() == null)
+            labelArtist.setText("<Empty>");
+        else
+            labelArtist.setText(player.getSongInfo().getArtist());
+
+        if(player.getSongInfo().getTitle() == null)
+            labelTitle.setText("<Empty>");
+        else
+            labelTitle.setText(player.getSongInfo().getTitle());
+
+        if(player.getSongInfo().getYear() == null)
+            labelYear.setText("<Empty>");
+        else
+            labelYear.setText(player.getSongInfo().getYear());
+
+        if(player.getSongInfo().getImage() == null)
+            imageView.setImage(new Image(getClass().getResource("/album.png").toExternalForm()));
+        else
+            imageView.setImage(player.getSongInfo().getImage());
     }
 
     public void setStage(Stage s)

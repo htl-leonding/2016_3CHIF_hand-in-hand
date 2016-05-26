@@ -39,24 +39,32 @@
             </VBox>
          </left>
          <right>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER">
                <children>
-                  <Label fx:id="labelTitle" text="&lt;Empty&gt;">
-                     <font>
-                        <Font size="19.0" />
-                     </font></Label>
-                  <Label fx:id="labelAlbum" text="&lt;Empty&gt;">
-                     <font>
-                        <Font size="19.0" />
-                     </font></Label>
-                  <Label fx:id="labelArtist" text="&lt;Empty&gt;">
-                     <font>
-                        <Font size="19.0" />
-                     </font></Label>
-                  <Label fx:id="labelYear" text="&lt;Empty&gt;">
-                     <font>
-                        <Font size="19.0" />
-                     </font></Label>
+                  <VBox alignment="CENTER_LEFT" prefHeight="294.0" prefWidth="396.0" BorderPane.alignment="CENTER_LEFT">
+                     <children>
+                        <Label fx:id="labelTitle" text="&lt;Empty&gt;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelAlbum" text="&lt;Empty&gt;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelArtist" text="&lt;Empty&gt;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelYear" text="&lt;Empty&gt;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
                </children>
             </VBox>
          </right>
