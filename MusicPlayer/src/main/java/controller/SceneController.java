@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -19,9 +20,9 @@ import model.Player;
 
 import java.io.File;
 import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.*;
 
-public class SceneController implements Initializable{
+public class SceneController implements Initializable, Observer{
 
     @FXML
     private Button btPlay;
@@ -39,6 +40,9 @@ public class SceneController implements Initializable{
     private ImageView imageView;
 
     @FXML
+    private ProgressBar progressBarSong;
+
+    @FXML
     private Label labelYear;
 
     @FXML
@@ -54,6 +58,7 @@ public class SceneController implements Initializable{
     private Stage stage;
     private MusicFinder musicFinder;
     private Player player;
+    private Timer timer;
 
 
     @FXML
@@ -135,6 +140,13 @@ public class SceneController implements Initializable{
             btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));
 
             setMetadata();
+
+            timer.scheduleAtFixedRate(new TimerTask() {
+                @Override
+                public void run() {
+                    progressBarSong.setProgress(player.getElapsedTime().toMillis() / player.getDuration().toMillis());
+                }
+            }, new Date(), 250);
         }
         System.out.println(musicFinder.getFileList().size() + " file(s) found!");
     }
@@ -148,38 +160,48 @@ public class SceneController implements Initializable{
         btDirectory.setGraphic(new ImageView((getClass().getResource("/file-directory.png").toExternalForm())));
         imageView.setImage(new Image(getClass().getResource("/album.png").toExternalForm()));
         imageView.setFitWidth(500);
+
+        timer = new Timer(true);
     }
 
-    private void setMetadata()
-    {
-        if(player.getSongInfo().getAlbum() == null)
+    private void setMetadata() {
+        if (player.getSongInfo().getAlbum() == null)
             labelAlbum.setText("<Empty>");
         else
             labelAlbum.setText(player.getSongInfo().getAlbum());
 
-        if(player.getSongInfo().getArtist() == null)
+        if (player.getSongInfo().getArtist() == null)
             labelArtist.setText("<Empty>");
         else
             labelArtist.setText(player.getSongInfo().getArtist());
 
-        if(player.getSongInfo().getTitle() == null)
+        if (player.getSongInfo().getTitle() == null)
             labelTitle.setText("<Empty>");
         else
             labelTitle.setText(player.getSongInfo().getTitle());
 
-        if(player.getSongInfo().getYear() == null)
+        if (player.getSongInfo().getYear() == null)
             labelYear.setText("<Empty>");
         else
             labelYear.setText(player.getSongInfo().getYear());
 
-        if(player.getSongInfo().getImage() == null)
+        if (player.getSongInfo().getImage() == null) {
             imageView.setImage(new Image(getClass().getResource("/album.png").toExternalForm()));
-        else
+            imageView.setFitWidth(500);
+        } else {
             imageView.setImage(player.getSongInfo().getImage());
+            imageView.setFitWidth(250);
+        }
     }
 
     public void setStage(Stage s)
     {
         this.stage = s;
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        progressBarSong.setProgress(1);
+        btNextHandler(null);
     }
 }

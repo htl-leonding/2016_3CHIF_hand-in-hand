@@ -1,6 +1,8 @@
 package model;
 
 import com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
@@ -11,14 +13,15 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
 import java.io.IOException;
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * Created by Stefan Smiljkovic on 24.05.2016.
  */
-public class Player {
+public class Player extends Observable {
     private File currentFile;
     private MediaPlayer mediaPlayer;
-    private Duration duration;
     private SongInfo songInfo;
 
     public Player() {
@@ -31,9 +34,15 @@ public class Player {
         try{
             Media hit = new Media(currentFile.toURI().toASCIIString());
             mediaPlayer = new MediaPlayer(hit);
-
             songInfo = new SongInfo(currentFile);
 
+            mediaPlayer.onEndOfMediaProperty().addListener(new ChangeListener<Runnable>() {
+                @Override
+                public void changed(ObservableValue<? extends Runnable> observable, Runnable oldValue, Runnable newValue) {
+                    setChanged();
+                    notifyObservers();
+                }
+            });
 
             return true;
         }
@@ -68,12 +77,16 @@ public class Player {
 
     public Duration getElapsedTime()
     {
-        duration = mediaPlayer.getTotalDuration();
-        return duration;
+        return  mediaPlayer.getCurrentTime();
     }
 
     public SongInfo getSongInfo()
     {
         return songInfo;
+    }
+
+    public Duration getDuration()
+    {
+        return mediaPlayer.getTotalDuration();
     }
 }

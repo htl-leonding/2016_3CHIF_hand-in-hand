@@ -55,7 +55,9 @@ public class SongInfo {
 
     public Image getImage(){
         try {
-            return SwingFXUtils.toFXImage(audioFile.getTag().getArtworkList().get(0).getImage(), null);
+            if(!audioFile.getTag().getArtworkList().isEmpty())
+                return SwingFXUtils.toFXImage(audioFile.getTag().getArtworkList().get(0).getImage(), null);
+            return null;
         }
         catch (Exception ex)
         {

@@ -1,5 +1,6 @@
 package model;
 
+import javafx.scene.control.Alert;
 import sun.awt.image.ImageWatched;
 
 import java.io.File;
@@ -62,13 +63,12 @@ public class MusicFinder implements Enumeration<File> {
             }
         });
 
-
-
         for (File f:files)
         {
             newListFiles.add(f);
         }
         cnt = 0;
+
         return newListFiles;
     }
 

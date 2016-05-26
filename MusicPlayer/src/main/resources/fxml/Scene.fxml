@@ -39,7 +39,7 @@
             </VBox>
          </left>
          <right>
-            <VBox alignment="CENTER">
+            <VBox alignment="CENTER" prefHeight="294.0" prefWidth="221.0">
                <children>
                   <VBox alignment="CENTER_LEFT" prefHeight="294.0" prefWidth="396.0" BorderPane.alignment="CENTER_LEFT">
                      <children>
@@ -73,7 +73,7 @@
    <bottom>
       <BorderPane prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <center>
-            <ProgressBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#progressClickHandler" progress="0.0" BorderPane.alignment="CENTER" />
+            <ProgressBar fx:id="progressBarSong" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#progressClickHandler" progress="0.0" BorderPane.alignment="CENTER" />
          </center>
          <left>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="157.0" BorderPane.alignment="CENTER">
