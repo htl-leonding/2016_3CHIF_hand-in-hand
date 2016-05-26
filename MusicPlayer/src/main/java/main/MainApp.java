@@ -32,7 +32,9 @@ public class MainApp extends Application {
 
         SceneController s = FXLoader.getController();
 
-        if(scene != null)
+        if(scene != null) {
             s.setStage(stage);
+            s.startResizableProperty();
+        }
     }
 }

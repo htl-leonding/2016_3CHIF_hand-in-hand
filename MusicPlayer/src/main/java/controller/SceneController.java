@@ -3,6 +3,8 @@ package controller;
 /**
  * Created by Stefan Smiljkovic on 24.05.2016.
  */
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -59,6 +61,7 @@ public class SceneController implements Initializable, Observer{
     private MusicFinder musicFinder;
     private Player player;
     private Timer timer;
+    private boolean musicCoverShowing;
 
 
     @FXML
@@ -69,10 +72,7 @@ public class SceneController implements Initializable, Observer{
 
     @FXML
     void btPreviousHandler(ActionEvent event) {
-        if(player == null)
-            return;
-
-        if(musicFinder.getPosition() > 1)
+        if(musicFinder.getPosition() > 1 && player != null)
         {
             player.pause();
             player.start(musicFinder.prevElement());
@@ -85,12 +85,12 @@ public class SceneController implements Initializable, Observer{
 
     @FXML
     void btPlayHandler(ActionEvent event) {
-        if(player.isPlaying())
+        if(player != null && player.isPlaying())
         {
             player.pause();
             btPlay.setGraphic(new ImageView(getClass().getResource("/play.png").toExternalForm()));
         }
-        else
+        else if(player != null)
         {
             player.play();
             btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));
@@ -99,10 +99,8 @@ public class SceneController implements Initializable, Observer{
 
     @FXML
     void btNextHandler(ActionEvent event) {
-        if(player == null)
-            return;
 
-        if(musicFinder.hasMoreElements())
+        if(musicFinder.hasMoreElements() && player != null)
         {
             player.pause();
             player.start(musicFinder.nextElement());
@@ -153,6 +151,8 @@ public class SceneController implements Initializable, Observer{
 
     public void initialize(URL location, ResourceBundle resources) {
         musicFinder = new MusicFinder();
+        player = null;
+        musicCoverShowing = false;
 
         btPlay.setGraphic(new ImageView(getClass().getResource("/play.png").toExternalForm()));
         btNext.setGraphic(new ImageView(getClass().getResource("/next.png").toExternalForm()));
@@ -162,6 +162,33 @@ public class SceneController implements Initializable, Observer{
         imageView.setFitWidth(500);
 
         timer = new Timer(true);
+    }
+
+    public void startResizableProperty()
+    {
+        new Timer().scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                if(player != null)
+                {
+                    if(musicCoverShowing)
+                        updDatePicSizes(500, (int) (stage.getWidth()/2));
+                    else
+                        updDatePicSizes(250, (int) (stage.getWidth()/2));
+                }
+                updDatePicSizes(500, (int) (stage.getWidth()/2));
+            }
+        }, 0, 250);
+    }
+
+    private synchronized void updDatePicSizes(int normal, int max)
+    {
+        if(!stage.isMaximized())
+            imageView.setFitWidth(normal);
+        else
+        {
+            imageView.setFitWidth(max);
+        }
     }
 
     private void setMetadata() {
@@ -187,10 +214,12 @@ public class SceneController implements Initializable, Observer{
 
         if (player.getSongInfo().getImage() == null) {
             imageView.setImage(new Image(getClass().getResource("/album.png").toExternalForm()));
-            imageView.setFitWidth(500);
+            updDatePicSizes(500, (int) (stage.getMaxWidth()/2));
+            musicCoverShowing = false;
         } else {
             imageView.setImage(player.getSongInfo().getImage());
-            imageView.setFitWidth(250);
+            updDatePicSizes(250, (int) (stage.getMaxWidth()/2));
+            musicCoverShowing = true;
         }
     }
 
