@@ -17,7 +17,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.paint.Color;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import model.MusicFinder;
@@ -125,6 +124,7 @@ public class SceneController implements Initializable{
     @FXML
     void btOpenDirectoryHandler(ActionEvent event) {
         DirectoryChooser chooser = new DirectoryChooser();
+
         File f = chooser.showDialog(stage);
         if(f == null)
             return;
@@ -188,7 +188,6 @@ public class SceneController implements Initializable{
         btPrev.setGraphic(new ImageView(getClass().getResource("/previous.png").toExternalForm()));
         btDirectory.setGraphic(new ImageView((getClass().getResource("/file-directory.png").toExternalForm())));
         imageView.setImage(new Image(getClass().getResource("/album.png").toExternalForm()));
-        imageView.setFitWidth(500);
 
         timer = new Timer(true);
         progressTimeString.setDisable(true);
@@ -197,31 +196,17 @@ public class SceneController implements Initializable{
 
     public void startResizableProperty()
     {
-        resizeTimer = new Timer();
-        resizeTimer.scheduleAtFixedRate(new TimerTask() {
+        stage.getScene().widthProperty().addListener(new ChangeListener<Number>() {
             @Override
-            public void run() {
-                if(player != null)
-                {
-                    if(musicCoverShowing)
-                        updDatePicSizes(500, (int) (stage.getWidth()/2));
-                    else
-                        updDatePicSizes(250, (int) (stage.getWidth()/2));
-                }
-                updDatePicSizes(500, (int) (stage.getWidth()/2));
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                if(musicCoverShowing)
+                    imageView.setFitWidth(stage.getWidth()/2);
+                else
+                    imageView.setFitWidth((stage.getWidth() + 600)/2);
             }
-        }, 0, 250);
+        });
     }
 
-    private synchronized void updDatePicSizes(int normal, int max)
-    {
-        if(!stage.isMaximized())
-            imageView.setFitWidth(normal);
-        else
-        {
-            imageView.setFitWidth(max);
-        }
-    }
 
     private void setMetadata() {
         if (player.getSongInfo().getAlbum() == null)
@@ -246,11 +231,11 @@ public class SceneController implements Initializable{
 
         if (player.getSongInfo().getImage() == null) {
             imageView.setImage(new Image(getClass().getResource("/album.png").toExternalForm()));
-            updDatePicSizes(500, (int) (stage.getMaxWidth()/2));
+            imageView.setFitWidth((stage.getWidth()+600)/2);
             musicCoverShowing = false;
         } else {
             imageView.setImage(player.getSongInfo().getImage());
-            updDatePicSizes(250, (int) (stage.getMaxWidth()/2));
+            imageView.setFitWidth(stage.getWidth()/2);
             musicCoverShowing = true;
         }
     }
@@ -258,6 +243,7 @@ public class SceneController implements Initializable{
     public void setStage(Stage s)
     {
         this.stage = s;
+        imageView.setFitWidth((stage.getWidth() + 600)/2);
     }
 
     private String convertIntSecToTimeSrting(int sec)

@@ -37,6 +37,9 @@ public class MainApp extends Application {
         stage.setScene(scene);
         stage.show();
 
+        stage.setMinHeight(stage.getHeight());
+        stage.setMinWidth(stage.getWidth());
+
         s = FXLoader.getController();
 
         if(scene != null) {
