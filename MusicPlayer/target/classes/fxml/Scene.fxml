@@ -19,19 +19,19 @@
          <left>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label text="Title:">
+                  <Label text="Title:" textFill="#0022ff">
                      <font>
                         <Font size="19.0" />
                      </font></Label>
-                  <Label text="Album:">
+                  <Label text="Album:" textFill="#0022ff">
                      <font>
                         <Font size="19.0" />
                      </font></Label>
-                  <Label text="Artist:">
+                  <Label text="Artist:" textFill="#0022ff">
                      <font>
                         <Font size="19.0" />
                      </font></Label>
-                  <Label text="Year:">
+                  <Label text="Year:" textFill="#0022ff">
                      <font>
                         <Font size="19.0" />
                      </font></Label>
@@ -43,22 +43,22 @@
                <children>
                   <VBox alignment="CENTER_LEFT" prefHeight="294.0" prefWidth="396.0" BorderPane.alignment="CENTER_LEFT">
                      <children>
-                        <Label fx:id="labelTitle" text="&lt;Empty&gt;">
+                        <Label fx:id="labelTitle" text="&lt;Empty&gt;" textFill="#0022ff">
                            <font>
                               <Font size="19.0" />
                            </font>
                         </Label>
-                        <Label fx:id="labelAlbum" text="&lt;Empty&gt;">
+                        <Label fx:id="labelAlbum" text="&lt;Empty&gt;" textFill="#0022ff">
                            <font>
                               <Font size="19.0" />
                            </font>
                         </Label>
-                        <Label fx:id="labelArtist" text="&lt;Empty&gt;">
+                        <Label fx:id="labelArtist" text="&lt;Empty&gt;" textFill="#0022ff">
                            <font>
                               <Font size="19.0" />
                            </font>
                         </Label>
-                        <Label fx:id="labelYear" text="&lt;Empty&gt;">
+                        <Label fx:id="labelYear" text="&lt;Empty&gt;" textFill="#0022ff">
                            <font>
                               <Font size="19.0" />
                            </font>
@@ -73,7 +73,11 @@
    <bottom>
       <BorderPane prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <center>
-            <ProgressBar fx:id="progressBarSong" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#progressClickHandler" progress="0.0" BorderPane.alignment="CENTER" />
+            <VBox>
+               <children>
+                  <ProgressBar fx:id="progressBarSong" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#progressClickHandler" progress="0.0" BorderPane.alignment="CENTER" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
          </center>
          <left>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="157.0" BorderPane.alignment="CENTER">

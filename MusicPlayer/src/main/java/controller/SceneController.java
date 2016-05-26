@@ -61,13 +61,18 @@ public class SceneController implements Initializable, Observer{
     private MusicFinder musicFinder;
     private Player player;
     private Timer timer;
+    private Timer resizeTimer;
     private boolean musicCoverShowing;
 
 
     @FXML
     void progressClickHandler(MouseEvent event) {
-        if(player == null)
-            return;
+        if(player != null) {
+            System.out.println(event.getX()/progressBarSong.getWidth());
+            System.out.println(event.getX());
+            System.out.println(progressBarSong.getWidth());
+            player.jump(event.getX()/progressBarSong.getWidth());
+        }
     }
 
     @FXML
@@ -160,13 +165,13 @@ public class SceneController implements Initializable, Observer{
         btDirectory.setGraphic(new ImageView((getClass().getResource("/file-directory.png").toExternalForm())));
         imageView.setImage(new Image(getClass().getResource("/album.png").toExternalForm()));
         imageView.setFitWidth(500);
-
         timer = new Timer(true);
     }
 
     public void startResizableProperty()
     {
-        new Timer().scheduleAtFixedRate(new TimerTask() {
+        resizeTimer = new Timer();
+        resizeTimer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 if(player != null)
@@ -232,5 +237,13 @@ public class SceneController implements Initializable, Observer{
     public void update(Observable o, Object arg) {
         progressBarSong.setProgress(1);
         btNextHandler(null);
+    }
+
+    public void close()
+    {
+        if(timer != null)
+            timer.cancel();
+        if(resizeTimer != null)
+            resizeTimer.cancel();
     }
 }
