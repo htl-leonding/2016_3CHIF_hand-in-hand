@@ -19,7 +19,7 @@ import java.util.Observer;
 /**
  * Created by Stefan Smiljkovic on 24.05.2016.
  */
-public class Player extends Observable {
+public class Player {
     private File currentFile;
     private MediaPlayer mediaPlayer;
     private SongInfo songInfo;
@@ -35,14 +35,6 @@ public class Player extends Observable {
             Media hit = new Media(currentFile.toURI().toASCIIString());
             mediaPlayer = new MediaPlayer(hit);
             songInfo = new SongInfo(currentFile);
-
-            mediaPlayer.onEndOfMediaProperty().addListener(new ChangeListener<Runnable>() {
-                @Override
-                public void changed(ObservableValue<? extends Runnable> observable, Runnable oldValue, Runnable newValue) {
-                    setChanged();
-                    notifyObservers();
-                }
-            });
 
             return true;
         }

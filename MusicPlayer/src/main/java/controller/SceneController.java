@@ -3,6 +3,7 @@ package controller;
 /**
  * Created by Stefan Smiljkovic on 24.05.2016.
  */
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -24,7 +25,7 @@ import java.io.File;
 import java.net.URL;
 import java.util.*;
 
-public class SceneController implements Initializable, Observer{
+public class SceneController implements Initializable{
 
     @FXML
     private Button btPlay;
@@ -69,8 +70,6 @@ public class SceneController implements Initializable, Observer{
     void progressClickHandler(MouseEvent event) {
         if(player != null) {
             System.out.println(event.getX()/progressBarSong.getWidth());
-            System.out.println(event.getX());
-            System.out.println(progressBarSong.getWidth());
             player.jump(event.getX()/progressBarSong.getWidth());
         }
     }
@@ -148,6 +147,15 @@ public class SceneController implements Initializable, Observer{
                 @Override
                 public void run() {
                     progressBarSong.setProgress(player.getElapsedTime().toMillis() / player.getDuration().toMillis());
+                    if(player.getElapsedTime().toMillis() / player.getDuration().toMillis() >= 1)
+                    {
+                        Platform.runLater(new Runnable() {
+                            @Override
+                            public void run() {
+                                btNextHandler(null);
+                            }
+                        });
+                    }
                 }
             }, new Date(), 250);
         }
@@ -165,6 +173,7 @@ public class SceneController implements Initializable, Observer{
         btDirectory.setGraphic(new ImageView((getClass().getResource("/file-directory.png").toExternalForm())));
         imageView.setImage(new Image(getClass().getResource("/album.png").toExternalForm()));
         imageView.setFitWidth(500);
+
         timer = new Timer(true);
     }
 
@@ -231,12 +240,6 @@ public class SceneController implements Initializable, Observer{
     public void setStage(Stage s)
     {
         this.stage = s;
-    }
-
-    @Override
-    public void update(Observable o, Object arg) {
-        progressBarSong.setProgress(1);
-        btNextHandler(null);
     }
 
     public void close()
