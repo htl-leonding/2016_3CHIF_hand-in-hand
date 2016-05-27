@@ -201,7 +201,6 @@ public class FxmlController implements Initializable {
 
     private void print(Metadata metadata) {
         System.out.println("-------------------------------------");
-metadata.
         // Iterate over the data and print to System.out
 
         //
