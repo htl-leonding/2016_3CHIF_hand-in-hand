@@ -32,14 +32,4 @@
          </styleClass>
       </Button>
    </right>
-   <bottom>
-      <HBox fx:id="hb" alignment="CENTER" prefHeight="150.0" prefWidth="1080.0" spacing="50.0" style="-fx-background-color: #e6e6e6;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fx:id="ivFirst" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ivSecond" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ivThird" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ivFourth" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </HBox>
-   </bottom>
 </BorderPane>
