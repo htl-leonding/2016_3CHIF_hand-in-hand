@@ -288,9 +288,13 @@ public class SceneController implements Initializable{
         g /= (width*heigth);
         b /= (width*heigth);
 
-        r = Math.max(r, 0.1);
-        g = Math.max(g, 0.1);
-        b = Math.max(b, 0.1);
+        double temp = (r + g + b)/3;
+
+        if(temp < 0.2) {
+            r = Math.max(r, 0.3);
+            g = Math.max(g, 0.3);
+            b = Math.max(b, 0.3);
+        }
 
         setLabelColor(new Color(1 - r, 1 - g, 1 - b, 1));
     }
@@ -305,11 +309,6 @@ public class SceneController implements Initializable{
         labelAlbumText.setTextFill(color);
         labelYear.setTextFill(color);
         labelYearText.setTextFill(color);
-
-        borderPaneMain.getLeft().setStyle("\"-fx-background: #FFFFFF;\"");
-
-        borderPaneMain.setStyle("\"-fx-background: #FFFFFF;\"");
-        //stage.getScene().setFill(new Color(1 - color.getRed(), 1 - color.getGreen(), 1 - color.getBlue(), 1));
     }
 
     public void setStage(Stage s)
