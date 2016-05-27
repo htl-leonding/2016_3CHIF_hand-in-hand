@@ -1,6 +1,12 @@
 package controller;
 
 
+import com.drew.imaging.ImageMetadataReader;
+import com.drew.imaging.ImageProcessingException;
+import com.drew.metadata.Directory;
+import com.drew.metadata.Metadata;
+import com.drew.metadata.Tag;
+import com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -14,9 +20,11 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import model.ImageGallery;
+
 import java.awt.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -173,8 +181,50 @@ public class FxmlController implements Initializable {
     void SetImage(int act) {
         try {
             ivMainView.setImage(new Image(new FileInputStream(img.getFilesList().get(act)), 1024, 0, true, true));
+            SetImageMetadata();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void SetImageMetadata() {
+        try {
+            Metadata metadata = ImageMetadataReader.readMetadata(img.getFilesList().get(actPos));
+
+            print(metadata);
+        } catch (ImageProcessingException e) {
+            // handle exception
+        } catch (IOException e) {
+            // handle exception
+        }
+    }
+
+    private void print(Metadata metadata) {
+        System.out.println("-------------------------------------");
+metadata.
+        // Iterate over the data and print to System.out
+
+        //
+        // A Metadata object contains multiple Directory objects
+        //
+        for (Directory directory : metadata.getDirectories()) {
+
+            //
+            // Each Directory stores values in Tag objects
+            //
+            for (Tag tag : directory.getTags()) {
+                System.out.println(tag);
+
+            }
+
+            //
+            // Each Directory may also contain error messages
+            //
+            if (directory.hasErrors()) {
+                for (String error : directory.getErrors()) {
+                    System.err.println("ERROR: " + error);
+                }
+            }
         }
     }
 }
