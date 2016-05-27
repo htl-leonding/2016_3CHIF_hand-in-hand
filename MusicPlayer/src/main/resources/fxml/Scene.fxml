@@ -7,34 +7,40 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="400.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SceneController">
+
+<BorderPane fx:id="borderPaneMain" maxHeight="400.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SceneController">
    <center>
       <ImageView fx:id="imageView" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <viewport>
             <Rectangle2D />
-         </viewport></ImageView>
+         </viewport>
+      </ImageView>
    </center>
    <left>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <left>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label text="Title:" textFill="#0022ff">
+                  <Label fx:id="labelTitleText" text="Title:" textFill="#0022ff">
                      <font>
                         <Font size="19.0" />
-                     </font></Label>
-                  <Label text="Album:" textFill="#0022ff">
+                     </font>
+                  </Label>
+                  <Label fx:id="labelAlbumText" text="Album:" textFill="#0022ff">
                      <font>
                         <Font size="19.0" />
-                     </font></Label>
-                  <Label text="Artist:" textFill="#0022ff">
+                     </font>
+                  </Label>
+                  <Label fx:id="labelArtistText" text="Artist:" textFill="#0022ff">
                      <font>
                         <Font size="19.0" />
-                     </font></Label>
-                  <Label text="Year:" textFill="#0022ff">
+                     </font>
+                  </Label>
+                  <Label fx:id="labelYearText" text="Year:" textFill="#0022ff">
                      <font>
                         <Font size="19.0" />
-                     </font></Label>
+                     </font>
+                  </Label>
                </children>
             </VBox>
          </left>
@@ -90,7 +96,8 @@
                         <Label fx:id="progressTimeString" text="0/0">
                            <font>
                               <Font size="19.0" />
-                           </font></Label>
+                           </font>
+                        </Label>
                      </children>
                   </StackPane>
                </children>
@@ -102,6 +109,7 @@
       <Button fx:id="btDirectory" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btOpenDirectoryHandler" prefHeight="51.0" prefWidth="50.0" BorderPane.alignment="TOP_LEFT">
          <BorderPane.margin>
             <Insets left="5.0" top="5.0" />
-         </BorderPane.margin></Button>
+         </BorderPane.margin>
+      </Button>
    </top>
 </BorderPane>

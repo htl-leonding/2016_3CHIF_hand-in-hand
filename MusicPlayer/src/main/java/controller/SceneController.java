@@ -15,8 +15,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.PixelReader;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import model.MusicFinder;
@@ -27,6 +29,18 @@ import java.net.URL;
 import java.util.*;
 
 public class SceneController implements Initializable{
+
+    @FXML
+    private Label labelTitleText;
+
+    @FXML
+    private Label labelYearText;
+
+    @FXML
+    private Label labelAlbumText;
+
+    @FXML
+    private Label labelArtistText;
 
     @FXML
     private Label progressTimeString;
@@ -63,6 +77,8 @@ public class SceneController implements Initializable{
 
     @FXML
     private Label labelAlbum;
+
+
 
 
     private Stage stage;
@@ -110,7 +126,7 @@ public class SceneController implements Initializable{
     @FXML
     void btNextHandler(ActionEvent event) {
 
-        if(musicFinder.hasMoreElements() && player != null)
+        if(player != null && musicFinder.hasMoreElements())
         {
             player.pause();
             player.start(musicFinder.nextElement());
@@ -209,22 +225,22 @@ public class SceneController implements Initializable{
 
 
     private void setMetadata() {
-        if (player.getSongInfo().getAlbum() == null)
+        if (player.getSongInfo().getAlbum() == null || player.getSongInfo().getAlbum() == "")
             labelAlbum.setText("<Empty>");
         else
             labelAlbum.setText(player.getSongInfo().getAlbum());
 
-        if (player.getSongInfo().getArtist() == null)
+        if (player.getSongInfo().getArtist() ==  null || player.getSongInfo().getArtist() == "")
             labelArtist.setText("<Empty>");
         else
             labelArtist.setText(player.getSongInfo().getArtist());
 
-        if (player.getSongInfo().getTitle() == null)
+        if (player.getSongInfo().getTitle() == null ||player.getSongInfo().getTitle() == "")
             labelTitle.setText("<Empty>");
         else
             labelTitle.setText(player.getSongInfo().getTitle());
 
-        if (player.getSongInfo().getYear() == null)
+        if (player.getSongInfo().getYear() == null || player.getSongInfo().getYear() == "")
             labelYear.setText("<Empty>");
         else
             labelYear.setText(player.getSongInfo().getYear());
@@ -233,17 +249,74 @@ public class SceneController implements Initializable{
             imageView.setImage(new Image(getClass().getResource("/album.png").toExternalForm()));
             imageView.setFitWidth((stage.getWidth()+600)/2);
             musicCoverShowing = false;
+            calcLabelColorOpposite(imageView.getImage());
+
         } else {
             imageView.setImage(player.getSongInfo().getImage());
             imageView.setFitWidth(stage.getWidth()/2);
             musicCoverShowing = true;
+            calcLabelColorOpposite(imageView.getImage());
         }
+    }
+
+    private synchronized void calcLabelColorOpposite(Image image)
+    {
+        double r = 0;
+        double g = 0;
+        double b = 0;
+
+        int cnt = 0;
+
+        PixelReader reader = image.getPixelReader();
+
+        double width = image.getWidth();
+        double heigth = image.getHeight();
+
+        for (int x = 0; x < width; ++x)
+        {
+            for(int y = 0;  y < heigth; ++y)
+            {
+                ++cnt;
+
+                r += reader.getColor(x, y).getRed();
+                g += reader.getColor(x, y).getGreen();
+                b += reader.getColor(x, y).getBlue();
+            }
+        }
+
+        r /= (width*heigth);
+        g /= (width*heigth);
+        b /= (width*heigth);
+
+        r = Math.max(r, 0.1);
+        g = Math.max(g, 0.1);
+        b = Math.max(b, 0.1);
+
+        setLabelColor(new Color(1 - r, 1 - g, 1 - b, 1));
+    }
+
+    private void setLabelColor(Color color)
+    {
+        labelArtist.setTextFill(color);
+        labelArtistText.setTextFill(color);
+        labelTitle.setTextFill(color);
+        labelTitleText.setTextFill(color);
+        labelAlbum.setTextFill(color);
+        labelAlbumText.setTextFill(color);
+        labelYear.setTextFill(color);
+        labelYearText.setTextFill(color);
+
+        borderPaneMain.getLeft().setStyle("\"-fx-background: #FFFFFF;\"");
+
+        borderPaneMain.setStyle("\"-fx-background: #FFFFFF;\"");
+        //stage.getScene().setFill(new Color(1 - color.getRed(), 1 - color.getGreen(), 1 - color.getBlue(), 1));
     }
 
     public void setStage(Stage s)
     {
         this.stage = s;
         imageView.setFitWidth((stage.getWidth() + 600)/2);
+        calcLabelColorOpposite(imageView.getImage());
     }
 
     private String convertIntSecToTimeSrting(int sec)
