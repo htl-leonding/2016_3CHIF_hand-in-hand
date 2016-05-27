@@ -16,6 +16,8 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.PixelReader;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
@@ -26,6 +28,7 @@ import model.Player;
 
 import java.io.File;
 import java.net.URL;
+import java.security.Key;
 import java.util.*;
 
 public class SceneController implements Initializable{
@@ -78,9 +81,6 @@ public class SceneController implements Initializable{
     @FXML
     private Label labelAlbum;
 
-
-
-
     private Stage stage;
     private MusicFinder musicFinder;
     private Player player;
@@ -88,6 +88,17 @@ public class SceneController implements Initializable{
     private Timer resizeTimer;
     private boolean musicCoverShowing;
 
+    @FXML
+    void mainKeyHandler(KeyEvent event) {
+        if(event.getCode().equals(KeyCode.LEFT))
+            btPreviousHandler(null);
+        else if(event.getCode().equals(KeyCode.RIGHT))
+            btNextHandler(null);
+        else if(event.getCode().equals(KeyCode.SPACE))
+            btPlayHandler(null);
+
+        System.out.println("|" + event.getText() + "|");
+    }
 
     @FXML
     void progressClickHandler(MouseEvent event) {
@@ -97,7 +108,7 @@ public class SceneController implements Initializable{
     }
 
     @FXML
-    void btPreviousHandler(ActionEvent event) {
+    void btPreviousHandler(MouseEvent event) {
         if(musicFinder.getPosition() > 1 && player != null)
         {
             player.pause();
@@ -110,7 +121,7 @@ public class SceneController implements Initializable{
     }
 
     @FXML
-    void btPlayHandler(ActionEvent event) {
+    void btPlayHandler(MouseEvent event) {
         if(player != null && player.isPlaying())
         {
             player.pause();
@@ -124,7 +135,7 @@ public class SceneController implements Initializable{
     }
 
     @FXML
-    void btNextHandler(ActionEvent event) {
+    void btNextHandler(MouseEvent event) {
 
         if(player != null && musicFinder.hasMoreElements())
         {
@@ -138,7 +149,7 @@ public class SceneController implements Initializable{
     }
 
     @FXML
-    void btOpenDirectoryHandler(ActionEvent event) {
+    void btOpenDirectoryHandler(MouseEvent event) {
         DirectoryChooser chooser = new DirectoryChooser();
 
         File f = chooser.showDialog(stage);
