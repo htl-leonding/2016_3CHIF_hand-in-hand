@@ -132,8 +132,10 @@ In der Klasse Key wird ein Button mit der jeweiligen Funktion gespeichert und im
 Ermöglicht die serielle und parallele Kommunikation mit der JDK. RXTX wurde Anfang 1997 Entwickelt und wurde seitdem immer weiter bearbeitet. Die neuste Verion ist rxtx-2.1-7, die Anfang 2006 veröffentlicht wurde. Mehr Informationen über diese Bibliothek finden man [hier](http://users.frii.com/jarvi/rxtx/index.html).
 
 ***
+Links zum Wiki
 * [Home](https://github.com/htl-leonding/2016_3CHIF_hand-in-hand/wiki/Home)
 * [Über das Projekt](https://github.com/htl-leonding/2016_3CHIF_hand-in-hand/wiki/%C3%9Cber-das-Projekt)
 * [Versionen](https://github.com/htl-leonding/2016_3CHIF_hand-in-hand/wiki/Versionen)
 * [Feautures](https://github.com/htl-leonding/2016_3CHIF_hand-in-hand/wiki/Feautures)
+* [Code](https://github.com/htl-leonding/2016_3CHIF_hand-in-hand/wiki/Code)
 
