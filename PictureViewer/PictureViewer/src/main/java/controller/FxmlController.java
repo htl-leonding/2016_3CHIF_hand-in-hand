@@ -6,13 +6,13 @@ import com.drew.imaging.ImageProcessingException;
 import com.drew.metadata.Directory;
 import com.drew.metadata.Metadata;
 import com.drew.metadata.Tag;
-import com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -26,15 +26,25 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class FxmlController implements Initializable {
 
     @FXML
+    private Label lbSize;
+
+    @FXML
     private Button btRightSwitch;
 
     @FXML
+    private Label lbName;
+
+    @FXML
     private Button btLeftSwitch;
+
+    @FXML
+    private Label lbChanged;
 
     @FXML
     private BorderPane bp;
@@ -211,8 +221,10 @@ public class FxmlController implements Initializable {
             //
             // Each Directory stores values in Tag objects
             //
+
             for (Tag tag : directory.getTags()) {
                 System.out.println(tag);
+                //String test = tag.toString();
 
             }
 
