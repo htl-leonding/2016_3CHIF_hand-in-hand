@@ -13,6 +13,7 @@ public class Asteroids extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/view/GameView.fxml"));
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
+        primaryStage.setFullScreen(true);
     }
 
 

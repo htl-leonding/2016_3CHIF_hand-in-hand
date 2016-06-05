@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e881d1bc-71ce-448b-8ecf-4c145d9ebae7" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/.idea/libraries/Maven__org_jaudiotagger_2_0_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/Hand_in_Hand-MusicPlayer.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/main/java/controller/SceneController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/main/java/main/MainApp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/main/java/model/MusicFinder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/main/java/model/Player.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/main/java/model/SongInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/main/resources/Pause.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/main/resources/album.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/main/resources/file-directory.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/main/resources/fxml/Scene.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/main/resources/music-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/main/resources/next.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/main/resources/play.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/main/resources/previous.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/album.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/controller/SceneController$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/controller/SceneController$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/controller/SceneController$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/controller/SceneController$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/controller/SceneController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/file-directory.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/fxml/Scene.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/main/MainApp$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/main/MainApp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/model/MusicFinder$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/model/MusicFinder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/model/Player.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/model/SongInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/music-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/next.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/pause.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/play.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/target/classes/previous.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/.idea/cssdialects.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/.idea/libraries/Maven__com_adobe_xmp_xmpcore_5_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/.idea/libraries/Maven__com_drewnoakes_metadata_extractor_2_8_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/PictureViewer.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/src/main/java/controller/FxmlController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/src/main/java/model/Direction.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/src/main/java/model/ImageGallery.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/src/main/java/pictureViewer/PictureViewer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/src/main/resources/Buttons.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/src/main/resources/FxmlView.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/src/main/resources/LeftButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/src/main/resources/RightButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/Buttons.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/FxmlView.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/LeftButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/RightButton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/controller/FxmlController$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/controller/FxmlController$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/controller/FxmlController$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/controller/FxmlController$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/controller/FxmlController$4$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/controller/FxmlController$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/controller/FxmlController$5$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/controller/FxmlController$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/controller/FxmlController$6$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/controller/FxmlController$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/controller/FxmlController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/model/Direction.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/model/ImageGallery.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PictureViewer/PictureViewer/target/classes/pictureViewer/PictureViewer.class" afterPath="" />
+    </list>
+    <ignored path="2016_3CHIF_hand-in-hand.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="2016_3CHIF_hand-in-hand" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="GameController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AdditionalPrograms/AsteroidsGame/Asteroids/src/controller/GameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="width" value="1932" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2016_3CHIF_hand-in-hand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2016_3CHIF_hand-in-hand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2016_3CHIF_hand-in-hand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2016_3CHIF_hand-in-hand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2016_3CHIF_hand-in-hand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdditionalPrograms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2016_3CHIF_hand-in-hand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2016_3CHIF_hand-in-hand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdditionalPrograms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AsteroidsGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Asteroids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2016_3CHIF_hand-in-hand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2016_3CHIF_hand-in-hand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdditionalPrograms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AsteroidsGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Asteroids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2016_3CHIF_hand-in-hand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2016_3CHIF_hand-in-hand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdditionalPrograms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AsteroidsGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Asteroids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/AdditionalPrograms/AsteroidsGame/Asteroids" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e881d1bc-71ce-448b-8ecf-4c145d9ebae7" name="Default" comment="" />
+      <created>1465161792599</created>
+      <option name="number" value="Default" />
+      <updated>1465161792599</updated>
+      <workItem from="1465161793809" duration="40000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="40000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="0" width="1932" height="1038" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/AdditionalPrograms/AsteroidsGame/Asteroids/src/controller/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

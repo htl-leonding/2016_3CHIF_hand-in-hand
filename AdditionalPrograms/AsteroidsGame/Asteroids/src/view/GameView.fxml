@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -7,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.canvas.*?>
 
-<BorderPane id="BorderPane" prefHeight="550" prefWidth="520" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.GameController">
+<BorderPane id="BorderPane" prefHeight="550" prefWidth="520" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GameController">
     <center>
         <BorderPane fx:id="borderPaneGame">
             <center>
@@ -18,6 +19,9 @@
     </center>
 
     <bottom>
-        <Label fx:id="lblPoints" alignment="CENTER" maxWidth="1.7976931348623157E308" text="test" textAlignment="CENTER" />
+        <Label fx:id="lblPoints" alignment="CENTER" maxWidth="1.7976931348623157E308" text="test" textAlignment="CENTER" textFill="#f50000">
+         <font>
+            <Font name="Arial" size="23.0" />
+         </font></Label>
     </bottom>
 </BorderPane>

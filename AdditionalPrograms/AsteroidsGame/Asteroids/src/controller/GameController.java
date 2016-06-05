@@ -99,7 +99,7 @@ public class GameController implements Initializable, Observer {
 
         factor = cvGame.getWidth() / 500.0;
 
-        lblPoints.setText("Punkte: " + model.getPoints());
+        lblPoints.setText("Highscore: " + model.getPoints());
 
         GraphicsContext ctx = cvGame.getGraphicsContext2D();
 
@@ -134,7 +134,7 @@ public class GameController implements Initializable, Observer {
     public void update(Observable o, Object arg) {
         if (model.getGameOver()) {
             Platform.runLater(() -> {
-                Alert a = new Alert(Alert.AlertType.INFORMATION, "GAME OVER!");
+                Alert a = new Alert(Alert.AlertType.INFORMATION, ("GAME OVER! \nYour Highscore: " + model.getPoints()));
                 a.showAndWait();
                 System.exit(0);
             });
