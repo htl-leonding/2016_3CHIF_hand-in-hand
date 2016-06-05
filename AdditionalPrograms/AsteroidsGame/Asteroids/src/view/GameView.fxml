@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.*?>
+
+<BorderPane id="BorderPane" prefHeight="550" prefWidth="520" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.GameController">
+    <center>
+        <BorderPane fx:id="borderPaneGame">
+            <center>
+                <Canvas fx:id="cvGame">
+                </Canvas>
+            </center>
+        </BorderPane>
+    </center>
+
+    <bottom>
+        <Label fx:id="lblPoints" alignment="CENTER" maxWidth="1.7976931348623157E308" text="test" textAlignment="CENTER" />
+    </bottom>
+</BorderPane>

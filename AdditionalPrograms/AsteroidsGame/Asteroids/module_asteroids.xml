@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_asteroids" default="compile.module.asteroids">
+  <dirname property="module.asteroids.basedir" file="${ant.file.module_asteroids}"/>
+  
+  <property name="module.jdk.home.asteroids" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.asteroids" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.asteroids" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.asteroids" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="asteroids.output.dir" value="${module.asteroids.basedir}/out/production/Asteroids"/>
+  <property name="asteroids.testoutput.dir" value="${module.asteroids.basedir}/out/test/Asteroids"/>
+  
+  <path id="asteroids.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="asteroids.module.production.classpath">
+    <path refid="${module.jdk.classpath.asteroids}"/>
+  </path>
+  
+  <path id="asteroids.runtime.production.module.classpath">
+    <pathelement location="${asteroids.output.dir}"/>
+  </path>
+  
+  <path id="asteroids.module.classpath">
+    <path refid="${module.jdk.classpath.asteroids}"/>
+    <pathelement location="${asteroids.output.dir}"/>
+  </path>
+  
+  <path id="asteroids.runtime.module.classpath">
+    <pathelement location="${asteroids.testoutput.dir}"/>
+    <pathelement location="${asteroids.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.asteroids">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.asteroids">
+    <patternset refid="excluded.from.module.asteroids"/>
+  </patternset>
+  
+  <path id="asteroids.module.sourcepath">
+    <dirset dir="${module.asteroids.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.asteroids" depends="compile.module.asteroids.production,compile.module.asteroids.tests" description="Compile module Asteroids"/>
+  
+  <target name="compile.module.asteroids.production" depends="register.custom.compilers" description="Compile module Asteroids; production classes">
+    <mkdir dir="${asteroids.output.dir}"/>
+    <javac2 destdir="${asteroids.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.asteroids}/javac">
+      <compilerarg line="${compiler.args.asteroids}"/>
+      <bootclasspath refid="asteroids.module.bootclasspath"/>
+      <classpath refid="asteroids.module.production.classpath"/>
+      <src refid="asteroids.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.asteroids"/>
+    </javac2>
+    
+    <copy todir="${asteroids.output.dir}">
+      <fileset dir="${module.asteroids.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.asteroids.tests" depends="register.custom.compilers,compile.module.asteroids.production" description="compile module Asteroids; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.asteroids" description="cleanup module">
+    <delete dir="${asteroids.output.dir}"/>
+    <delete dir="${asteroids.testoutput.dir}"/>
+  </target>
+</project>
