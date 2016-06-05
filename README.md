@@ -80,12 +80,12 @@ Mit Hilfe der Buttons kann man mit diesen Programm Videos abspielen und genieße
 Mit diesen Programm kann der Benutzer ein Musikordner auswählen um dann die darin enthaltenen Lieder abzuspielen. Dabei kann man mittels den Buttons zum nächsten Lied vorspringen, zum vorherigen Lied wechseln oder das Lied pausieren.
 
 #Asteroids-Game
-Dabei handelt sich um ein Spiel bei dem der Benutzer einen Raumschiff steuert. Natürlich haben wir es dem Benutzer nicht leicht gemacht, man muss um ein Level abzuschließen alle Asteroide die auf einen zukommen abschießen. Mit jedem neuen Level wird das spiel schwerer und anspruchsvoller.
+Dabei handelt sich um ein Spiel bei dem der Benutzer ein Raumschiff steuert. Natürlich haben wir es dem Benutzer nicht leicht gemacht, man muss um ein Level abzuschließen alle Asteroide die auf einen zukommen abschießen. Mit jedem neuen Level wird das spiel schwerer und anspruchsvoller. Jedoch kann am Anfang des Spiels der Schwierigkeitsgrad ausgewählt werden damit es für niemanden zu schwer wird :)
 
 ***
 
 #Kurzbeschreibung
-Unser ganzes Projekt wird in Java Entwickelt, dabei handelt es sich um ein Maven-Projekt.
+Unser ganzes Projekt wird in Java Entwickelt, dabei handelt es sich genauer gesagt um ein Maven-Projekt.
 
 #Struktur
 <p allign="center">
@@ -94,10 +94,11 @@ Unser ganzes Projekt wird in Java Entwickelt, dabei handelt es sich um ein Maven
 
 #Klassen
 ##PortListener
-Diese Klasse stellt die Verbindung zwischen dem Arduino und dem PC auf. Ist auch dafür da um die Eingabe der Benutzer, mit dem Buttons, zu bearbeiten und an die Controller Klasse weiter zu geben.
+Diese Klasse stellt eine Verbindung zwischen dem Arduino und dem PC auf. Sie dient auch zur auslesung der Eingabe des Benutzers. Die PortListener Klasse schickt dann dies eingelesenen Strings ein und schickt sie an den Controller. Dort wird dann auf den Benutzer gewartet der den gedrückten Button einer Funktion zuweist.
 
 Verbindungsaufbau:
 <p allign="center">
+Hier ist ein kleiner Codeausschnitt zur Verbindungsherstellung
     <img src="http://i.imgur.com/jSB278J.png">
 </p>
 
