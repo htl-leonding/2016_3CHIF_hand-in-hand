@@ -144,10 +144,10 @@ public class GameController implements Initializable, Observer {
                 public void run() {
 
                     drawWorld();
+
                 }
             });
         }
     }
-
 }
 

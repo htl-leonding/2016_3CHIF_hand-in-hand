@@ -40,6 +40,7 @@ public class GameModel extends Observable {
     Random random;
     int turnCounter = 0;
     Timer t;
+    int level;
 
     boolean gameOver;
 
@@ -139,13 +140,23 @@ public class GameModel extends Observable {
 
         if (!gameOver) {
             points++;
+            if (points > 5000)
+            {
+                level = 2;
+            }
             turnCounter++;
 
             //Nach einer bestimmten Rundenanzahl wird immer ein neuer Asteroid platziert
+
             if (turnCounter > NEWASTEROIDTURNS) {
                 AddAsteroid();
                 turnCounter = 0;
             }
+            else if (level == 2 && (turnCounter*2) > NEWASTEROIDTURNS) {
+                AddAsteroid();
+                turnCounter = 0;
+            }
+
         }
         //Observer über Änderungen im Model informieren
         setChanged();
