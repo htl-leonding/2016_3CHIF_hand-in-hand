@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Asteroids:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Asteroids_jar</output-path>
+    <root id="archive" name="Asteroids.jar">
+      <element id="module-output" name="Asteroids" />
+    </root>
+  </artifact>
+</component>

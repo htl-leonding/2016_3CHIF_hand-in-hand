@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Hand_in_Hand2">
+    <output-path>$PROJECT_DIR$/classes/artifacts/Hand_in_Hand2</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="htl.leonding.hand_in_hand.HandInHand" />
+        <option name="description" value="" />
+        <option name="htmlParamFile" value="" />
+        <option name="paramFile" value="" />
+        <option name="title" value="Hand_in_hand" />
+        <option name="vendor" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Hand_in_Hand.jar">
+        <element id="module-output" name="Hand_in_Hand" />
+      </element>
+      <element id="library" level="project" name="Maven: org.rxtx:rxtx:2.1.7" />
+    </root>
+  </artifact>
+</component>
