@@ -4,14 +4,13 @@
  */
 package model;
 
-import java.awt.Point;
-import java.awt.Rectangle;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Observable;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+
 import javafx.scene.paint.Color;
 
 public class GameModel extends Observable {
@@ -31,8 +30,8 @@ public class GameModel extends Observable {
     //Geschwindigkeiten: Pro Runde bewegt sich das jeweilige Objekt um diesen Wert in die aktuelle Bewegungsrichtung
     public static final int PLAYERSPEED = 2;         //Geschwindigkeit des Spielers
     public static final int SHOOTSPEED = 2;         //Geschwindigkeit des Schussen
-    public static final int MAXASTEROIDSPEED = 3;  //Maximale Geschwindigkeit eines Asteroiden
-    public static final int MINASTEROIDSPEED = 1;   //Minimale Geschwindigkeit eines Asteroiden
+    public static final int MAXASTEROIDSPEED = 20;  //Maximale Geschwindigkeit eines Asteroiden
+    public static final int MINASTEROIDSPEED = 10;   //Minimale Geschwindigkeit eines Asteroiden
 
     PlayerShip playerShip;
     List<Asteroid> asteroids;
@@ -40,7 +39,7 @@ public class GameModel extends Observable {
     Random random;
     int turnCounter = 0;
     Timer t;
-    int level;
+    private int level = 1;
 
     boolean gameOver;
 
@@ -73,7 +72,11 @@ public class GameModel extends Observable {
 
             @Override
             public void run() {
-                gameTurn();
+                try {
+                    gameTurn();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }), 100, 10);
     }
@@ -83,7 +86,7 @@ public class GameModel extends Observable {
      * Kollisionsprüfungen werden ausgeführt. Richtungsänderung / Reaktion wenn
      * am Rand der Spielfläche geschieht in den einzelnen GameElementen
      */
-    public void gameTurn() {
+    public void gameTurn() throws InterruptedException {
         if (gameOver) {
             return;
         }
@@ -112,7 +115,7 @@ public class GameModel extends Observable {
             }
 
             //Prüfen auf Spielende (wenn Asteroid die Spielerebene erreicht hat.
-            if (asteroids.get(i).getPosY() >= PLAYERPOS_Y) {
+            if (asteroids.get(i).getPosY() >= PLAYERPOS_Y-30) {
                 gameOver = true;
                 t.cancel();
                 break;
@@ -140,9 +143,9 @@ public class GameModel extends Observable {
 
         if (!gameOver) {
             points++;
-            if (points > 5000)
+            if (points/level > 4000 && level < 10)
             {
-                level = 2;
+                level++;
             }
             turnCounter++;
 
@@ -152,7 +155,7 @@ public class GameModel extends Observable {
                 AddAsteroid();
                 turnCounter = 0;
             }
-            else if (level == 2 && (turnCounter*2) > NEWASTEROIDTURNS) {
+            else if ((turnCounter* getLevel()) > NEWASTEROIDTURNS) {
                 AddAsteroid();
                 turnCounter = 0;
             }
@@ -183,4 +186,9 @@ public class GameModel extends Observable {
     private void AddAsteroid() {
         asteroids.add(new Asteroid(GAMESIZE / 2, ASTEROIDSTART_Y, random.nextInt(MAXASTEROIDSPEED - MINASTEROIDSPEED + 1) + MINASTEROIDSPEED, Color.RED));
     }
+
+    public int getLevel() {
+        return level;
+    }
+
 }
