@@ -32,6 +32,7 @@ public class PictureViewer extends Application{
         stage.setScene(scene);
         stage.show();
         stage.setFullScreen(true);
+        stage.getIcons().add(new Image(getClass().getResource("/picture-icon.png").toExternalForm()));
 
         FxmlController f = FXLoader.getController();
 
