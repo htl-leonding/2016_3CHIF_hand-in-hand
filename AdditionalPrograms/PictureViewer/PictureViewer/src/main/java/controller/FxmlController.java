@@ -1,16 +1,12 @@
 package controller;
 
 
-import com.drew.imaging.ImageMetadataReader;
-import com.drew.imaging.ImageProcessingException;
-import com.drew.metadata.Directory;
-import com.drew.metadata.Metadata;
-import com.drew.metadata.Tag;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -19,14 +15,15 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.Stage;
 import model.ImageGallery;
 
 import java.awt.*;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.net.URL;
-import java.util.Date;
 import java.util.ResourceBundle;
 
 public class FxmlController implements Initializable {
@@ -52,10 +49,47 @@ public class FxmlController implements Initializable {
     @FXML
     private ImageView ivMainView;
 
+    @FXML
+    private Button btOpenDirectory;
+
+    @FXML
+    private Button btDirectory;
+
 
     private ImageGallery img = model.ImageGallery.getInstance();
     private int actPos = 0;
+    private Stage stage;
 
+
+    @FXML
+    void DirectoryChooser(ActionEvent event) {
+        DirectoryChooser chooser = new DirectoryChooser();
+
+        File folder = chooser.showDialog(getStage());
+        if(folder == null)
+            return;
+        img.setFolder(folder);
+
+        if(!img.searchPicturesInDirectory())
+        {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setTitle("No pictures found!");
+            a.setContentText("No pictures found at path: " + folder.getAbsolutePath());
+            a.setHeaderText("Error");
+            a.show();
+        }
+        else {
+
+            img.searchPicturesInDirectory();
+
+            try {
+                if (img.getFilesList().size() > 0)
+                    ivMainView.setImage(new Image(new FileInputStream(img.getFilesList().get(actPos)), 1920, 1080, true, true));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
     /**
      * Switch to the next picture (right)
@@ -104,15 +138,6 @@ public class FxmlController implements Initializable {
         bp.setPrefHeight(height-150);
         ivMainView.setFitHeight(height - 165);
         ivMainView.setFitWidth(width - 50);
-
-        img.searchPicturesInDirectory();
-
-        try {
-            if (img.getFilesList().size() > 0)
-                ivMainView.setImage(new Image(new FileInputStream(img.getFilesList().get(actPos)), 1920, 1080, true, true));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
     }
 
     private void ShowButtons() {
@@ -191,51 +216,16 @@ public class FxmlController implements Initializable {
     void SetImage(int act) {
         try {
             ivMainView.setImage(new Image(new FileInputStream(img.getFilesList().get(act)), 1024, 0, true, true));
-            SetImageMetadata();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    public void SetImageMetadata() {
-        try {
-            Metadata metadata = ImageMetadataReader.readMetadata(img.getFilesList().get(actPos));
-
-            print(metadata);
-        } catch (ImageProcessingException e) {
-            // handle exception
-        } catch (IOException e) {
-            // handle exception
-        }
+    public Stage getStage() {
+        return stage;
     }
 
-    private void print(Metadata metadata) {
-        System.out.println("-------------------------------------");
-        // Iterate over the data and print to System.out
-
-        //
-        // A Metadata object contains multiple Directory objects
-        //
-        for (Directory directory : metadata.getDirectories()) {
-
-            //
-            // Each Directory stores values in Tag objects
-            //
-
-            for (Tag tag : directory.getTags()) {
-                System.out.println(tag);
-                //String test = tag.toString();
-
-            }
-
-            //
-            // Each Directory may also contain error messages
-            //
-            if (directory.hasErrors()) {
-                for (String error : directory.getErrors()) {
-                    System.err.println("ERROR: " + error);
-                }
-            }
-        }
+    public void setStage(Stage s) {
+        this.stage = s;
     }
 }

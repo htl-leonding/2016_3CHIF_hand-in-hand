@@ -1,10 +1,8 @@
 package model;
 
 import java.io.File;
-import java.nio.file.Files;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Observable;
 
 
 public class ImageGallery {
@@ -14,7 +12,7 @@ public class ImageGallery {
     //Instance of model
     private static ImageGallery model = null;
     //The Folder which has to be scanned for Images
-    final File folder = new File("C:\\Users\\Andrej\\Desktop\\Git-Project\\2016_3CHIF_hand-in-hand\\Documents\\Fotos");
+    private File folder = new File("");
 
     //Singleton Pattern
     private ImageGallery(){};
@@ -38,8 +36,8 @@ public class ImageGallery {
     /**
      * Searches all Pictures in a folder
      */
-    public void searchPicturesInDirectory() {
-        File[] filesArray = folder.listFiles();
+    public boolean searchPicturesInDirectory() {
+        File[] filesArray = getFolder().listFiles();
         List<File> temp = new LinkedList<File>();
         for (File file : filesArray) {
             if (!file.isDirectory()) {
@@ -53,5 +51,17 @@ public class ImageGallery {
             }
         }
         filesList = temp;
+        if (temp != null)
+            return true;
+        else
+            return false;
+    }
+
+    public File getFolder() {
+        return folder;
+    }
+
+    public void setFolder(File folder) {
+        this.folder = folder;
     }
 }
