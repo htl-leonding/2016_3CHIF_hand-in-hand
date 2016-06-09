@@ -30,8 +30,8 @@ public class GameModel extends Observable {
     //Geschwindigkeiten: Pro Runde bewegt sich das jeweilige Objekt um diesen Wert in die aktuelle Bewegungsrichtung
     public static final int PLAYERSPEED = 2;         //Geschwindigkeit des Spielers
     public static final int SHOOTSPEED = 2;         //Geschwindigkeit des Schussen
-    public static final int MAXASTEROIDSPEED = 20;  //Maximale Geschwindigkeit eines Asteroiden
-    public static final int MINASTEROIDSPEED = 10;   //Minimale Geschwindigkeit eines Asteroiden
+    public static final int MAXASTEROIDSPEED = 3;  //Maximale Geschwindigkeit eines Asteroiden
+    public static final int MINASTEROIDSPEED = 1;   //Minimale Geschwindigkeit eines Asteroiden
 
     PlayerShip playerShip;
     List<Asteroid> asteroids;
