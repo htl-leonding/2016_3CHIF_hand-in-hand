@@ -50,9 +50,6 @@ public class FxmlController implements Initializable {
     private ImageView ivMainView;
 
     @FXML
-    private Button btOpenDirectory;
-
-    @FXML
     private Button btDirectory;
 
 
@@ -119,6 +116,7 @@ public class FxmlController implements Initializable {
 
     public void initialize(URL location, ResourceBundle resources) {
         ShowButtons();
+        btDirectory.setGraphic(new ImageView((getClass().getResource("/file-directory.png").toExternalForm())));
 
         bp.setOnKeyPressed(new EventHandler<KeyEvent>() {
             public void handle(KeyEvent event) {

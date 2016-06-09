@@ -33,6 +33,10 @@
       </Button>
    </right>
    <top>
-      <Button fx:id="btOpenDirectory" mnemonicParsing="false" onAction="#DirectoryChooser" text="Button" BorderPane.alignment="CENTER" />
+      <Button fx:id="btDirectory" mnemonicParsing="false" onAction="#DirectoryChooser" prefHeight="50.0" prefWidth="50.0" BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets left="5.0" top="5.0" />
+         </BorderPane.margin>
+      </Button>
    </top>
 </BorderPane>

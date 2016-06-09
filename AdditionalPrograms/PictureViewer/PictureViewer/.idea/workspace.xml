@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="094c262b-944d-4936-a50c-acba57c027c9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java" afterPath="$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java" />
-    </list>
+    <list default="true" id="094c262b-944d-4936-a50c-acba57c027c9" name="Default" comment="" />
     <ignored path="PictureViewer.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,46 +28,45 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-22.709677">
               <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FxmlController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FxmlController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/FxmlController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0555556">
-              <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
+            <state vertical-scroll-proportion="-4.214286">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2927#3243#0" expanded="true" />
-                <element signature="e#3242#3243#0" expanded="true" />
-                <element signature="e#3715#3961#0" expanded="true" />
-                <element signature="e#3960#3961#0" expanded="true" />
-                <element signature="e#4074#4777#0" expanded="true" />
-                <element signature="e#4266#4656#0" expanded="true" />
-                <element signature="e#4655#4656#0" expanded="true" />
-                <element signature="e#4776#4777#0" expanded="true" />
-                <element signature="e#4860#5281#0" expanded="true" />
-                <element signature="e#4990#5239#0" expanded="true" />
-                <element signature="e#5238#5239#0" expanded="true" />
-                <element signature="e#5280#5281#0" expanded="true" />
-                <element signature="e#5363#5986#0" expanded="true" />
-                <element signature="e#5539#5881#0" expanded="true" />
-                <element signature="e#5880#5881#0" expanded="true" />
-                <element signature="e#5985#5986#0" expanded="true" />
-                <element signature="e#6070#6491#0" expanded="true" />
-                <element signature="e#6200#6449#0" expanded="true" />
-                <element signature="e#6448#6449#0" expanded="true" />
-                <element signature="e#6490#6491#0" expanded="true" />
+                <element signature="e#2993#3309#0" expanded="true" />
+                <element signature="e#3308#3309#0" expanded="true" />
+                <element signature="e#3781#4027#0" expanded="true" />
+                <element signature="e#4026#4027#0" expanded="true" />
+                <element signature="e#4140#4843#0" expanded="true" />
+                <element signature="e#4332#4722#0" expanded="true" />
+                <element signature="e#4721#4722#0" expanded="true" />
+                <element signature="e#4842#4843#0" expanded="true" />
+                <element signature="e#4926#5347#0" expanded="true" />
+                <element signature="e#5056#5305#0" expanded="true" />
+                <element signature="e#5304#5305#0" expanded="true" />
+                <element signature="e#5346#5347#0" expanded="true" />
+                <element signature="e#5429#6052#0" expanded="true" />
+                <element signature="e#5605#5947#0" expanded="true" />
+                <element signature="e#5946#5947#0" expanded="true" />
+                <element signature="e#6051#6052#0" expanded="true" />
+                <element signature="e#6136#6557#0" expanded="true" />
+                <element signature="e#6266#6515#0" expanded="true" />
+                <element signature="e#6514#6515#0" expanded="true" />
+                <element signature="e#6556#6557#0" expanded="true" />
                 <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
                 <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
-                <element signature="e#6875#6876#0" expanded="true" />
-                <element signature="e#6903#6904#0" expanded="true" />
-                <element signature="e#6940#6941#0" expanded="true" />
-                <element signature="e#6970#6971#0" expanded="true" />
+                <element signature="e#6941#6942#0" expanded="true" />
+                <element signature="e#6969#6970#0" expanded="true" />
+                <element signature="e#7006#7007#0" expanded="true" />
+                <element signature="e#7036#7037#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,16 +82,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Direction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Direction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ImageGallery.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/ImageGallery.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PictureViewer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PictureViewer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51687115">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1199#1200#0" expanded="true" />
@@ -156,7 +143,7 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-7.353846">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -188,8 +175,8 @@
         <option value="$PROJECT_DIR$/src/main/java/model/ImageGallery.java" />
         <option value="$PROJECT_DIR$/src/main/resources/FxmlView.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/Buttons.css" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/FxmlController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/FxmlController.java" />
       </list>
     </option>
   </component>
@@ -413,15 +400,15 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="pictureViewer" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="model" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrej\Desktop\Git-Project\2016_3CHIF_hand-in-hand\AdditionalPrograms\PictureViewer\PictureViewer\src\main\resources" />
       <recent name="C:\Users\Andrej\Desktop\Git-Project\2016_3CHIF_hand-in-hand\PictureViewer\PictureViewer\src\main\resources" />
       <recent name="C:\Users\Andrej\Desktop\Git-Project\2016_3CHIF_hand-in-hand\PictureViewer\PictureViewer\src\main\java\view" />
       <recent name="C:\temp\PictureViewer\src\main\resources" />
       <recent name="C:\temp\PictureViewer\src\main\java\view" />
-      <recent name="C:\temp\PictureViewer\src\main\java\pictureViewer" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="model" />
     </key>
   </component>
   <component name="RunManager" selected="Application.PictureViewer">
@@ -627,12 +614,12 @@
       <workItem from="1465455771077" duration="1218000" />
       <workItem from="1465460161297" duration="30000" />
       <workItem from="1465505536141" duration="211000" />
-      <workItem from="1465505787707" duration="2719000" />
+      <workItem from="1465505787707" duration="3052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56156000" />
+    <option name="totallyTimeSpent" value="56489000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -711,17 +698,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -735,33 +711,32 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2927#3243#0" expanded="true" />
-            <element signature="e#3242#3243#0" expanded="true" />
-            <element signature="e#3715#3961#0" expanded="true" />
-            <element signature="e#3960#3961#0" expanded="true" />
-            <element signature="e#4074#4777#0" expanded="true" />
-            <element signature="e#4266#4656#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
-            <element signature="e#4776#4777#0" expanded="true" />
-            <element signature="e#4860#5281#0" expanded="true" />
-            <element signature="e#4990#5239#0" expanded="true" />
-            <element signature="e#5238#5239#0" expanded="true" />
-            <element signature="e#5280#5281#0" expanded="true" />
-            <element signature="e#5363#5986#0" expanded="true" />
-            <element signature="e#5539#5881#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
-            <element signature="e#5985#5986#0" expanded="true" />
-            <element signature="e#6070#6491#0" expanded="true" />
-            <element signature="e#6200#6449#0" expanded="true" />
-            <element signature="e#6448#6449#0" expanded="true" />
-            <element signature="e#6490#6491#0" expanded="true" />
+            <element signature="e#2993#3309#0" expanded="true" />
+            <element signature="e#3308#3309#0" expanded="true" />
+            <element signature="e#3781#4027#0" expanded="true" />
+            <element signature="e#4026#4027#0" expanded="true" />
+            <element signature="e#4140#4843#0" expanded="true" />
+            <element signature="e#4332#4722#0" expanded="true" />
+            <element signature="e#4721#4722#0" expanded="true" />
+            <element signature="e#4842#4843#0" expanded="true" />
+            <element signature="e#4926#5347#0" expanded="true" />
+            <element signature="e#5056#5305#0" expanded="true" />
+            <element signature="e#5304#5305#0" expanded="true" />
+            <element signature="e#5346#5347#0" expanded="true" />
+            <element signature="e#5429#6052#0" expanded="true" />
+            <element signature="e#5605#5947#0" expanded="true" />
+            <element signature="e#5946#5947#0" expanded="true" />
+            <element signature="e#6051#6052#0" expanded="true" />
+            <element signature="e#6136#6557#0" expanded="true" />
+            <element signature="e#6266#6515#0" expanded="true" />
+            <element signature="e#6514#6515#0" expanded="true" />
+            <element signature="e#6556#6557#0" expanded="true" />
             <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
             <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#6875#6876#0" expanded="true" />
-            <element signature="e#6903#6904#0" expanded="true" />
-            <element signature="e#6940#6941#0" expanded="true" />
-            <element signature="e#6970#6971#0" expanded="true" />
+            <element signature="e#6941#6942#0" expanded="true" />
+            <element signature="e#6969#6970#0" expanded="true" />
+            <element signature="e#7006#7007#0" expanded="true" />
+            <element signature="e#7036#7037#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -832,33 +807,32 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2927#3243#0" expanded="true" />
-            <element signature="e#3242#3243#0" expanded="true" />
-            <element signature="e#3715#3961#0" expanded="true" />
-            <element signature="e#3960#3961#0" expanded="true" />
-            <element signature="e#4074#4777#0" expanded="true" />
-            <element signature="e#4266#4656#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
-            <element signature="e#4776#4777#0" expanded="true" />
-            <element signature="e#4860#5281#0" expanded="true" />
-            <element signature="e#4990#5239#0" expanded="true" />
-            <element signature="e#5238#5239#0" expanded="true" />
-            <element signature="e#5280#5281#0" expanded="true" />
-            <element signature="e#5363#5986#0" expanded="true" />
-            <element signature="e#5539#5881#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
-            <element signature="e#5985#5986#0" expanded="true" />
-            <element signature="e#6070#6491#0" expanded="true" />
-            <element signature="e#6200#6449#0" expanded="true" />
-            <element signature="e#6448#6449#0" expanded="true" />
-            <element signature="e#6490#6491#0" expanded="true" />
+            <element signature="e#2993#3309#0" expanded="true" />
+            <element signature="e#3308#3309#0" expanded="true" />
+            <element signature="e#3781#4027#0" expanded="true" />
+            <element signature="e#4026#4027#0" expanded="true" />
+            <element signature="e#4140#4843#0" expanded="true" />
+            <element signature="e#4332#4722#0" expanded="true" />
+            <element signature="e#4721#4722#0" expanded="true" />
+            <element signature="e#4842#4843#0" expanded="true" />
+            <element signature="e#4926#5347#0" expanded="true" />
+            <element signature="e#5056#5305#0" expanded="true" />
+            <element signature="e#5304#5305#0" expanded="true" />
+            <element signature="e#5346#5347#0" expanded="true" />
+            <element signature="e#5429#6052#0" expanded="true" />
+            <element signature="e#5605#5947#0" expanded="true" />
+            <element signature="e#5946#5947#0" expanded="true" />
+            <element signature="e#6051#6052#0" expanded="true" />
+            <element signature="e#6136#6557#0" expanded="true" />
+            <element signature="e#6266#6515#0" expanded="true" />
+            <element signature="e#6514#6515#0" expanded="true" />
+            <element signature="e#6556#6557#0" expanded="true" />
             <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
             <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#6875#6876#0" expanded="true" />
-            <element signature="e#6903#6904#0" expanded="true" />
-            <element signature="e#6940#6941#0" expanded="true" />
-            <element signature="e#6970#6971#0" expanded="true" />
+            <element signature="e#6941#6942#0" expanded="true" />
+            <element signature="e#6969#6970#0" expanded="true" />
+            <element signature="e#7006#7007#0" expanded="true" />
+            <element signature="e#7036#7037#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -907,33 +881,32 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2927#3243#0" expanded="true" />
-            <element signature="e#3242#3243#0" expanded="true" />
-            <element signature="e#3715#3961#0" expanded="true" />
-            <element signature="e#3960#3961#0" expanded="true" />
-            <element signature="e#4074#4777#0" expanded="true" />
-            <element signature="e#4266#4656#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
-            <element signature="e#4776#4777#0" expanded="true" />
-            <element signature="e#4860#5281#0" expanded="true" />
-            <element signature="e#4990#5239#0" expanded="true" />
-            <element signature="e#5238#5239#0" expanded="true" />
-            <element signature="e#5280#5281#0" expanded="true" />
-            <element signature="e#5363#5986#0" expanded="true" />
-            <element signature="e#5539#5881#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
-            <element signature="e#5985#5986#0" expanded="true" />
-            <element signature="e#6070#6491#0" expanded="true" />
-            <element signature="e#6200#6449#0" expanded="true" />
-            <element signature="e#6448#6449#0" expanded="true" />
-            <element signature="e#6490#6491#0" expanded="true" />
+            <element signature="e#2993#3309#0" expanded="true" />
+            <element signature="e#3308#3309#0" expanded="true" />
+            <element signature="e#3781#4027#0" expanded="true" />
+            <element signature="e#4026#4027#0" expanded="true" />
+            <element signature="e#4140#4843#0" expanded="true" />
+            <element signature="e#4332#4722#0" expanded="true" />
+            <element signature="e#4721#4722#0" expanded="true" />
+            <element signature="e#4842#4843#0" expanded="true" />
+            <element signature="e#4926#5347#0" expanded="true" />
+            <element signature="e#5056#5305#0" expanded="true" />
+            <element signature="e#5304#5305#0" expanded="true" />
+            <element signature="e#5346#5347#0" expanded="true" />
+            <element signature="e#5429#6052#0" expanded="true" />
+            <element signature="e#5605#5947#0" expanded="true" />
+            <element signature="e#5946#5947#0" expanded="true" />
+            <element signature="e#6051#6052#0" expanded="true" />
+            <element signature="e#6136#6557#0" expanded="true" />
+            <element signature="e#6266#6515#0" expanded="true" />
+            <element signature="e#6514#6515#0" expanded="true" />
+            <element signature="e#6556#6557#0" expanded="true" />
             <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
             <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#6875#6876#0" expanded="true" />
-            <element signature="e#6903#6904#0" expanded="true" />
-            <element signature="e#6940#6941#0" expanded="true" />
-            <element signature="e#6970#6971#0" expanded="true" />
+            <element signature="e#6941#6942#0" expanded="true" />
+            <element signature="e#6969#6970#0" expanded="true" />
+            <element signature="e#7006#7007#0" expanded="true" />
+            <element signature="e#7036#7037#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -971,33 +944,32 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2927#3243#0" expanded="true" />
-            <element signature="e#3242#3243#0" expanded="true" />
-            <element signature="e#3715#3961#0" expanded="true" />
-            <element signature="e#3960#3961#0" expanded="true" />
-            <element signature="e#4074#4777#0" expanded="true" />
-            <element signature="e#4266#4656#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
-            <element signature="e#4776#4777#0" expanded="true" />
-            <element signature="e#4860#5281#0" expanded="true" />
-            <element signature="e#4990#5239#0" expanded="true" />
-            <element signature="e#5238#5239#0" expanded="true" />
-            <element signature="e#5280#5281#0" expanded="true" />
-            <element signature="e#5363#5986#0" expanded="true" />
-            <element signature="e#5539#5881#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
-            <element signature="e#5985#5986#0" expanded="true" />
-            <element signature="e#6070#6491#0" expanded="true" />
-            <element signature="e#6200#6449#0" expanded="true" />
-            <element signature="e#6448#6449#0" expanded="true" />
-            <element signature="e#6490#6491#0" expanded="true" />
+            <element signature="e#2993#3309#0" expanded="true" />
+            <element signature="e#3308#3309#0" expanded="true" />
+            <element signature="e#3781#4027#0" expanded="true" />
+            <element signature="e#4026#4027#0" expanded="true" />
+            <element signature="e#4140#4843#0" expanded="true" />
+            <element signature="e#4332#4722#0" expanded="true" />
+            <element signature="e#4721#4722#0" expanded="true" />
+            <element signature="e#4842#4843#0" expanded="true" />
+            <element signature="e#4926#5347#0" expanded="true" />
+            <element signature="e#5056#5305#0" expanded="true" />
+            <element signature="e#5304#5305#0" expanded="true" />
+            <element signature="e#5346#5347#0" expanded="true" />
+            <element signature="e#5429#6052#0" expanded="true" />
+            <element signature="e#5605#5947#0" expanded="true" />
+            <element signature="e#5946#5947#0" expanded="true" />
+            <element signature="e#6051#6052#0" expanded="true" />
+            <element signature="e#6136#6557#0" expanded="true" />
+            <element signature="e#6266#6515#0" expanded="true" />
+            <element signature="e#6514#6515#0" expanded="true" />
+            <element signature="e#6556#6557#0" expanded="true" />
             <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
             <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#6875#6876#0" expanded="true" />
-            <element signature="e#6903#6904#0" expanded="true" />
-            <element signature="e#6940#6941#0" expanded="true" />
-            <element signature="e#6970#6971#0" expanded="true" />
+            <element signature="e#6941#6942#0" expanded="true" />
+            <element signature="e#6969#6970#0" expanded="true" />
+            <element signature="e#7006#7007#0" expanded="true" />
+            <element signature="e#7036#7037#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1046,33 +1018,32 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2927#3243#0" expanded="true" />
-            <element signature="e#3242#3243#0" expanded="true" />
-            <element signature="e#3715#3961#0" expanded="true" />
-            <element signature="e#3960#3961#0" expanded="true" />
-            <element signature="e#4074#4777#0" expanded="true" />
-            <element signature="e#4266#4656#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
-            <element signature="e#4776#4777#0" expanded="true" />
-            <element signature="e#4860#5281#0" expanded="true" />
-            <element signature="e#4990#5239#0" expanded="true" />
-            <element signature="e#5238#5239#0" expanded="true" />
-            <element signature="e#5280#5281#0" expanded="true" />
-            <element signature="e#5363#5986#0" expanded="true" />
-            <element signature="e#5539#5881#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
-            <element signature="e#5985#5986#0" expanded="true" />
-            <element signature="e#6070#6491#0" expanded="true" />
-            <element signature="e#6200#6449#0" expanded="true" />
-            <element signature="e#6448#6449#0" expanded="true" />
-            <element signature="e#6490#6491#0" expanded="true" />
+            <element signature="e#2993#3309#0" expanded="true" />
+            <element signature="e#3308#3309#0" expanded="true" />
+            <element signature="e#3781#4027#0" expanded="true" />
+            <element signature="e#4026#4027#0" expanded="true" />
+            <element signature="e#4140#4843#0" expanded="true" />
+            <element signature="e#4332#4722#0" expanded="true" />
+            <element signature="e#4721#4722#0" expanded="true" />
+            <element signature="e#4842#4843#0" expanded="true" />
+            <element signature="e#4926#5347#0" expanded="true" />
+            <element signature="e#5056#5305#0" expanded="true" />
+            <element signature="e#5304#5305#0" expanded="true" />
+            <element signature="e#5346#5347#0" expanded="true" />
+            <element signature="e#5429#6052#0" expanded="true" />
+            <element signature="e#5605#5947#0" expanded="true" />
+            <element signature="e#5946#5947#0" expanded="true" />
+            <element signature="e#6051#6052#0" expanded="true" />
+            <element signature="e#6136#6557#0" expanded="true" />
+            <element signature="e#6266#6515#0" expanded="true" />
+            <element signature="e#6514#6515#0" expanded="true" />
+            <element signature="e#6556#6557#0" expanded="true" />
             <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
             <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#6875#6876#0" expanded="true" />
-            <element signature="e#6903#6904#0" expanded="true" />
-            <element signature="e#6940#6941#0" expanded="true" />
-            <element signature="e#6970#6971#0" expanded="true" />
+            <element signature="e#6941#6942#0" expanded="true" />
+            <element signature="e#6969#6970#0" expanded="true" />
+            <element signature="e#7006#7007#0" expanded="true" />
+            <element signature="e#7036#7037#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1113,33 +1084,32 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2927#3243#0" expanded="true" />
-            <element signature="e#3242#3243#0" expanded="true" />
-            <element signature="e#3715#3961#0" expanded="true" />
-            <element signature="e#3960#3961#0" expanded="true" />
-            <element signature="e#4074#4777#0" expanded="true" />
-            <element signature="e#4266#4656#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
-            <element signature="e#4776#4777#0" expanded="true" />
-            <element signature="e#4860#5281#0" expanded="true" />
-            <element signature="e#4990#5239#0" expanded="true" />
-            <element signature="e#5238#5239#0" expanded="true" />
-            <element signature="e#5280#5281#0" expanded="true" />
-            <element signature="e#5363#5986#0" expanded="true" />
-            <element signature="e#5539#5881#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
-            <element signature="e#5985#5986#0" expanded="true" />
-            <element signature="e#6070#6491#0" expanded="true" />
-            <element signature="e#6200#6449#0" expanded="true" />
-            <element signature="e#6448#6449#0" expanded="true" />
-            <element signature="e#6490#6491#0" expanded="true" />
+            <element signature="e#2993#3309#0" expanded="true" />
+            <element signature="e#3308#3309#0" expanded="true" />
+            <element signature="e#3781#4027#0" expanded="true" />
+            <element signature="e#4026#4027#0" expanded="true" />
+            <element signature="e#4140#4843#0" expanded="true" />
+            <element signature="e#4332#4722#0" expanded="true" />
+            <element signature="e#4721#4722#0" expanded="true" />
+            <element signature="e#4842#4843#0" expanded="true" />
+            <element signature="e#4926#5347#0" expanded="true" />
+            <element signature="e#5056#5305#0" expanded="true" />
+            <element signature="e#5304#5305#0" expanded="true" />
+            <element signature="e#5346#5347#0" expanded="true" />
+            <element signature="e#5429#6052#0" expanded="true" />
+            <element signature="e#5605#5947#0" expanded="true" />
+            <element signature="e#5946#5947#0" expanded="true" />
+            <element signature="e#6051#6052#0" expanded="true" />
+            <element signature="e#6136#6557#0" expanded="true" />
+            <element signature="e#6266#6515#0" expanded="true" />
+            <element signature="e#6514#6515#0" expanded="true" />
+            <element signature="e#6556#6557#0" expanded="true" />
             <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
             <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#6875#6876#0" expanded="true" />
-            <element signature="e#6903#6904#0" expanded="true" />
-            <element signature="e#6940#6941#0" expanded="true" />
-            <element signature="e#6970#6971#0" expanded="true" />
+            <element signature="e#6941#6942#0" expanded="true" />
+            <element signature="e#6969#6970#0" expanded="true" />
+            <element signature="e#7006#7007#0" expanded="true" />
+            <element signature="e#7036#7037#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1180,33 +1150,32 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2927#3243#0" expanded="true" />
-            <element signature="e#3242#3243#0" expanded="true" />
-            <element signature="e#3715#3961#0" expanded="true" />
-            <element signature="e#3960#3961#0" expanded="true" />
-            <element signature="e#4074#4777#0" expanded="true" />
-            <element signature="e#4266#4656#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
-            <element signature="e#4776#4777#0" expanded="true" />
-            <element signature="e#4860#5281#0" expanded="true" />
-            <element signature="e#4990#5239#0" expanded="true" />
-            <element signature="e#5238#5239#0" expanded="true" />
-            <element signature="e#5280#5281#0" expanded="true" />
-            <element signature="e#5363#5986#0" expanded="true" />
-            <element signature="e#5539#5881#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
-            <element signature="e#5985#5986#0" expanded="true" />
-            <element signature="e#6070#6491#0" expanded="true" />
-            <element signature="e#6200#6449#0" expanded="true" />
-            <element signature="e#6448#6449#0" expanded="true" />
-            <element signature="e#6490#6491#0" expanded="true" />
+            <element signature="e#2993#3309#0" expanded="true" />
+            <element signature="e#3308#3309#0" expanded="true" />
+            <element signature="e#3781#4027#0" expanded="true" />
+            <element signature="e#4026#4027#0" expanded="true" />
+            <element signature="e#4140#4843#0" expanded="true" />
+            <element signature="e#4332#4722#0" expanded="true" />
+            <element signature="e#4721#4722#0" expanded="true" />
+            <element signature="e#4842#4843#0" expanded="true" />
+            <element signature="e#4926#5347#0" expanded="true" />
+            <element signature="e#5056#5305#0" expanded="true" />
+            <element signature="e#5304#5305#0" expanded="true" />
+            <element signature="e#5346#5347#0" expanded="true" />
+            <element signature="e#5429#6052#0" expanded="true" />
+            <element signature="e#5605#5947#0" expanded="true" />
+            <element signature="e#5946#5947#0" expanded="true" />
+            <element signature="e#6051#6052#0" expanded="true" />
+            <element signature="e#6136#6557#0" expanded="true" />
+            <element signature="e#6266#6515#0" expanded="true" />
+            <element signature="e#6514#6515#0" expanded="true" />
+            <element signature="e#6556#6557#0" expanded="true" />
             <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
             <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#6875#6876#0" expanded="true" />
-            <element signature="e#6903#6904#0" expanded="true" />
-            <element signature="e#6940#6941#0" expanded="true" />
-            <element signature="e#6970#6971#0" expanded="true" />
+            <element signature="e#6941#6942#0" expanded="true" />
+            <element signature="e#6969#6970#0" expanded="true" />
+            <element signature="e#7006#7007#0" expanded="true" />
+            <element signature="e#7036#7037#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1313,7 +1282,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-22.709677">
           <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
           <folding />
         </state>
@@ -1341,7 +1310,7 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.353846">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1362,50 +1331,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/FxmlController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0555556">
-          <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2927#3243#0" expanded="true" />
-            <element signature="e#3242#3243#0" expanded="true" />
-            <element signature="e#3715#3961#0" expanded="true" />
-            <element signature="e#3960#3961#0" expanded="true" />
-            <element signature="e#4074#4777#0" expanded="true" />
-            <element signature="e#4266#4656#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
-            <element signature="e#4776#4777#0" expanded="true" />
-            <element signature="e#4860#5281#0" expanded="true" />
-            <element signature="e#4990#5239#0" expanded="true" />
-            <element signature="e#5238#5239#0" expanded="true" />
-            <element signature="e#5280#5281#0" expanded="true" />
-            <element signature="e#5363#5986#0" expanded="true" />
-            <element signature="e#5539#5881#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
-            <element signature="e#5985#5986#0" expanded="true" />
-            <element signature="e#6070#6491#0" expanded="true" />
-            <element signature="e#6200#6449#0" expanded="true" />
-            <element signature="e#6448#6449#0" expanded="true" />
-            <element signature="e#6490#6491#0" expanded="true" />
-            <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="e#6875#6876#0" expanded="true" />
-            <element signature="e#6903#6904#0" expanded="true" />
-            <element signature="e#6940#6941#0" expanded="true" />
-            <element signature="e#6970#6971#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51687115">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1199#1200#0" expanded="true" />
             <element signature="e#1227#1228#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/file-directory.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/FxmlController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.214286">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="e#2993#3309#0" expanded="true" />
+            <element signature="e#3308#3309#0" expanded="true" />
+            <element signature="e#3781#4027#0" expanded="true" />
+            <element signature="e#4026#4027#0" expanded="true" />
+            <element signature="e#4140#4843#0" expanded="true" />
+            <element signature="e#4332#4722#0" expanded="true" />
+            <element signature="e#4721#4722#0" expanded="true" />
+            <element signature="e#4842#4843#0" expanded="true" />
+            <element signature="e#4926#5347#0" expanded="true" />
+            <element signature="e#5056#5305#0" expanded="true" />
+            <element signature="e#5304#5305#0" expanded="true" />
+            <element signature="e#5346#5347#0" expanded="true" />
+            <element signature="e#5429#6052#0" expanded="true" />
+            <element signature="e#5605#5947#0" expanded="true" />
+            <element signature="e#5946#5947#0" expanded="true" />
+            <element signature="e#6051#6052#0" expanded="true" />
+            <element signature="e#6136#6557#0" expanded="true" />
+            <element signature="e#6266#6515#0" expanded="true" />
+            <element signature="e#6514#6515#0" expanded="true" />
+            <element signature="e#6556#6557#0" expanded="true" />
+            <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
+            <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
+            <element signature="e#6941#6942#0" expanded="true" />
+            <element signature="e#6969#6970#0" expanded="true" />
+            <element signature="e#7006#7007#0" expanded="true" />
+            <element signature="e#7036#7037#0" expanded="true" />
           </folding>
         </state>
       </provider>
