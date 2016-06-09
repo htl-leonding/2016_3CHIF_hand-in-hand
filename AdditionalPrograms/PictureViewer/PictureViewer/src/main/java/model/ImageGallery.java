@@ -14,7 +14,7 @@ public class ImageGallery {
     //Instance of model
     private static ImageGallery model = null;
     //The Folder which has to be scanned for Images
-    final File folder = new File("C:\\Users\\Andrej\\Desktop");
+    final File folder = new File("C:\\Users\\Andrej\\Desktop\\Git-Project\\2016_3CHIF_hand-in-hand\\Documents\\Fotos");
 
     //Singleton Pattern
     private ImageGallery(){};

@@ -5,7 +5,7 @@
  */
 package model;
 
-/**
+ /**
  *
  * @author Andrej Sakal, Stefan Smiljkovic, Gabriel Ionescu
  */
@@ -14,9 +14,7 @@ public class Key {
     private String keyString = null;
     private String actionOfButton = null;
     private int outputKey = 0;
-    //ID
-    private static int nuOfObj = 0;
-    private int id = 0;
+    private boolean isPressed;
 
 
     public String getActionOfButton() {
@@ -29,11 +27,18 @@ public class Key {
 
     public Key(int key, String keyString, String actionOfButton)
     {
-        this.keyString = keyString;
+        String[] line = keyString.split(":");
+        if (line.length > 1 && line[1] != null && line[1].toLowerCase().equals("p")) {
+            this.setPressed(true);
+        }
+        else if (line.length > 1 && line[1] != null && line[1].toLowerCase().equals("r")) {
+            this.setPressed(false);
+        }
+        else if (line.length <= 1) {
+            this.keyString = keyString;
+        }
         this.outputKey = key;
         this.actionOfButton = actionOfButton;
-        nuOfObj++;
-        id = nuOfObj;
     }
 
     public String getInputString() {
@@ -51,11 +56,12 @@ public class Key {
     public void setOutputKey(int outputKey) {
         this.outputKey = outputKey;
     }
-    
-    @Override
-    public String toString()
-    {
-        return String.format("%d                                                            %s", id, actionOfButton);
-    }
-    
-}
+
+     public boolean isPressed() {
+         return isPressed;
+     }
+
+     public void setPressed(boolean pressed) {
+         isPressed = pressed;
+     }
+ }

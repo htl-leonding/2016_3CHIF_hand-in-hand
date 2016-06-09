@@ -5,14 +5,16 @@
  */
 package model;
 
-import gnu.io.CommPortIdentifier;
-import gnu.io.SerialPort;
-import gnu.io.SerialPortEvent;
-import gnu.io.SerialPortEventListener;
+import gnu.io.*;
+import javafx.scene.control.Alert;
+
+import javax.sql.rowset.serial.SerialException;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Enumeration;
 import java.util.Observable;
+import java.util.TooManyListenersException;
 
 /**
  *
@@ -63,7 +65,7 @@ public class PortListener extends Observable implements SerialPortEventListener 
         //System.out.println("CONSTR");
         CommPortIdentifier portId = null;
         Enumeration portEnum = CommPortIdentifier.getPortIdentifiers();
-        
+
         //First, Find an instance of serial port as set in PORT_NAMES.
         while (portEnum.hasMoreElements()) {
             CommPortIdentifier currPortId = (CommPortIdentifier) portEnum.nextElement();
@@ -77,8 +79,6 @@ public class PortListener extends Observable implements SerialPortEventListener 
             }
         }
         if (portId == null) {
-            //Testing
-            //System.out.println("Could not find COM port.");
             return;
         }
         try {
@@ -98,12 +98,22 @@ public class PortListener extends Observable implements SerialPortEventListener 
             // add event listeners
             serialPort.addEventListener(this);
             serialPort.notifyOnDataAvailable(true);
-        } catch (Exception e) {
-            System.err.println(e.toString());
+
+        } catch (UnsupportedCommOperationException e) {
+            e.printStackTrace();
+        } catch (TooManyListenersException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (PortInUseException e) {
+            Alert a = new Alert(Alert.AlertType.ERROR, "The current Port is in Use!");
+            e.printStackTrace();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
             this.close();
         }
     }
-
     /**
      * Returns the last read Input from the Port
      *
@@ -134,20 +144,20 @@ public class PortListener extends Observable implements SerialPortEventListener 
 
         //Proves if the event is our needed event
         if (oEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
-            try {
 
                 //Cheks the value of the input
-                if (input.ready()) {
-                    inputString = input.readLine();
-                    System.out.println("Input: " + inputString);
-                    
-                    //Notifying all Observers when something new is read from the mc
-                    setChanged();
-                    notifyObservers();
+                try {
+                    if (input.ready()) {
+                        inputString = input.readLine();
+
+                        //Notifying all Observers when something new is read from the mc
+                        setChanged();
+                        notifyObservers();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-            } catch (Exception e) {
-                System.err.println(e.toString());
-            }
         }
     }
 }
+

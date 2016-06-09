@@ -227,7 +227,13 @@ public class viewFXMLController implements Initializable, Observer {
 
                 isInList = true;
                 progressbar.setVisible(false);//Hide loadingbar
-                robot.keyPress(keyList.get(i).getOutputKey());//"PRESS" button
+                if (keyList.get(i).isPressed()) {
+                    robot.keyPress(keyList.get(i).getOutputKey());//"PRESS" button
+                }
+                else if (!keyList.get(i).isPressed()) {
+                    robot.keyRelease(keyList.get(i).getOutputKey());//"RELEASED" button
+                }
+
                 if(toAssignKey != 0)
                     Platform.runLater(new Runnable() {
                         @Override
@@ -266,6 +272,7 @@ public class viewFXMLController implements Initializable, Observer {
     @FXML
     private void handleResetButton(ActionEvent event) {
         keyList.clear();
+        label.setText(rs.getString("EveryThingRested"));
     }
 
     /**

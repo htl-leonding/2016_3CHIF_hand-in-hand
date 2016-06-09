@@ -44,24 +44,24 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Datei-Name: " textAlignment="CENTER">
+            <Label alignment="CENTER" contentDisplay="CENTER" opacity="0.0" text="Datei-Name: " textAlignment="CENTER">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <Label text="Datei-Größe: " GridPane.rowIndex="1">
+            <Label opacity="0.0" text="Datei-Größe: " GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <Label text="Zuletzt-geändert:" GridPane.rowIndex="2">
+            <Label opacity="0.0" text="Zuletzt-geändert:" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <Label fx:id="lbName" text="Label" GridPane.columnIndex="1" />
-            <Label fx:id="lbSize" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label fx:id="lbChanged" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="lbName" opacity="0.0" text="Label" GridPane.columnIndex="1" />
+            <Label fx:id="lbSize" opacity="0.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lbChanged" opacity="0.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </bottom>
