@@ -66,8 +66,8 @@ public class FxmlController implements Initializable {
         if(folder == null)
             return;
         img.setFolder(folder);
-
-        if(!img.searchPicturesInDirectory())
+        boolean foundPic = img.searchPicturesInDirectory();
+        if(!foundPic)
         {
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setTitle("No pictures found!");
@@ -76,8 +76,6 @@ public class FxmlController implements Initializable {
             a.show();
         }
         else {
-
-            img.searchPicturesInDirectory();
 
             try {
                 if (img.getFilesList().size() > 0)

@@ -216,6 +216,7 @@ public class viewFXMLController implements Initializable, Observer {
     public void update(Observable o, Object arg) {
 
         String input = getModel().getInputString();
+        String[] split = input.split(":");
 
         boolean isInList = false;
         
@@ -223,15 +224,15 @@ public class viewFXMLController implements Initializable, Observer {
         for (int i = 0; i < keyList.size(); ++i) {
 
             //If inputvalue maches with key
-            if (keyList.get(i).getInputString().equals(input)) {
+            if (keyList.get(i).getInputString().equals(split[0])) {
 
                 isInList = true;
                 progressbar.setVisible(false);//Hide loadingbar
-                if (keyList.get(i).isPressed()) {
+                if (split[1].equals("p")) {
                     robot.keyPress(keyList.get(i).getOutputKey());//"PRESS" button
                 }
-                else if (!keyList.get(i).isPressed()) {
-                    robot.keyRelease(keyList.get(i).getOutputKey());//"RELEASED" button
+                else {
+                    robot.keyRelease(keyList.get(i).getOutputKey());
                 }
 
                 if(toAssignKey != 0)
