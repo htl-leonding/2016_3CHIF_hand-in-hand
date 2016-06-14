@@ -38,7 +38,7 @@ Den Menschen soll es durch unser Projekt viel leichter fallen zwischen Fotos ode
 
 ***
 
-#Aktuell (Version 3.1)
+#Aktuell (Version 3.2)
 
 * Holz box mit Buttons und Display
 * EazyKeyboard leicht konfigurierbar
