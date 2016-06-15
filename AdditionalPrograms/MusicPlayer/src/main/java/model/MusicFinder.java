@@ -46,23 +46,33 @@ public class MusicFinder implements Enumeration<File> {
         cnt = i;
     }
 
+    /**
+     * Searches for music
+     * @return
+     */
     public boolean searchForMusic()
     {
-        fileList = searchMusic();
-        return (fileList.size() != 0);
+        fileList = searchMusic();//Saving music-files to list
+        return (fileList.size() != 0);//Are files in list
     }
 
+    /**
+     * Searchung for music
+     * @return
+     */
     private List<File> searchMusic()
     {
-        List<File> newListFiles = new LinkedList<File>();
+        List<File> newListFiles = new LinkedList<>();
         File dir = new File(directoryName);
 
+        //List all files
         File[] files = dir.listFiles(new FilenameFilter() {
             public boolean accept(File dir, String name) {
-                return name.endsWith(".mp3");
+                return name.endsWith(".mp3");//Save only mp3 - files
             }
         });
 
+        /*Saving array into list*/
         for (File f:files)
         {
             newListFiles.add(f);
@@ -72,32 +82,42 @@ public class MusicFinder implements Enumeration<File> {
         return newListFiles;
     }
 
+    /**
+     * Returns true, if elements are available
+     * @return
+     */
     public boolean hasMoreElements() {
-        return cnt < fileList.size();
+        return cnt < fileList.size();//Is end of list reached?
     }
 
+    /**
+     * Returns next File
+     * @return
+     */
     public File nextElement() {
-        if(hasMoreElements()) {
+        if(hasMoreElements()) {//Not last element
             ++cnt;
-            System.out.println(cnt - 1);
-            return fileList.get(cnt - 1);
+            return fileList.get(cnt - 1);//Returns next element
         }
 
-        cnt = 0;
-        System.out.println(cnt);
+        //cnt = 0;//Setting count to first element
         return null;
     }
 
+    /**
+     * Get previous element
+     * @return
+     */
     public File prevElement()
     {
-        if (cnt > 1)
+        if (cnt > 1)//Not first element
         {
             --cnt;
             System.out.println(cnt - 1);
             return fileList.get(cnt - 1);
         }
 
-        cnt = fileList.size() - 1;
+        //cnt = fileList.size() - 1;//Seting count to last element
         System.out.println(cnt);
         return null;
     }

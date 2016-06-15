@@ -35,21 +35,20 @@ public class MainApp extends Application {
         Parent root = FXLoader.load();
         Scene scene = new Scene(root);
 
-        stage.getIcons().add(new Image(getClass().getResource("/music-icon.png").toExternalForm()));
+        stage.getIcons().add(new Image(getClass().getResource("/music-icon.png").toExternalForm()));//Setting icon
         stage.setTitle("MusicPlayer");
         stage.setScene(scene);
         stage.show();
 
-        scene.setOnKeyTyped(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
+        /*Handler for pressed keys - mainly for spacebar*/
+        scene.setOnKeyTyped((event) -> {
+            {
                 if(event.getCharacter().equals(" "))
-                {
-                    ((SceneController)FXLoader.getController()).handleKeyEvent(event);
-                }
+                    ((SceneController)FXLoader.getController()).handleKeyEvent(event);//Inform controller
             }
         });
 
+        /*Setting minimum sizes*/
         stage.setMinHeight(stage.getHeight());
         stage.setMinWidth(stage.getWidth());
 
@@ -57,14 +56,13 @@ public class MainApp extends Application {
 
         if(scene != null) {
             s.setStage(stage);
-            s.startResizableProperty();
 
-            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-                @Override
-                public void handle(WindowEvent event) {
+            /*Handler for closing window*/
+            stage.setOnCloseRequest((event) ->
+                 {
                     s.close();
                 }
-            });
+            );
         }
     }
 }
