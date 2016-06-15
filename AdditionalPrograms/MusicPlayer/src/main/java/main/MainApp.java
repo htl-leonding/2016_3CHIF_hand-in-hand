@@ -11,6 +11,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -37,6 +39,16 @@ public class MainApp extends Application {
         stage.setTitle("MusicPlayer");
         stage.setScene(scene);
         stage.show();
+
+        scene.setOnKeyTyped(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+                if(event.getCharacter().equals(" "))
+                {
+                    ((SceneController)FXLoader.getController()).handleKeyEvent(event);
+                }
+            }
+        });
 
         stage.setMinHeight(stage.getHeight());
         stage.setMinWidth(stage.getWidth());

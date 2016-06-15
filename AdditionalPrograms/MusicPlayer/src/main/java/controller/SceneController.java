@@ -6,7 +6,7 @@ package controller;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -28,7 +28,6 @@ import model.Player;
 
 import java.io.File;
 import java.net.URL;
-import java.security.Key;
 import java.util.*;
 
 public class SceneController implements Initializable{
@@ -88,16 +87,23 @@ public class SceneController implements Initializable{
     private Timer resizeTimer;
     private boolean musicCoverShowing;
 
+    public void handleKeyEvent(KeyEvent event)
+    {
+        mainKeyHandler(event);
+    }
+
     @FXML
     void mainKeyHandler(KeyEvent event) {
         if(event.getCode().equals(KeyCode.LEFT))
             btPreviousHandler(null);
         else if(event.getCode().equals(KeyCode.RIGHT))
             btNextHandler(null);
-        else if(event.getCode().equals(KeyCode.SPACE))
+        else if(event.getCharacter().equals(" "))
             btPlayHandler(null);
 
-        System.out.println("|" + event.getText() + "|");
+        event.consume();
+
+        System.out.println("|" + event.getCharacter() + "|");
     }
 
     @FXML
@@ -219,6 +225,12 @@ public class SceneController implements Initializable{
         timer = new Timer(true);
         progressTimeString.setDisable(true);
         progressTimeString.setOpacity(1);
+
+        borderPaneMain.requestFocus();
+        borderPaneMain.setOnKeyPressed((EventHandler<javafx.event.Event>) (event) -> {
+                mainKeyHandler((KeyEvent) event);
+                event.consume();
+        });
     }
 
     public void startResizableProperty()
