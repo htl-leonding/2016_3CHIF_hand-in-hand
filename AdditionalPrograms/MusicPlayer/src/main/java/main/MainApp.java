@@ -61,7 +61,7 @@ public class MainApp extends Application {
             stage.setOnCloseRequest((event) ->
                  {
                     s.close();
-                }
+                 }
             );
         }
     }
