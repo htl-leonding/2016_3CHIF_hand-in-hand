@@ -6,7 +6,7 @@ package controller;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -28,7 +28,6 @@ import model.Player;
 
 import java.io.File;
 import java.net.URL;
-import java.security.Key;
 import java.util.*;
 
 public class SceneController implements Initializable{
@@ -85,117 +84,151 @@ public class SceneController implements Initializable{
     private MusicFinder musicFinder;
     private Player player;
     private Timer timer;
-    private Timer resizeTimer;
     private boolean musicCoverShowing;
 
+    /**
+     * Method used for external events
+     * Controller reacts to given KeyEvent
+     * @param event
+     */
+    public void handleKeyEvent(KeyEvent event)
+    {
+        mainKeyHandler(event);
+    }
+
+    /**
+     * Main-Eventhandler for controller
+     * @param event
+     */
     @FXML
     void mainKeyHandler(KeyEvent event) {
         if(event.getCode().equals(KeyCode.LEFT))
             btPreviousHandler(null);
         else if(event.getCode().equals(KeyCode.RIGHT))
             btNextHandler(null);
-        else if(event.getCode().equals(KeyCode.SPACE))
+        else if(event.getCharacter().equals(" "))
             btPlayHandler(null);
 
-        System.out.println("|" + event.getText() + "|");
+        event.consume();//Terminate event
     }
 
+    /**
+     * Handler for clicking on progrssbar
+     * @param event
+     */
     @FXML
     void progressClickHandler(MouseEvent event) {
         if(player != null) {
-            player.jump(event.getX()/progressBarSong.getWidth());
+            player.jump(event.getX()/progressBarSong.getWidth());//Calculate percentage and jump to area in file
         }
     }
 
+    /**
+     * Handler for "previousButton"
+     * @param event
+     */
     @FXML
     void btPreviousHandler(MouseEvent event) {
-        if(musicFinder.getPosition() > 1 && player != null)
+        if(musicFinder.getPosition() > 1 && player != null)//Is not first song and player exists
         {
-            player.pause();
-            player.start(musicFinder.prevElement());
-            player.play();
-            btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));
+            player.pause();//Stop playing
+            player.start(musicFinder.prevElement());//Load new song
+            player.play();//Play new song
+            btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));//Change buttongraphic
 
-            setMetadata();
+            setMetadata();//Set metadata
         }
     }
 
+    /**
+     * Handler for"Play-/Pause-button"
+     * @param event
+     */
     @FXML
     void btPlayHandler(MouseEvent event) {
-        if(player != null && player.isPlaying())
+        if(player != null && player.isPlaying())//Is it playing? and does player exists
         {
-            player.pause();
-            btPlay.setGraphic(new ImageView(getClass().getResource("/play.png").toExternalForm()));
+            player.pause();//Stop player
+            btPlay.setGraphic(new ImageView(getClass().getResource("/play.png").toExternalForm()));//Change buttongraphic
         }
-        else if(player != null)
+        else if(player != null)//Does player exists?
         {
-            player.play();
-            btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));
+            player.play();//Start player
+            btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));//Change buttongraphic
         }
     }
 
+    /**
+     * Handler for "Nextbutton"
+     * @param event
+     */
     @FXML
     void btNextHandler(MouseEvent event) {
-
-        if(player != null && musicFinder.hasMoreElements())
+        if(player != null && musicFinder.hasMoreElements())//Does player exist? and is last musicfile
         {
-            player.pause();
-            player.start(musicFinder.nextElement());
-            player.play();
-            btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));
+            player.pause();//Stop player
+            player.start(musicFinder.nextElement());//Load new file
+            player.play();//Play music
+            btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));//Change buttongraphic
 
-            setMetadata();
+            setMetadata();//Load metadata
         }
     }
 
+    /**
+     * Handler for "openDirectoryButton"
+     * @param event
+     */
     @FXML
     void btOpenDirectoryHandler(MouseEvent event) {
         DirectoryChooser chooser = new DirectoryChooser();
 
-        File f = chooser.showDialog(stage);
-        if(f == null)
+        File f = chooser.showDialog(stage);//Choose directory
+        if(f == null)//Nothing selected
             return;
 
-        musicFinder.setDirectoryName(f.getAbsolutePath());
-        if(!musicFinder.searchForMusic())
+        musicFinder.setDirectoryName(f.getAbsolutePath());//Set initial searchdirectory
+        if(!musicFinder.searchForMusic())//Any music found?
         {
+            /*Error - no music found*/
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setTitle("No music found!");
             a.setContentText("No music found at path: " + f.getAbsolutePath());
             a.setHeaderText("Error");
             a.show();
         }
-        else
+        else//Found some music
         {
-            if(player == null)
+            if(player == null)//Does Player already exists
                 player = new Player();
             else
-                player.pause();
-            player.start(musicFinder.nextElement());
-            player.play();
-            btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));
+                player.pause();//Stop playing
+            player.start(musicFinder.nextElement());//Load new file
+            player.play();//Start playing
+            btPlay.setGraphic(new ImageView(getClass().getResource("/pause.png").toExternalForm()));//Change buttongraphic
 
-            setMetadata();
+            setMetadata();//Setting metadata
 
+            /*New Timertast for progressbar*/
             timer.scheduleAtFixedRate(new TimerTask() {
                 @Override
                 public void run() {
-                    progressBarSong.setProgress(player.getElapsedTime().toMillis() / player.getDuration().toMillis());
+                    progressBarSong.setProgress(player.getElapsedTime().toMillis() / player.getDuration().toMillis());//Set progresbarstatus
 
                     Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
                             progressTimeString.setText(convertIntSecToTimeSrting((int)player.getElapsedTime().toSeconds())
-                                    + " / " + convertIntSecToTimeSrting((int)player.getDuration().toSeconds()));
+                                    + " / " + convertIntSecToTimeSrting((int)player.getDuration().toSeconds()));//Write current time onto progressbar
                         }
                     });
 
-                    if(player.getElapsedTime().toMillis() / player.getDuration().toMillis() >= 1)
+                    if(player.getElapsedTime().toMillis() / player.getDuration().toMillis() >= 1)//Reaching end
                     {
-                        Platform.runLater(new Runnable() {
-                            @Override
-                            public void run() {
-                                btNextHandler(null);
+                        Platform.runLater(() -> {
+                            {
+                                btPlay.setGraphic(new ImageView(getClass().getResource("/play.png").toExternalForm()));
+                                btNextHandler(null);//Changing to next Song
                             }
                         });
                     }
@@ -205,11 +238,17 @@ public class SceneController implements Initializable{
         System.out.println(musicFinder.getFileList().size() + " file(s) found!");
     }
 
+    /**
+     * Init-method
+     * @param location
+     * @param resources
+     */
     public void initialize(URL location, ResourceBundle resources) {
         musicFinder = new MusicFinder();
         player = null;
         musicCoverShowing = false;
 
+        /*Initialize buttongraphics*/
         btPlay.setGraphic(new ImageView(getClass().getResource("/play.png").toExternalForm()));
         btNext.setGraphic(new ImageView(getClass().getResource("/next.png").toExternalForm()));
         btPrev.setGraphic(new ImageView(getClass().getResource("/previous.png").toExternalForm()));
@@ -217,24 +256,17 @@ public class SceneController implements Initializable{
         imageView.setImage(new Image(getClass().getResource("/album.png").toExternalForm()));
 
         timer = new Timer(true);
-        progressTimeString.setDisable(true);
-        progressTimeString.setOpacity(1);
-    }
+        progressTimeString.setDisable(true);//Disable label
+        progressTimeString.setOpacity(1);//Setting label over progressbar to 100% visible
 
-    public void startResizableProperty()
-    {
-        stage.getScene().widthProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                if(musicCoverShowing)
-                    imageView.setFitWidth(stage.getWidth()/2);
-                else
-                    imageView.setFitWidth((stage.getWidth() + 600)/2);
-            }
+        borderPaneMain.setOnKeyPressed((EventHandler<javafx.event.Event>) (event) -> {
+                mainKeyHandler((KeyEvent) event);//Handle KeyEvent
         });
     }
 
-
+    /**
+     * Setting Metadata
+     */
     private void setMetadata() {
         if (player.getSongInfo().getAlbum() == null || player.getSongInfo().getAlbum() == "")
             labelAlbum.setText("<Empty>");
@@ -256,20 +288,24 @@ public class SceneController implements Initializable{
         else
             labelYear.setText(player.getSongInfo().getYear());
 
-        if (player.getSongInfo().getImage() == null) {
-            imageView.setImage(new Image(getClass().getResource("/album.png").toExternalForm()));
+        if (player.getSongInfo().getImage() == null) {//Is image available?
+            imageView.setImage(new Image(getClass().getResource("/album.png").toExternalForm()));//Load standard cover
             imageView.setFitWidth((stage.getWidth()+600)/2);
             musicCoverShowing = false;
             calcLabelColorOpposite(imageView.getImage());
 
-        } else {
-            imageView.setImage(player.getSongInfo().getImage());
+        } else {//Load cover
+            imageView.setImage(player.getSongInfo().getImage());//Load cover out of file
             imageView.setFitWidth(stage.getWidth()/2);
             musicCoverShowing = true;
             calcLabelColorOpposite(imageView.getImage());
         }
     }
 
+    /**
+     * Calculates and sets opposite overall-color of cover
+     * @param image
+     */
     private synchronized void calcLabelColorOpposite(Image image)
     {
         double r = 0;
@@ -307,9 +343,13 @@ public class SceneController implements Initializable{
             b = Math.max(b, 0.3);
         }
 
-        setLabelColor(new Color(1 - r, 1 - g, 1 - b, 1));
+        setLabelColor(new Color(1 - r, 1 - g, 1 - b, 1));//Setting labelcolor
     }
 
+    /**
+     * Chancheing color of all etadatalabels
+     * @param color
+     */
     private void setLabelColor(Color color)
     {
         labelArtist.setTextFill(color);
@@ -322,13 +362,33 @@ public class SceneController implements Initializable{
         labelYearText.setTextFill(color);
     }
 
+    /**
+     * Set stage
+     * @param s
+     */
     public void setStage(Stage s)
     {
         this.stage = s;
         imageView.setFitWidth((stage.getWidth() + 600)/2);
         calcLabelColorOpposite(imageView.getImage());
+
+        /*Handels events for resizeing cover*/
+        stage.getScene().widthProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                if(musicCoverShowing)
+                    imageView.setFitWidth(stage.getWidth()/2);//Resize cover
+                else
+                    imageView.setFitWidth((stage.getWidth() + 600)/2);//Resize cover
+            }
+        });
     }
 
+    /**
+     * Converts give seconds to Time-String
+     * @param sec
+     * @return
+     */
     private String convertIntSecToTimeSrting(int sec)
     {
         String newString = "";
@@ -351,11 +411,12 @@ public class SceneController implements Initializable{
         return newString;
     }
 
+    /**
+     * Close and end all timers
+     */
     public void close()
     {
         if(timer != null)
             timer.cancel();
-        if(resizeTimer != null)
-            resizeTimer.cancel();
     }
 }

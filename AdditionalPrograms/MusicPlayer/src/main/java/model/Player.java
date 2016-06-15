@@ -32,9 +32,9 @@ public class Player {
         this.currentFile = currentFile;
 
         try{
-            Media hit = new Media(currentFile.toURI().toASCIIString());
-            mediaPlayer = new MediaPlayer(hit);
-            songInfo = new SongInfo(currentFile);
+            Media hit = new Media(currentFile.toURI().toASCIIString());//Load new music
+            mediaPlayer = new MediaPlayer(hit);//Create new Player
+            songInfo = new SongInfo(currentFile);//Save songinfos
 
             return true;
         }
@@ -55,11 +55,11 @@ public class Player {
 
     public void play()
     {
-        if(mediaPlayer != null) {
-            mediaPlayer.play();
+        if(mediaPlayer != null) {//Does player exists
+            mediaPlayer.play();//PLay
         }
         else
-            System.out.println("MediaPlayer is null");
+            System.out.println("MediaPlayer is null!");
     }
 
     public boolean isPlaying()

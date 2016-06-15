@@ -11,6 +11,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -33,11 +35,20 @@ public class MainApp extends Application {
         Parent root = FXLoader.load();
         Scene scene = new Scene(root);
 
-        stage.getIcons().add(new Image(getClass().getResource("/music-icon.png").toExternalForm()));
+        stage.getIcons().add(new Image(getClass().getResource("/music-icon.png").toExternalForm()));//Setting icon
         stage.setTitle("MusicPlayer");
         stage.setScene(scene);
         stage.show();
 
+        /*Handler for pressed keys - mainly for spacebar*/
+        scene.setOnKeyTyped((event) -> {
+            {
+                if(event.getCharacter().equals(" "))
+                    ((SceneController)FXLoader.getController()).handleKeyEvent(event);//Inform controller
+            }
+        });
+
+        /*Setting minimum sizes*/
         stage.setMinHeight(stage.getHeight());
         stage.setMinWidth(stage.getWidth());
 
@@ -45,14 +56,13 @@ public class MainApp extends Application {
 
         if(scene != null) {
             s.setStage(stage);
-            s.startResizableProperty();
 
-            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-                @Override
-                public void handle(WindowEvent event) {
+            /*Handler for closing window*/
+            stage.setOnCloseRequest((event) ->
+                 {
                     s.close();
                 }
-            });
+            );
         }
     }
 }
