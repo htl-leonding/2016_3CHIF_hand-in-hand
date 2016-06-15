@@ -38,8 +38,8 @@
       <file leaf-file-name="FxmlController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/FxmlController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8181818">
-              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.36349925">
+              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
@@ -93,7 +93,76 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="1768" column="0" selection-start-line="1768" selection-start-column="0" selection-end-line="1768" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#0#127551#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#3555#3556#0" expanded="false" />
+                <element signature="e#3595#3596#0" expanded="false" />
+                <element signature="e#6271#6272#0" expanded="false" />
+                <element signature="e#6331#6332#0" expanded="false" />
+                <element signature="e#45311#45312#0" expanded="false" />
+                <element signature="e#45372#45373#0" expanded="false" />
+                <element signature="e#57599#57600#0" expanded="false" />
+                <element signature="e#57671#57672#0" expanded="false" />
+                <element signature="e#60473#60474#0" expanded="false" />
+                <element signature="e#60509#60510#0" expanded="false" />
+                <element signature="e#60568#60569#0" expanded="false" />
+                <element signature="e#60610#60611#0" expanded="false" />
+                <element signature="e#61124#61125#0" expanded="false" />
+                <element signature="e#61160#61161#0" expanded="false" />
+                <element signature="e#65773#65774#0" expanded="false" />
+                <element signature="e#65808#65809#0" expanded="false" />
+                <element signature="e#66830#66831#0" expanded="false" />
+                <element signature="e#66876#66877#0" expanded="false" />
+                <element signature="e#66933#66934#0" expanded="false" />
+                <element signature="e#66978#66979#0" expanded="false" />
+                <element signature="e#68443#68444#0" expanded="false" />
+                <element signature="e#68489#68490#0" expanded="false" />
+                <element signature="e#68933#68934#0" expanded="false" />
+                <element signature="e#68979#68980#0" expanded="false" />
+                <element signature="e#69384#69385#0" expanded="false" />
+                <element signature="e#69430#69431#0" expanded="false" />
+                <element signature="e#69830#69831#0" expanded="false" />
+                <element signature="e#69876#69877#0" expanded="false" />
+                <element signature="e#78661#78662#0" expanded="false" />
+                <element signature="e#78736#78737#0" expanded="false" />
+                <element signature="e#78839#78840#0" expanded="false" />
+                <element signature="e#78870#78871#0" expanded="false" />
+                <element signature="e#79022#79023#0" expanded="false" />
+                <element signature="e#79058#79059#0" expanded="false" />
+                <element signature="e#79260#79261#0" expanded="false" />
+                <element signature="e#79307#79308#0" expanded="false" />
+                <element signature="e#80224#80225#0" expanded="false" />
+                <element signature="e#80277#80278#0" expanded="false" />
+                <element signature="e#81604#81605#0" expanded="false" />
+                <element signature="e#81635#81636#0" expanded="false" />
+                <element signature="e#81799#81800#0" expanded="false" />
+                <element signature="e#81839#81840#0" expanded="false" />
+                <element signature="e#81975#81976#0" expanded="false" />
+                <element signature="e#82007#82008#0" expanded="false" />
+                <element signature="e#82185#82186#0" expanded="false" />
+                <element signature="e#82227#82228#0" expanded="false" />
+                <element signature="e#82352#82353#0" expanded="false" />
+                <element signature="e#82384#82385#0" expanded="false" />
+                <element signature="e#82514#82515#0" expanded="false" />
+                <element signature="e#82544#82545#0" expanded="false" />
+                <element signature="e#82943#82944#0" expanded="false" />
+                <element signature="e#82975#82976#0" expanded="false" />
+                <element signature="e#83892#83893#0" expanded="false" />
+                <element signature="e#83928#83929#0" expanded="false" />
+                <element signature="e#84852#84853#0" expanded="false" />
+                <element signature="e#84889#84890#0" expanded="false" />
+                <element signature="e#85062#85063#0" expanded="false" />
+                <element signature="e#85114#85115#0" expanded="false" />
+                <element signature="e#85282#85283#0" expanded="false" />
+                <element signature="e#85322#85323#0" expanded="false" />
+                <element signature="e#85711#85712#0" expanded="false" />
+                <element signature="e#85741#85742#0" expanded="false" />
+                <element signature="e#96290#96291#0" expanded="false" />
+                <element signature="e#96358#96359#0" expanded="false" />
+                <element signature="e#105859#105860#0" expanded="false" />
+                <element signature="e#105931#105932#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,14 +179,14 @@
       </file>
       <file leaf-file-name="FxmlView.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
@@ -356,8 +425,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -588,11 +657,12 @@
       <workItem from="1465505536141" duration="211000" />
       <workItem from="1465505787707" duration="4290000" />
       <workItem from="1465551524878" duration="599000" />
+      <workItem from="1465979925342" duration="1654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58326000" />
+    <option name="totallyTimeSpent" value="59980000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -605,7 +675,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1038" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286052" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -613,7 +683,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295699" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17730497" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17730497" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -671,6 +741,17 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/FxmlController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -724,14 +805,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -773,14 +854,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -860,55 +941,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/FxmlController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
-            <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="247" selection-start-line="7" selection-start-column="247" selection-end-line="7" selection-end-column="247" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -942,14 +982,55 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="247" selection-start-line="7" selection-start-column="247" selection-end-line="7" selection-end-column="247" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/FxmlController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />
+            <element signature="method#SetImage#0;class#FxmlController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pictureViewer/PictureViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="247" selection-start-line="7" selection-start-column="247" selection-end-line="7" selection-end-column="247" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -983,14 +1064,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -1041,7 +1122,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1057,7 +1137,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1768" column="0" selection-start-line="1768" selection-start-column="0" selection-end-line="1768" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#127551#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3555#3556#0" expanded="false" />
+            <element signature="e#3595#3596#0" expanded="false" />
+            <element signature="e#6271#6272#0" expanded="false" />
+            <element signature="e#6331#6332#0" expanded="false" />
+            <element signature="e#45311#45312#0" expanded="false" />
+            <element signature="e#45372#45373#0" expanded="false" />
+            <element signature="e#57599#57600#0" expanded="false" />
+            <element signature="e#57671#57672#0" expanded="false" />
+            <element signature="e#60473#60474#0" expanded="false" />
+            <element signature="e#60509#60510#0" expanded="false" />
+            <element signature="e#60568#60569#0" expanded="false" />
+            <element signature="e#60610#60611#0" expanded="false" />
+            <element signature="e#61124#61125#0" expanded="false" />
+            <element signature="e#61160#61161#0" expanded="false" />
+            <element signature="e#65773#65774#0" expanded="false" />
+            <element signature="e#65808#65809#0" expanded="false" />
+            <element signature="e#66830#66831#0" expanded="false" />
+            <element signature="e#66876#66877#0" expanded="false" />
+            <element signature="e#66933#66934#0" expanded="false" />
+            <element signature="e#66978#66979#0" expanded="false" />
+            <element signature="e#68443#68444#0" expanded="false" />
+            <element signature="e#68489#68490#0" expanded="false" />
+            <element signature="e#68933#68934#0" expanded="false" />
+            <element signature="e#68979#68980#0" expanded="false" />
+            <element signature="e#69384#69385#0" expanded="false" />
+            <element signature="e#69430#69431#0" expanded="false" />
+            <element signature="e#69830#69831#0" expanded="false" />
+            <element signature="e#69876#69877#0" expanded="false" />
+            <element signature="e#78661#78662#0" expanded="false" />
+            <element signature="e#78736#78737#0" expanded="false" />
+            <element signature="e#78839#78840#0" expanded="false" />
+            <element signature="e#78870#78871#0" expanded="false" />
+            <element signature="e#79022#79023#0" expanded="false" />
+            <element signature="e#79058#79059#0" expanded="false" />
+            <element signature="e#79260#79261#0" expanded="false" />
+            <element signature="e#79307#79308#0" expanded="false" />
+            <element signature="e#80224#80225#0" expanded="false" />
+            <element signature="e#80277#80278#0" expanded="false" />
+            <element signature="e#81604#81605#0" expanded="false" />
+            <element signature="e#81635#81636#0" expanded="false" />
+            <element signature="e#81799#81800#0" expanded="false" />
+            <element signature="e#81839#81840#0" expanded="false" />
+            <element signature="e#81975#81976#0" expanded="false" />
+            <element signature="e#82007#82008#0" expanded="false" />
+            <element signature="e#82185#82186#0" expanded="false" />
+            <element signature="e#82227#82228#0" expanded="false" />
+            <element signature="e#82352#82353#0" expanded="false" />
+            <element signature="e#82384#82385#0" expanded="false" />
+            <element signature="e#82514#82515#0" expanded="false" />
+            <element signature="e#82544#82545#0" expanded="false" />
+            <element signature="e#82943#82944#0" expanded="false" />
+            <element signature="e#82975#82976#0" expanded="false" />
+            <element signature="e#83892#83893#0" expanded="false" />
+            <element signature="e#83928#83929#0" expanded="false" />
+            <element signature="e#84852#84853#0" expanded="false" />
+            <element signature="e#84889#84890#0" expanded="false" />
+            <element signature="e#85062#85063#0" expanded="false" />
+            <element signature="e#85114#85115#0" expanded="false" />
+            <element signature="e#85282#85283#0" expanded="false" />
+            <element signature="e#85322#85323#0" expanded="false" />
+            <element signature="e#85711#85712#0" expanded="false" />
+            <element signature="e#85741#85742#0" expanded="false" />
+            <element signature="e#96290#96291#0" expanded="false" />
+            <element signature="e#96358#96359#0" expanded="false" />
+            <element signature="e#105859#105860#0" expanded="false" />
+            <element signature="e#105931#105932#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1070,14 +1219,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/FxmlView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/Buttons.css">
@@ -1118,8 +1267,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/FxmlController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8181818">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.36349925">
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#SetImage#0;class#FxmlController#0" expanded="false" />

@@ -115,13 +115,15 @@ public class FxmlController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         ShowButtons();
         btDirectory.setGraphic(new ImageView((getClass().getResource("/file-directory.png").toExternalForm())));
-
         bp.setOnKeyPressed(new EventHandler<KeyEvent>() {
             public void handle(KeyEvent event) {
                 if (event.getCode() == KeyCode.LEFT) {
                     LeftSwitch(null);
                 } else if (event.getCode() == KeyCode.RIGHT) {
                     RightSwitch(null);
+                }
+                else if (event.getCode() == KeyCode.SPACE) {
+
                 }
             }
         });
