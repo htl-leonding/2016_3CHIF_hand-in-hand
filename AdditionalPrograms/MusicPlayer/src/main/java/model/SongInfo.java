@@ -28,6 +28,7 @@ public class SongInfo {
     public SongInfo(File musicFile) throws Exception
     {
         try {
+            /*Load audiofiles*/
             audioFile = AudioFileIO.read(musicFile);
             audioHeader = audioFile.getAudioHeader();
         }
@@ -55,9 +56,9 @@ public class SongInfo {
 
     public Image getImage(){
         try {
-            if(!audioFile.getTag().getArtworkList().isEmpty())
-                return SwingFXUtils.toFXImage(audioFile.getTag().getArtworkList().get(0).getImage(), null);
-            return null;
+            if(!audioFile.getTag().getArtworkList().isEmpty())//Does exits image?
+                return SwingFXUtils.toFXImage(audioFile.getTag().getArtworkList().get(0).getImage(), null);//Load awtImage and convert to fximage
+            return null;//No image
         }
         catch (Exception ex)
         {
