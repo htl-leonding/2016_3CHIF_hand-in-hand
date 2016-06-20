@@ -86,6 +86,9 @@ public class SceneController implements Initializable{
     private Timer timer;
     private boolean musicCoverShowing;
 
+    public static int SEARCHLEVELS = 3;
+    public static int FILENUMBER = 600;
+
     /**
      * Method used for external events
      * Controller reacts to given KeyEvent
@@ -188,7 +191,7 @@ public class SceneController implements Initializable{
             return;
 
         musicFinder.setDirectoryName(f.getAbsolutePath());//Set initial searchdirectory
-        if(!musicFinder.searchForMusic())//Any music found?
+        if(!musicFinder.searchForMusic(SEARCHLEVELS, FILENUMBER))//Any music found?
         {
             /*Error - no music found*/
             Alert a = new Alert(Alert.AlertType.ERROR);
@@ -337,10 +340,10 @@ public class SceneController implements Initializable{
 
         double temp = (r + g + b)/3;
 
-        if(temp < 0.2) {
-            r = Math.max(r, 0.3);
-            g = Math.max(g, 0.3);
-            b = Math.max(b, 0.3);
+        if(temp < 0.4) {
+            r = Math.max(r, 0.4);
+            g = Math.max(g, 0.4);
+            b = Math.max(b, 0.4);
         }
 
         setLabelColor(new Color(1 - r, 1 - g, 1 - b, 1));//Setting labelcolor
