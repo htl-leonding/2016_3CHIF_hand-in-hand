@@ -118,6 +118,8 @@ public class viewFXMLController implements Initializable, Observer {
         toAssignKey = 0;
 
         //Setting images
+        btDeutsch.setText("");
+        btDeutsch.setGraphic(new ImageView(getClass().getResource("/ukd.png").toExternalForm()));
         ivInfoPic.setImage(new Image(getClass().getResource("/htl_logo.png").toExternalForm()));
         ivHomePic.setImage(new Image(getClass().getResource("/HandinHand.PNG").toExternalForm()));
         ivAndrejPic.setImage(new Image(getClass().getResource("/Sakal.JPG").toExternalForm()));
@@ -293,7 +295,7 @@ public class viewFXMLController implements Initializable, Observer {
         tHome.setText(rs.getString("Home"));
         tSettings.setText(rs.getString("Settings"));
         helpHyper.setText(rs.getString("Help"));
-        btDeutsch.setText(rs.getString("Language"));
+        //btDeutsch.setText(rs.getString("Language"));
         label.setText("");
     }
 
@@ -307,11 +309,13 @@ public class viewFXMLController implements Initializable, Observer {
             changeLang("en","US");
             isGerman = false;
             lbHome.setText("");
+            btDeutsch.setGraphic(new ImageView(getClass().getResource("/Germany_flat.png").toExternalForm()));
         }
         else {
             changeLang("de", "DE");
             isGerman = true;
             lbHome.setText("");
+            btDeutsch.setGraphic(new ImageView(getClass().getResource("/ukd.png").toExternalForm()));
         }
     }
 }

@@ -79,25 +79,25 @@
                                       </Hyperlink>
                                   </top>
                                   <bottom>
-                                      <BorderPane prefHeight="195.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+                                      <BorderPane prefHeight="208.0" prefWidth="598.0" BorderPane.alignment="CENTER">
                                           <center>
-                                              <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" prefHeight="78.0" prefWidth="541.0" style="-fx-background-color: #d3d3d3;" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                                              <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" prefHeight="101.0" prefWidth="541.0" style="-fx-background-color: #d3d3d3;" textAlignment="CENTER" BorderPane.alignment="CENTER">
                                                   <BorderPane.margin>
                                                       <Insets bottom="10.0" top="5.0" />
                                                   </BorderPane.margin>
                                               </Label>
                                           </center>
                                           <top>
-                                              <ProgressIndicator fx:id="progressbar" blendMode="DIFFERENCE" BorderPane.alignment="CENTER">
+                                              <ProgressIndicator fx:id="progressbar" blendMode="DIFFERENCE" prefHeight="49.0" prefWidth="598.0" BorderPane.alignment="CENTER">
                                                   <BorderPane.margin>
                                                       <Insets />
                                                   </BorderPane.margin>
                                               </ProgressIndicator>
                                           </top>
                                        <bottom>
-                                          <VBox alignment="CENTER" prefHeight="55.0" prefWidth="598.0" BorderPane.alignment="CENTER">
+                                          <VBox alignment="CENTER" prefHeight="65.0" prefWidth="598.0" BorderPane.alignment="CENTER">
                                              <children>
-                                                <GridPane alignment="CENTER" prefHeight="59.0" prefWidth="598.0">
+                                                <GridPane alignment="CENTER" prefHeight="47.0" prefWidth="598.0">
                                                   <columnConstraints>
                                                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -106,8 +106,8 @@
                                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                   </rowConstraints>
                                                    <children>
-                                                      <Button fx:id="btDeutsch" minHeight="35.0" mnemonicParsing="false" onAction="#handleGermanButton" prefWidth="150.0" text="Englisch" />
-                                                          <Button fx:id="btReset" alignment="CENTER" contentDisplay="CENTER" minHeight="35.0" mnemonicParsing="false" onAction="#handleResetButton" prefWidth="150.0" text="RESET" textAlignment="CENTER" GridPane.columnIndex="1" />
+                                                      <Button fx:id="btDeutsch" maxHeight="50.0" maxWidth="150.0" minHeight="50.0" mnemonicParsing="false" onAction="#handleGermanButton" prefWidth="150.0" />
+                                                          <Button fx:id="btReset" alignment="CENTER" contentDisplay="CENTER" minHeight="50.0" mnemonicParsing="false" onAction="#handleResetButton" prefWidth="150.0" text="RESET" textAlignment="CENTER" GridPane.columnIndex="1" />
                                                    </children>
                                                 </GridPane>
                                              </children>
