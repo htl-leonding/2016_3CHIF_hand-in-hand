@@ -66,8 +66,7 @@ public class FxmlController implements Initializable {
         if(folder == null)
             return;
         img.setFolder(folder);
-        boolean foundPic = img.searchPicturesInDirectory();
-        if(!foundPic)
+        if(img.searchPicturesInDirectory() == false)
         {
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setTitle("No pictures found!");
@@ -115,13 +114,15 @@ public class FxmlController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         ShowButtons();
         btDirectory.setGraphic(new ImageView((getClass().getResource("/file-directory.png").toExternalForm())));
-
         bp.setOnKeyPressed(new EventHandler<KeyEvent>() {
             public void handle(KeyEvent event) {
                 if (event.getCode() == KeyCode.LEFT) {
                     LeftSwitch(null);
                 } else if (event.getCode() == KeyCode.RIGHT) {
                     RightSwitch(null);
+                }
+                else if (event.getCode() == KeyCode.SPACE) {
+
                 }
             }
         });
