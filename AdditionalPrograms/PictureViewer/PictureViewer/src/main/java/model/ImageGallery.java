@@ -12,10 +12,13 @@ public class ImageGallery {
     //Instance of model
     private static ImageGallery model = null;
     //The Folder which has to be scanned for Images
-    private File folder = new File("");
+    private File rootFolder = new File("");
+    //Max size of fileList
+    private int maxSize = 50;
+
 
     //Singleton Pattern
-    private ImageGallery(){};
+    private ImageGallery(){}
 
     public static ImageGallery getInstance() {
         if (model == null)
@@ -37,31 +40,43 @@ public class ImageGallery {
      * Searches all Pictures in a folder
      */
     public boolean searchPicturesInDirectory() {
-        File[] filesArray = getFolder().listFiles();
-        List<File> temp = new LinkedList<File>();
-        for (File file : filesArray) {
-            if (!file.isDirectory()) {
-                String path = String.valueOf(file.getPath());
-
-                if (((path.toUpperCase().contains(".JPG")) || (path.toUpperCase().contains(".PNG")) || (path.toUpperCase().contains(".JPEG")) && !temp.contains(new File(path)))) {
-                    temp.add(file);
-                } else {
-                    continue;
-                }
-            }
-        }
-        filesList = temp;
-        if (temp != null)
+        filesList = getPicturesInDirectory(getFolder(), 0);
+        if (maxSize != 50)
             return true;
         else
             return false;
     }
 
-    public File getFolder() {
-        return folder;
+    private List<File> getPicturesInDirectory(File dir, int actLevel)
+    {
+        File[] filesArray = dir.listFiles();
+        List <File> temp = new LinkedList<File>();
+        if(actLevel < 3 && maxSize > 0) {
+            for (File file : filesArray) {
+                if (file.isDirectory()) {
+                    temp.addAll(getPicturesInDirectory(file, actLevel + 1));
+                } else {
+                    String path = String.valueOf(file.getPath());
+                    if (((path.toUpperCase().contains(".JPG")) || (path.toUpperCase().contains(".PNG")) || (path.toUpperCase().contains(".JPEG")) && !temp.contains(new File(path)))) {
+                        temp.add(file);
+                        maxSize--;
+                    }
+                }
+                if(maxSize <= 0)
+                    return temp;
+            }
+        }
+        return temp;
+    }
+
+    public File getFolder()
+    {
+        return rootFolder;
     }
 
     public void setFolder(File folder) {
-        this.folder = folder;
+        this.rootFolder = folder;
+        maxSize = 50;
+        filesList = null;
     }
 }
