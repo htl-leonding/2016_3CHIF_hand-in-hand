@@ -12,10 +12,8 @@ public class Asteroids extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/view/GameView.fxml"));
-        primaryStage.getIcons().add(new Image(getClass().getResource("/asteroids-icon.png").toExternalForm()));
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root,500,400));
         primaryStage.show();
-        primaryStage.setFullScreen(true);
     }
 
 

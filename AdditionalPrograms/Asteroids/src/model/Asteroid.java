@@ -9,9 +9,22 @@ import javafx.scene.paint.Color;
 
 public class Asteroid extends GameElement {
 
+    int posiX;
+    int posY;
+    int speed;
+    String richt = "Links";
+
+
     public Asteroid(int posX, int posY, int speed, Color color) {
         super(posX, posY, speed, color);
         setDirection(Direction.RIGHT);
+        richt = "Rechts";
+        if (richt == "Rechts") {
+            posX = posX - speed;
+        }
+        else {
+            posX = posX + speed;
+        }
     }
 
     /**
