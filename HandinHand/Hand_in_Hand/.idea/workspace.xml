@@ -6,14 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9a9cfb1-ce4a-4e66-89c3-24ac95356a98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../AdditionalPrograms/Asteroids/out/production/Asteroids/fxasteroids/Asteroids.class" afterPath="$PROJECT_DIR$/../../AdditionalPrograms/Asteroids/out/production/Asteroids/fxasteroids/Asteroids.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../AdditionalPrograms/Asteroids/out/production/Asteroids/model/Asteroid.class" afterPath="$PROJECT_DIR$/../../AdditionalPrograms/Asteroids/out/production/Asteroids/model/Asteroid.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../AdditionalPrograms/Asteroids/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../AdditionalPrograms/Asteroids/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../AdditionalPrograms/Asteroids/src/fxasteroids/Asteroids.java" afterPath="$PROJECT_DIR$/../../AdditionalPrograms/Asteroids/src/fxasteroids/Asteroids.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../AdditionalPrograms/Asteroids/src/model/Asteroid.java" afterPath="$PROJECT_DIR$/../../AdditionalPrograms/Asteroids/src/model/Asteroid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../AdditionalPrograms/MusicPlayer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../AdditionalPrograms/MusicPlayer/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="b9a9cfb1-ce4a-4e66-89c3-24ac95356a98" name="Default" comment="" />
     <ignored path="Hand_in_Hand.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
