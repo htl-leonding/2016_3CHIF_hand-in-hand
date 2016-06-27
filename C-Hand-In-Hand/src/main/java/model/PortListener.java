@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
 import gnu.io.*;
@@ -17,11 +12,26 @@ import java.util.TooManyListenersException;
 
 /**
  *
- * @author Andrej Sakal, Stefan Smiljkovic, Gabriel Ionescu
+ * @author Andrej Sakal
  */
 public class PortListener extends Observable implements SerialPortEventListener {
 
     SerialPort serialPort = null;
+
+    /**
+     * A BufferedReader which will be fed by a InputStreamReader converting the
+     * bytes into characters making the displayed results codepage independent
+     */
+    private BufferedReader input;
+
+    //Saves the inputString
+    private String inputString;
+
+    //Milliseconds to block while waiting for port open
+    private static final int TIME_OUT = 2000;
+
+    //Default bits per second for COM port.
+    private static final int DATA_RATE = 9600;
 
     public SerialPort getSerialPort() {
         return serialPort;
@@ -31,37 +41,15 @@ public class PortListener extends Observable implements SerialPortEventListener 
      * The port we're normally going to use.
      */
     private static final String PORT_NAMES[] = {
-        "/dev/ttyUSB0", // Linux based port names
-        "COM3", "COM6", "COM7", "COM8", "COM9", "COM5" // Windows based port names
+            "/dev/ttyUSB0", // Linux based port names
+            "COM3", "COM6", "COM7", "COM8", "COM9", "COM5" // Windows based port names
     };
-
-    /**
-     * A BufferedReader which will be fed by a InputStreamReader converting the
-     * bytes into characters making the displayed results codepage independent
-     */
-    private BufferedReader input;
-
-    /**
-     * Saves the inputString
-     */
-    private String inputString;
-
-    /**
-     * Milliseconds to block while waiting for port open
-     */
-    private static final int TIME_OUT = 2000;
-    /**
-     * Default bits per second for COM port.
-     */
-    private static final int DATA_RATE = 9600;
 
     /**
      * Default constructor of the PortListener Class, searches the MC on the possible Ports
      */
     public PortListener() {
 
-        //Testing
-        //System.out.println("CONSTR");
         CommPortIdentifier portId = null;
         Enumeration portEnum = CommPortIdentifier.getPortIdentifiers();
 
@@ -71,8 +59,6 @@ public class PortListener extends Observable implements SerialPortEventListener 
             for (String portName : PORT_NAMES) {
                 if (currPortId.getName().equals(portName)) {
                     portId = currPortId;
-                    //Testing
-                    //System.out.println("CONSTR FOUND PORT: " + portId.getName());
                     break;
                 }
             }
@@ -144,18 +130,18 @@ public class PortListener extends Observable implements SerialPortEventListener 
         //Proves if the event is our needed event
         if (oEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
 
-                //Cheks the value of the input
-                try {
-                    if (input.ready()) {
-                        inputString = input.readLine();
+            //Cheks the value of the input
+            try {
+                if (input.ready()) {
+                    inputString = input.readLine();
 
-                        //Notifying all Observers when something new is read from the mc
-                        setChanged();
-                        notifyObservers();
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    //Notifying all Observers when something new is read from the mc
+                    setChanged();
+                    notifyObservers();
                 }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
