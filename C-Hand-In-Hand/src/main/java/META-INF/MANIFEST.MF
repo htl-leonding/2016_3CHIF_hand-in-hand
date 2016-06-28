@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: hand_in_hand.HandInHand
+
