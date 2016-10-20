@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Picture-Viewer">
+    <output-path>$PROJECT_DIR$/out/artifacts/Picture_Viewer</output-path>
+    <root id="archive" name="Picture-Viewer.jar">
+      <element id="module-output" name="PictureViewer" />
+      <element id="library" level="project" name="Maven: com.drewnoakes:metadata-extractor:2.8.1" />
+      <element id="library" level="project" name="Maven: com.adobe.xmp:xmpcore:5.1.2" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
