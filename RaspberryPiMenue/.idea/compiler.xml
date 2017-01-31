@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="Hand-In-Hand" />
+        <module name="RaspberryPiMenue" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Hand-In-Hand" target="1.8" />
+      <module name="RaspberryPiMenue" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

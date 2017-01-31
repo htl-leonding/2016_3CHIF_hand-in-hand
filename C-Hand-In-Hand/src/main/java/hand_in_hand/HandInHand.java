@@ -20,9 +20,11 @@ public class HandInHand {
         model = new PortListener();
         KeyController k = new KeyController();
 
-        keyList.add(new Key(KeyEvent.VK_SPACE, "key3:p"));
-        keyList.add(new Key(KeyEvent.VK_LEFT, "key0:p"));
-        keyList.add(new Key(KeyEvent.VK_RIGHT, "key4:p"));
+        keyList.add(new Key(KeyEvent.VK_SPACE, "key0:p"));
+        keyList.add(new Key(KeyEvent.VK_LEFT,"key1:p"));
+        keyList.add(new Key(KeyEvent.VK_RIGHT, "key2:p"));
+        keyList.add(new Key(KeyEvent.VK_UP, "key3:p"));
+        keyList.add(new Key(KeyEvent.VK_DOWN, "key4:p"));
 
         //If there is no connection...
         if (getModel().getSerialPort() == null)
