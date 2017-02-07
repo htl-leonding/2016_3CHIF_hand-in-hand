@@ -15,30 +15,41 @@ Die Bedienung eines Computers ist neben Lesen, Schreiben und Rechnen längst zu 
 ##Einführung
 
 * Hand in Hand ist ein unterstützendes System für beeinträchtigte Personen.
-* Unsere Software ist dafür gedacht Menschen, die nicht mit der Tastatur zurechtkommen, zu helfen.
+* Unsere Software & Hardware ist dafür gedacht Menschen, die nicht mit der Tastatur zurechtkommen, zu helfen.
 * Dies machen wir möglich indem wir die Tastatur viel größer und robuster nachbauen.
 * Unser Gerät kann man ohne größere Probleme überall mitnehmen wo es zum Einsatz kommen soll.
-* Die größten Vorteile unserer Software sind die hohe Flexibilität, leichte Verwendung und vielseitige Nutzbarkeit.
+* Die größten Vorteile sind die hohe Flexibilität, leichte Verwendung und vielseitige Nutzbarkeit.
 
 ##Grundlagen
 
-* Hand in Hand – Derzeitige [Version 3.1](https://github.com/htl-leonding/2016_3CHIF_hand-in-hand/wiki/Versionen#version-31)
+* Hand in Hand – Derzeitige [Version 4.2]
 * Unsere Software ermöglicht es schnell und einfach Tasten von einer herkömmlichen Tastatur auf unserem EazyKeyboard zu konfigurieren
-* 3-Funktionen: Linke Pfeiltaste – Leertaste – Rechte Pfeiltaste
+* 5-Funktionen: Linke Pfeiltaste – Rechte Pfeiltaste - Pfeiltaste nach Oben - Pfeiltaste nach unten - Leertaste 
 * Ein 7 Zoll Display erleichtert die Handlichkeit und die Mitnahme des Gerätes.
 * RXTX-Bibliothek ermöglicht uns über den Seriellen Port zu kommunizieren
 
 ##Unsere Ziele
 
-Den Menschen soll es durch unser Projekt viel leichter fallen zwischen Fotos oder Videos zu wechseln. Ziel ist es das reibungslos laufende Programm auf vielen Systemen verwenden zu können. Der Benutzer soll mittels den Tasten auf dem Arduino in einem Video-, Bild- oder Musikwiedergabeprogramm verschiedene Funktionen ausführen können. Diese Funktionen kann der Benutzer selbständig einer Taste zuweisen.
+Den Menschen soll es durch unser Projekt viel leichter fallen mit dem Computer zu arbeiten. Ziel ist es das reibungslos laufende Programm auf vielen Systemen verwenden zu können. Der Benutzer soll mittels den Tasten auf dem Arduino in einem Video-, Bild- oder Musikwiedergabeprogramm verschiedene Funktionen ausführen können. Diese Funktionen kann der Benutzer selbständig einer Taste zuweisen.
 
 <p align="center">
    <img src ="http://i.imgur.com/1X0g6uJ.png">
 </p>
 
 ***
+# Na geht doch...
+* Wasserspritz geschütze Holzbox
+* 5 bunte LED - Buttons
+* 5-Funktionen: Linke Pfeiltaste – Rechte Pfeiltaste - Pfeiltaste nach Oben - Pfeiltaste nach unten - Leertaste 
+* Leichte Bedienbarkeit, einfach an die Stromversorgung anhängen und fertig
+* Zuverlässige serielle Kommunikation mithilfe der RXTX-Bibliothek und eines ESP8266
+* 7 Zoll Display mit Touch
+* Vielseitige Nutzbarkeit
+* Kann überall ganz einfach mitgenommen werden
+* Schlagfest
 
-#Aktuell (Version 3.2)
+
+# Sieht doch schon gut aus...
 
 * Holz box mit Buttons und Display
 * EazyKeyboard leicht konfigurierbar
@@ -55,14 +66,14 @@ Rohentwurf der Box und Button:
 ![Holz box](http://i.imgur.com/XoshqZr.jpg?1 =460x280)
 ![Button](http://i.imgur.com/1cuVZUD.jpg =460x280)
 
-##Vorgänger
+##Die ersten Schritte nach vorne...
 ###Version 2.2:
 * Esp8266 mit 3 Tasten
 * RXTX-Bibliothek für die serielle Kommunikation
 
 ![Version 2.2](http://i.imgur.com/WXepJFD.png?1)
 
-###Version 1.1:
+###Wie alles begann ...
 * Box mit selbstgebauten Tasten
 * Makey Makey
 
@@ -70,7 +81,7 @@ Rohentwurf der Box und Button:
 
 ***
 
-Ab der Version 3.1 stellen wir ein paar Features zur Verfügung
+Nur in der Version 3.1 erhätlich
 
 #Picture Viewer
 Dadurch kann sich der Benutzer einzelne Fotos anschauen und zwischen denen wechseln. Das Wechseln erfolgt mittels den Eingebauten Buttons.
@@ -132,7 +143,7 @@ In der Klasse Key wird ein Button mit den jeweiligen Funktionen gespeichert und 
 
 #Bibliotheken
 ##RXTX
-Ermöglicht die serielle und parallele Kommunikation. RXTX wurde Anfang 1997 Entwickelt und seitdem immer weiterentwickelt und verbessert. Die neuste Version ist rxtx-2.1-7, die Anfang 2006 veröffentlicht wurde. Mehr Informationen über die RXTX-Bibliothek findet man [hier](http://users.frii.com/jarvi/rxtx/index.html).
+Unsere geliebte RXTX-Bibliothek ist das Herzstück unseres Programmes es liest und schickt verschiedenste Daten über die Serielle Schnitstelle (USB) an den ESP8266.Kurz gesagt es ermöglicht uns die serielle und parallele Kommunikation. RXTX wurde Anfang 1997 Entwickelt und seitdem immer weiterentwickelt und verbessert. Die neuste Version ist rxtx-2.1-7, die Anfang 2006 veröffentlicht wurde. Mehr Informationen über die RXTX-Bibliothek findet man [hier](http://users.frii.com/jarvi/rxtx/index.html).
 
 ***
 Links zum Wiki
