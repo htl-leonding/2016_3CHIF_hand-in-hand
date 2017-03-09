@@ -1,3 +1,2 @@
-Manifest-Version: 1.0
+Manifest-Version: 1.1
 Main-Class: hand_in_hand.HandInHand
-
