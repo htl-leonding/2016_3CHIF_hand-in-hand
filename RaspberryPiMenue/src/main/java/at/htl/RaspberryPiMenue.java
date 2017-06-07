@@ -4,9 +4,12 @@ import at.htl.at.htl.utils.RunShellCommandFromJava;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.security.Key;
 
 /**
  * Created by sakal_andrej on 25.01.17.
@@ -37,12 +40,36 @@ public class RaspberryPiMenue {
         System.out.print("AUSWAHL MIT ENTER BESTÄTIGEN! (SPACE)\n");
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("Enter Integer:");
+        System.out.print("Eingabe tätigen:");
+        int i = 4;
         try{
-            int i = Integer.parseInt(br.readLine());
+            i = Integer.parseInt(br.readLine());
         }catch(NumberFormatException nfe){
             System.err.println("Invalid Format!");
         }
+        Robot robot = null;
+        try {
+            robot = new Robot();
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
+        robot.keyPress(KeyEvent.VK_ENTER);
+
+    switch (i) {
+            case 1:
+            String[] s = new String[] {"feh -F -r -x /media/USB"};
+            RunShellCommandFromJava.main(s);
+            break;
+        case 2:
+            String[] s2 = new String[] {"omxplayer -F /media/USB"};
+            RunShellCommandFromJava.main(s2);
+            break;
+        case 3:
+            String[] s3 = new String[] {"omxplayer -F /media/USB"};
+            RunShellCommandFromJava.main(s3);
+            break;
+    }
+
 
 
     }

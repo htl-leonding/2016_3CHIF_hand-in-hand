@@ -1,4 +1,4 @@
-package at.htl.at.htl.utils;// file: RunShellCommandFromJava.java
+package at.htl.at.htl.utils;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
