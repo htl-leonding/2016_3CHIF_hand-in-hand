@@ -32,12 +32,11 @@ public class RaspberryPiMenue {
         //Zuerst Hand-In-Hand mit Blauen Button als Enter ausführen & die Buttons als Ziffern einstellen dann
         //wenn 1, 2 oder 3 auf normal Betrieb nehmen
 
-        System.out.print("1. Diashow (Vom USB-Stick) bitte den ganz linken Blauen Knopf drücken! (LEFT) \n");
-        System.out.print("2. Videos abspielen (Vom USB-Stick) bitte den obersten roten Knopf drücken! (UP)\n");
-        System.out.print("3. Roboter steuern bitte den rechten gelben Knopf drücken! (RIGHT) \n\n");
-        System.out.print("4. Korrektur! (DOWN) \n\n");
+        System.out.print("1. Diashow (Vom USB-Stick) bitte den ganz linken Blauen Knopf drücken! (LINKER KNOP) \n");
+        System.out.print("2. Videos abspielen (Vom USB-Stick) bitte den obersten roten Knopf drücken! (OBERER KNOPF)\n");
+        System.out.print("3. Korrektur! (DOWN) \n\n");
 
-        System.out.print("AUSWAHL MIT ENTER BESTÄTIGEN! (SPACE)\n");
+        System.out.print("AUSWAHL MIT ENTER BESTÄTIGEN! (RECHTER KNOPF)\n");
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Eingabe tätigen:");
@@ -45,7 +44,7 @@ public class RaspberryPiMenue {
         try{
             i = Integer.parseInt(br.readLine());
         }catch(NumberFormatException nfe){
-            System.err.println("Invalid Format!");
+            System.err.println("Nur Zahlen eingeben bitte!");
         }
         Robot robot = null;
         try {
