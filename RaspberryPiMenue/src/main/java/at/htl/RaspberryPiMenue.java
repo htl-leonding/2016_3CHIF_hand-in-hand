@@ -1,25 +1,24 @@
 package at.htl;
 
-import at.htl.at.htl.utils.RunShellCommandFromJava;
-import javafx.application.Application;
-import javafx.stage.Stage;
+import at.htl.conrollers.KeyPressController;
+import at.htl.utils.RunShellCommandFromJava;
+import com.pi4j.io.gpio.RaspiPin;
+import com.pi4j.io.gpio.event.GpioPinDigitalStateChangeEvent;
 
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.security.Key;
+import java.util.TimerTask;
+import java.util.concurrent.ScheduledExecutorService;
 
 /**
  * Created by sakal_andrej on 25.01.17.
  */
 public class RaspberryPiMenue {
-
+    private static TimerTask task;
+    private static String s[];
+    private static KeyPressController keyPressController;
 
     public static void main(String[] args) throws IOException {
-
-        String[] ab = new String[1];
+        //String[] ab = new String[1];
 
         System.out.print("******************************************************************************\n");
         System.out.print("******************************************************************************\n");
@@ -34,42 +33,41 @@ public class RaspberryPiMenue {
 
         System.out.print("1. Diashow (Vom USB-Stick) bitte den ganz linken Blauen Knopf drücken! (LINKER KNOP) \n");
         System.out.print("2. Videos abspielen (Vom USB-Stick) bitte den obersten roten Knopf drücken! (OBERER KNOPF)\n");
-        System.out.print("3. Korrektur! (DOWN) \n\n");
+        System.out.print("3. Korrektur! (UNTERER KNOPF) \n\n");
 
         System.out.print("AUSWAHL MIT ENTER BESTÄTIGEN! (RECHTER KNOPF)\n");
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("Eingabe tätigen:");
-        int i = 4;
-        try{
-            i = Integer.parseInt(br.readLine());
-        }catch(NumberFormatException nfe){
-            System.err.println("Nur Zahlen eingeben bitte!");
-        }
-        Robot robot = null;
-        try {
-            robot = new Robot();
-        } catch (AWTException e) {
-            e.printStackTrace();
-        }
-        robot.keyPress(KeyEvent.VK_ENTER);
+        keyPressController = new KeyPressController(false);
+        keyPressController.setInputHandler(new KeyPressController.KeyboardInputListener() {
+            public void keyPressed(GpioPinDigitalStateChangeEvent pinEvent) {
+                runCode(pinEvent);
+            }
+        });
+        task = new TimerTask() {
+            @Override
+            public void run() {
+                try {
+                    this.wait(10000);
+                    RunShellCommandFromJava.main(new String[]{"feh -F -r -x /media/USB"});
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        task.run();
 
-    switch (i) {
-            case 1:
-            String[] s = new String[] {"feh -F -r -x /media/USB"};
-            RunShellCommandFromJava.main(s);
-            break;
-        case 2:
-            String[] s2 = new String[] {"omxplayer -F /media/USB"};
-            RunShellCommandFromJava.main(s2);
-            break;
-        case 3:
-            String[] s3 = new String[] {"omxplayer -F /media/USB"};
-            RunShellCommandFromJava.main(s3);
-            break;
     }
 
+    public static void runCode(GpioPinDigitalStateChangeEvent event){
 
-
+        if(event.getPin() == RaspiPin.GPIO_02){
+            s = new String[]{"feh -F -r -x /media/USB"};
+        } else if(event.getPin() == RaspiPin.GPIO_04){
+            s = new String[]{"omxplayer -F /media/USB"};
+        } else if(event.getPin() == RaspiPin.GPIO_05){
+            s = new String[]{"omxplayer -F /media/USB"};
+        } else if(event.getPin() == RaspiPin.GPIO_03){
+            RunShellCommandFromJava.main(s);
+        }
     }
 }

@@ -1,4 +1,4 @@
-package at.htl.at.htl.utils;
+package at.htl.utils;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -34,6 +34,7 @@ public class RunShellCommandFromJava {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
 
     }
 } 
