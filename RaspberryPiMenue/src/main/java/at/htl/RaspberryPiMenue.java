@@ -8,6 +8,7 @@ import com.pi4j.io.gpio.event.GpioPinDigitalStateChangeEvent;
 import java.io.IOException;
 import java.util.TimerTask;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by sakal_andrej on 25.01.17.
@@ -43,19 +44,19 @@ public class RaspberryPiMenue {
                 runCode(pinEvent);
             }
         });
-        task = new TimerTask() {
+        /*task = new TimerTask() {
             @Override
             public void run() {
                 try {
-                    this.wait(10000);
-                    RunShellCommandFromJava.main(new String[]{"feh -F -r -x /media/USB"});
+                    TimeUnit.SECONDS.sleep(10);
+                    RunShellCommandFromJava.main(new String[]{"feh -F -r -x -R /media/*"});
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
         };
-        task.run();
-
+        task.run();*/
+        System.in.read();
     }
 
     public static void runCode(GpioPinDigitalStateChangeEvent event){
@@ -67,6 +68,7 @@ public class RaspberryPiMenue {
         } else if(event.getPin() == RaspiPin.GPIO_05){
             s = new String[]{"omxplayer -F /media/USB"};
         } else if(event.getPin() == RaspiPin.GPIO_03){
+            task.cancel();
             RunShellCommandFromJava.main(s);
         }
     }

@@ -1,5 +1,6 @@
 package at.htl.conrollers;
 
+import at.htl.RaspberryPiMenue;
 import com.pi4j.io.gpio.*;
 import com.pi4j.io.gpio.event.GpioPinDigitalStateChangeEvent;
 import com.pi4j.io.gpio.event.GpioPinListenerDigital;
@@ -10,7 +11,7 @@ import java.awt.event.KeyEvent;
 /**
  * Created by Stefan Smiljkovic on 14.06.2017.
  */
-public class KeyPressController implements GpioPinListenerDigital
+public class KeyPressController
 {
     public boolean runInputHandler;
     private final GpioController gpio = GpioFactory.getInstance();
@@ -24,17 +25,62 @@ public class KeyPressController implements GpioPinListenerDigital
     }
 
     public KeyPressController(boolean handleInputs){
+        System.out.println("Started!");
         runInputHandler = handleInputs;
-        gpio.addListener(this);
-    }
 
-    public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent pinEvent) {
-        if(inputListener != null){
-            inputListener.keyPressed(pinEvent);
-        }
-        if(runInputHandler){
-            handleAction(pinEvent);
-        }
+        final GpioPinDigitalInput myButton2 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_02, PinPullResistance.PULL_DOWN);
+        final GpioPinDigitalInput myButton3 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_03, PinPullResistance.PULL_DOWN);
+        final GpioPinDigitalInput myButton4 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_04, PinPullResistance.PULL_DOWN);
+        final GpioPinDigitalInput myButton5 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_05, PinPullResistance.PULL_DOWN);
+        final GpioPinDigitalInput myButton6 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_06, PinPullResistance.PULL_DOWN);
+        final GpioPinDigitalInput myButton7 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_07, PinPullResistance.PULL_DOWN);
+
+        myButton2.addListener(new GpioPinListenerDigital() {
+            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent pinEvent) {
+                System.out.println("Hey!!");
+                System.out.println(pinEvent.getPin().getName() + ": " + pinEvent.getState());
+                if(inputListener != null){
+                    inputListener.keyPressed(pinEvent);
+                }
+                if(runInputHandler){
+                    handleAction(pinEvent);
+                }
+            }
+        });
+
+        myButton4.addListener(new GpioPinListenerDigital() {
+            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent pinEvent) {
+                System.out.println("Hey!!");
+                System.out.println(pinEvent.getPin().getName() + ": " + pinEvent.getState());
+                if(inputListener != null){
+                    inputListener.keyPressed(pinEvent);
+                }
+                if(runInputHandler){
+                    handleAction(pinEvent);
+                }
+            }
+        });
+
+        /*GpioPinDigitalInput[] pins = {
+                gpio.provisionDigitalInputPin(RaspiPin.GPIO_02, PinPullResistance.PULL_DOWN),
+                gpio.provisionDigitalInputPin(RaspiPin.GPIO_03, PinPullResistance.PULL_DOWN),
+                gpio.provisionDigitalInputPin(RaspiPin.GPIO_04, PinPullResistance.PULL_DOWN),
+                gpio.provisionDigitalInputPin(RaspiPin.GPIO_05, PinPullResistance.PULL_DOWN),
+                gpio.provisionDigitalInputPin(RaspiPin.GPIO_06, PinPullResistance.PULL_DOWN),
+        };
+        gpio.addListener(new GpioPinListenerDigital() {
+            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent pinEvent) {
+                System.out.println("Hey!!");
+                System.out.println(pinEvent.getPin().getName() + ": " + pinEvent.getState());
+                if(inputListener != null){
+                    inputListener.keyPressed(pinEvent);
+                }
+                if(runInputHandler){
+                    handleAction(pinEvent);
+                }
+            }
+        }, pins);*/
+        System.out.println("Listener added!");
     }
 
     private void handleAction(GpioPinDigitalStateChangeEvent pinEvent){
