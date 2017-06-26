@@ -10,6 +10,8 @@ import java.util.TimerTask;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import static at.htl.conrollers.KeyPressController.defaultPinPressedState;
+
 /**
  * Created by sakal_andrej on 25.01.17.
  */
@@ -17,6 +19,7 @@ public class RaspberryPiMenue {
     private static TimerTask task;
     private static String s[];
     private static KeyPressController keyPressController;
+    private static boolean isStarted = false;
 
     public static void main(String[] args) throws IOException {
         //String[] ab = new String[1];
@@ -44,32 +47,50 @@ public class RaspberryPiMenue {
                 runCode(pinEvent);
             }
         });
-        /*task = new TimerTask() {
+
+        task = new TimerTask() {
             @Override
             public void run() {
                 try {
                     TimeUnit.SECONDS.sleep(10);
-                    RunShellCommandFromJava.main(new String[]{"feh -F -r -x -R /media/*"});
+                    if (isStarted==false) {
+                        isStarted = true;
+                        keyPressController.setRunInputHandler(true);
+                        RunShellCommandFromJava.main(new String[]{"feh -F /media/USB/"});
+                    }
+                    System.out.println("task started");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
         };
-        task.run();*/
-        System.in.read();
+        task.run();
+        while(true) {
+
+        }
     }
 
     public static void runCode(GpioPinDigitalStateChangeEvent event){
-
-        if(event.getPin() == RaspiPin.GPIO_02){
-            s = new String[]{"feh -F -r -x /media/USB"};
-        } else if(event.getPin() == RaspiPin.GPIO_04){
-            s = new String[]{"omxplayer -F /media/USB"};
-        } else if(event.getPin() == RaspiPin.GPIO_05){
-            s = new String[]{"omxplayer -F /media/USB"};
-        } else if(event.getPin() == RaspiPin.GPIO_03){
-            task.cancel();
-            RunShellCommandFromJava.main(s);
+        System.out.println("We are in RunCode");
+        if (event.getState() == defaultPinPressedState) {
+            s = null;
+            if (event.getPin().getName() == RaspiPin.GPIO_02.getName()) {
+                s = new String[]{"feh -F /media/USB/"};
+                System.out.println("We are PIN2");
+            } else if (event.getPin().getName() == RaspiPin.GPIO_04.getName()) {
+                s = new String[]{"omxplayer -F /media/USB/"};
+            } else if (event.getPin().getName() == RaspiPin.GPIO_05.getName()) {
+                s = new String[]{"omxplayer -F /media/USB/"};
+            } else if (event.getPin().getName() == RaspiPin.GPIO_03.getName()) {
+                task.cancel();
+            }
+            //testphase sudo
+            if (s != null && isStarted==false) {
+                keyPressController.setRunInputHandler(true);
+                isStarted=true;
+                RunShellCommandFromJava.main(new String[]{"sudo chmod 777 -R /media/USB/"});
+                RunShellCommandFromJava.main(s);
+            }
         }
     }
 }

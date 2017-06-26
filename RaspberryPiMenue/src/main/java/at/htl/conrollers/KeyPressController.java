@@ -13,10 +13,14 @@ import java.awt.event.KeyEvent;
  */
 public class KeyPressController
 {
+    public boolean isRunInputHandler() {
+        return runInputHandler;
+    }
+
     public boolean runInputHandler;
     private final GpioController gpio = GpioFactory.getInstance();
-    private final PinState defaultPinPressedState = PinState.HIGH;
-    private final PinState defaultPinReleasedState = PinState.LOW;
+    public static final PinState defaultPinPressedState = PinState.HIGH;
+    public static final PinState defaultPinReleasedState = PinState.LOW;
     private KeyboardInputListener inputListener = null;
 
 
@@ -24,53 +28,24 @@ public class KeyPressController
         inputListener = listener;
     }
 
+    public void setRunInputHandler(boolean var) {
+        this.runInputHandler = var;
+    }
+
     public KeyPressController(boolean handleInputs){
         System.out.println("Started!");
         runInputHandler = handleInputs;
 
-        final GpioPinDigitalInput myButton2 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_02, PinPullResistance.PULL_DOWN);
-        final GpioPinDigitalInput myButton3 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_03, PinPullResistance.PULL_DOWN);
-        final GpioPinDigitalInput myButton4 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_04, PinPullResistance.PULL_DOWN);
-        final GpioPinDigitalInput myButton5 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_05, PinPullResistance.PULL_DOWN);
-        final GpioPinDigitalInput myButton6 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_06, PinPullResistance.PULL_DOWN);
-        final GpioPinDigitalInput myButton7 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_07, PinPullResistance.PULL_DOWN);
-
-        myButton2.addListener(new GpioPinListenerDigital() {
-            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent pinEvent) {
-                System.out.println("Hey!!");
-                System.out.println(pinEvent.getPin().getName() + ": " + pinEvent.getState());
-                if(inputListener != null){
-                    inputListener.keyPressed(pinEvent);
-                }
-                if(runInputHandler){
-                    handleAction(pinEvent);
-                }
-            }
-        });
-
-        myButton4.addListener(new GpioPinListenerDigital() {
-            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent pinEvent) {
-                System.out.println("Hey!!");
-                System.out.println(pinEvent.getPin().getName() + ": " + pinEvent.getState());
-                if(inputListener != null){
-                    inputListener.keyPressed(pinEvent);
-                }
-                if(runInputHandler){
-                    handleAction(pinEvent);
-                }
-            }
-        });
-
-        /*GpioPinDigitalInput[] pins = {
+        GpioPinDigitalInput[] pins = {
                 gpio.provisionDigitalInputPin(RaspiPin.GPIO_02, PinPullResistance.PULL_DOWN),
                 gpio.provisionDigitalInputPin(RaspiPin.GPIO_03, PinPullResistance.PULL_DOWN),
                 gpio.provisionDigitalInputPin(RaspiPin.GPIO_04, PinPullResistance.PULL_DOWN),
                 gpio.provisionDigitalInputPin(RaspiPin.GPIO_05, PinPullResistance.PULL_DOWN),
                 gpio.provisionDigitalInputPin(RaspiPin.GPIO_06, PinPullResistance.PULL_DOWN),
+                gpio.provisionDigitalInputPin(RaspiPin.GPIO_07, PinPullResistance.PULL_DOWN),
         };
         gpio.addListener(new GpioPinListenerDigital() {
             public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent pinEvent) {
-                System.out.println("Hey!!");
                 System.out.println(pinEvent.getPin().getName() + ": " + pinEvent.getState());
                 if(inputListener != null){
                     inputListener.keyPressed(pinEvent);
@@ -79,34 +54,35 @@ public class KeyPressController
                     handleAction(pinEvent);
                 }
             }
-        }, pins);*/
+        }, pins);
         System.out.println("Listener added!");
     }
 
     private void handleAction(GpioPinDigitalStateChangeEvent pinEvent){
         try {
             Robot virtualKeyboard = new Robot();
-            if(pinEvent.getPin() == RaspiPin.GPIO_02 && pinEvent.getState() == defaultPinPressedState){
+            System.out.printf("PINEVENT: " + pinEvent.getPin() + " STATE: " + pinEvent.getState() + "RASPI: " + RaspiPin.GPIO_07);
+            if(pinEvent.getPin().getName() == RaspiPin.GPIO_02.getName() && pinEvent.getState() == defaultPinPressedState){
                 virtualKeyboard.keyPress(KeyEvent.VK_LEFT);
-            } else if(pinEvent.getPin() == RaspiPin.GPIO_03 && pinEvent.getState() == defaultPinPressedState){
+            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_03.getName() && pinEvent.getState() == defaultPinPressedState){
                 virtualKeyboard.keyPress(KeyEvent.VK_RIGHT);
-            } else if(pinEvent.getPin() == RaspiPin.GPIO_04 && pinEvent.getState() == defaultPinPressedState){
+            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_04.getName() && pinEvent.getState() == defaultPinPressedState){
                 virtualKeyboard.keyPress(KeyEvent.VK_UP);
-            } else if(pinEvent.getPin() == RaspiPin.GPIO_05 && pinEvent.getState() == defaultPinPressedState){
+            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_05.getName() && pinEvent.getState() == defaultPinPressedState){
                 virtualKeyboard.keyPress(KeyEvent.VK_DOWN);
-            } else if(pinEvent.getPin() == RaspiPin.GPIO_06 && pinEvent.getState() == defaultPinPressedState){
+            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_06.getName() && pinEvent.getState() == defaultPinPressedState){
                 virtualKeyboard.keyPress(KeyEvent.VK_SPACE);
             }
 
-            if(pinEvent.getPin() == RaspiPin.GPIO_02 && pinEvent.getState() == defaultPinReleasedState){
+            if(pinEvent.getPin().getName() == RaspiPin.GPIO_02.getName() && pinEvent.getState() == defaultPinReleasedState){
                 virtualKeyboard.keyRelease(KeyEvent.VK_LEFT);
-            } else if(pinEvent.getPin() == RaspiPin.GPIO_03 && pinEvent.getState() == defaultPinReleasedState){
+            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_03.getName() && pinEvent.getState() == defaultPinReleasedState){
                 virtualKeyboard.keyRelease(KeyEvent.VK_RIGHT);
-            } else if(pinEvent.getPin() == RaspiPin.GPIO_04 && pinEvent.getState() == defaultPinReleasedState){
+            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_04.getName() && pinEvent.getState() == defaultPinReleasedState){
                 virtualKeyboard.keyRelease(KeyEvent.VK_UP);
-            } else if(pinEvent.getPin() == RaspiPin.GPIO_05 && pinEvent.getState() == defaultPinReleasedState){
+            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_05.getName() && pinEvent.getState() == defaultPinReleasedState){
                 virtualKeyboard.keyRelease(KeyEvent.VK_DOWN);
-            } else if(pinEvent.getPin() == RaspiPin.GPIO_06 && pinEvent.getState() == defaultPinReleasedState){
+            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_06.getName() && pinEvent.getState() == defaultPinReleasedState){
                 virtualKeyboard.keyRelease(KeyEvent.VK_SPACE);
             }
         } catch (AWTException e) {
