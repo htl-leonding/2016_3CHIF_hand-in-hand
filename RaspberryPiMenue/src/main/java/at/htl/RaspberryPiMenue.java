@@ -22,7 +22,7 @@ public class RaspberryPiMenue {
     private static boolean isStarted = false;
 
     public static void main(String[] args) throws IOException {
-        //String[] ab = new String[1];
+        /*//String[] ab = new String[1];
 
         System.out.print("******************************************************************************\n");
         System.out.print("******************************************************************************\n");
@@ -39,16 +39,17 @@ public class RaspberryPiMenue {
         System.out.print("2. Videos abspielen (Vom USB-Stick) bitte den obersten roten Knopf drücken! (OBERER KNOPF)\n");
         System.out.print("3. Korrektur! (UNTERER KNOPF) \n\n");
 
-        System.out.print("AUSWAHL MIT ENTER BESTÄTIGEN! (RECHTER KNOPF)\n");
+        System.out.print("AUSWAHL MIT ENTER BESTÄTIGEN! (RECHTER KNOPF)\n");*/
 
         keyPressController = new KeyPressController(false);
-        keyPressController.setInputHandler(new KeyPressController.KeyboardInputListener() {
+        RunShellCommandFromJava.main(new String[]{"feh -F /media/USB/"});
+        /*keyPressController.setInputHandler(new KeyPressController.KeyboardInputListener() {
             public void keyPressed(GpioPinDigitalStateChangeEvent pinEvent) {
                 runCode(pinEvent);
             }
-        });
+        });*/
 
-        task = new TimerTask() {
+        /*task = new TimerTask() {
             @Override
             public void run() {
                 try {
@@ -64,7 +65,7 @@ public class RaspberryPiMenue {
                 }
             }
         };
-        task.run();
+        task.run();*/
         while(true) {
 
         }
@@ -79,7 +80,7 @@ public class RaspberryPiMenue {
                 System.out.println("We are PIN2");
             } else if (event.getPin().getName() == RaspiPin.GPIO_04.getName()) {
                 s = new String[]{"omxplayer -F /media/USB/"};
-            } else if (event.getPin().getName() == RaspiPin.GPIO_05.getName()) {
+            } else if (event.getPin().getName() == RaspiPin.GPIO_17.getName()) {
                 s = new String[]{"omxplayer -F /media/USB/"};
             } else if (event.getPin().getName() == RaspiPin.GPIO_03.getName()) {
                 task.cancel();

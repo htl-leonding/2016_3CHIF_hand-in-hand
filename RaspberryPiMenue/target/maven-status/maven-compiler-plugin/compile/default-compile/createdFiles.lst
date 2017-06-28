@@ -1,7 +1,5 @@
-at/htl/RaspberryPiMenue$2.class
-at/htl/RaspberryPiMenue$1.class
-at/htl/conrollers/KeyPressController.class
-at/htl/RaspberryPiMenue.class
-at/htl/conrollers/KeyPressController$1.class
-at/htl/conrollers/KeyPressController$KeyboardInputListener.class
-at/htl/utils/RunShellCommandFromJava.class
+at\htl\conrollers\KeyPressController$1.class
+at\htl\RaspberryPiMenue.class
+at\htl\conrollers\KeyPressController$KeyboardInputListener.class
+at\htl\utils\RunShellCommandFromJava.class
+at\htl\conrollers\KeyPressController.class

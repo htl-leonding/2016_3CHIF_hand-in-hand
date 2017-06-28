@@ -40,9 +40,8 @@ public class KeyPressController
                 gpio.provisionDigitalInputPin(RaspiPin.GPIO_02, PinPullResistance.PULL_DOWN),
                 gpio.provisionDigitalInputPin(RaspiPin.GPIO_03, PinPullResistance.PULL_DOWN),
                 gpio.provisionDigitalInputPin(RaspiPin.GPIO_04, PinPullResistance.PULL_DOWN),
-                gpio.provisionDigitalInputPin(RaspiPin.GPIO_05, PinPullResistance.PULL_DOWN),
-                gpio.provisionDigitalInputPin(RaspiPin.GPIO_06, PinPullResistance.PULL_DOWN),
-                gpio.provisionDigitalInputPin(RaspiPin.GPIO_07, PinPullResistance.PULL_DOWN),
+                gpio.provisionDigitalInputPin(RaspiPin.GPIO_17, PinPullResistance.PULL_DOWN),
+                gpio.provisionDigitalInputPin(RaspiPin.GPIO_27, PinPullResistance.PULL_DOWN),
         };
         gpio.addListener(new GpioPinListenerDigital() {
             public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent pinEvent) {
@@ -68,9 +67,9 @@ public class KeyPressController
                 virtualKeyboard.keyPress(KeyEvent.VK_RIGHT);
             } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_04.getName() && pinEvent.getState() == defaultPinPressedState){
                 virtualKeyboard.keyPress(KeyEvent.VK_UP);
-            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_05.getName() && pinEvent.getState() == defaultPinPressedState){
+            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_17.getName() && pinEvent.getState() == defaultPinPressedState){
                 virtualKeyboard.keyPress(KeyEvent.VK_DOWN);
-            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_06.getName() && pinEvent.getState() == defaultPinPressedState){
+            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_27.getName() && pinEvent.getState() == defaultPinPressedState){
                 virtualKeyboard.keyPress(KeyEvent.VK_SPACE);
             }
 
@@ -80,9 +79,9 @@ public class KeyPressController
                 virtualKeyboard.keyRelease(KeyEvent.VK_RIGHT);
             } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_04.getName() && pinEvent.getState() == defaultPinReleasedState){
                 virtualKeyboard.keyRelease(KeyEvent.VK_UP);
-            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_05.getName() && pinEvent.getState() == defaultPinReleasedState){
+            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_17.getName() && pinEvent.getState() == defaultPinReleasedState){
                 virtualKeyboard.keyRelease(KeyEvent.VK_DOWN);
-            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_06.getName() && pinEvent.getState() == defaultPinReleasedState){
+            } else if(pinEvent.getPin().getName() == RaspiPin.GPIO_27.getName() && pinEvent.getState() == defaultPinReleasedState){
                 virtualKeyboard.keyRelease(KeyEvent.VK_SPACE);
             }
         } catch (AWTException e) {
